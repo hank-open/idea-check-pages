@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第 28 章 复盘制度：整套体系的闭环 · 债券基金：从定价引擎到实战盘感</title>
+<link rel="stylesheet" href="assets/katex.min.css">
+<link rel="stylesheet" href="assets/book.css">
+</head>
+<body class="">
+<div class="progress" id="progress"></div>
+<button class="toc-toggle" id="tocToggle" aria-label="目录">☰</button>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="index.html">
+      <div class="brand-title">债券基金：从定价引擎到实战盘感</div>
+      <div class="brand-sub">一本按依赖关系而非话题热度组织的债券基金教科书</div>
+    </a>
+    <div class="toc-search-wrap">
+      <input type="search" id="tocSearch" placeholder="搜索章节与小节…" autocomplete="off">
+    </div>
+    <nav class="toc" id="toc"><div class="toc-part"><div class="toc-part-label">总纲</div><a class="toc-link" href="00-前言-一条公式贯穿全书.html" data-search="前言：一条公式贯穿全书"><span class="toc-num">00</span><span class="toc-text">前言：一条公式贯穿全书</span></a></div><div class="toc-part"><div class="toc-part-label">L0 · 债券本身：定价引擎</div><a class="toc-link" href="01-L0.1-现金流与定价.html" data-search="第 1 章 现金流与定价：价格与收益率为什么反向"><span class="toc-num">01</span><span class="toc-text">现金流与定价：价格与收益率为什么反向</span></a><a class="toc-link" href="02-L0.2-久期与凸性.html" data-search="第 2 章 久期与凸性：波动的度量衡"><span class="toc-num">02</span><span class="toc-text">久期与凸性：波动的度量衡</span></a><a class="toc-link" href="03-L0.3-收益率曲线.html" data-search="第 3 章 收益率曲线：四象限与骑乘收益"><span class="toc-num">03</span><span class="toc-text">收益率曲线：四象限与骑乘收益</span></a><a class="toc-link" href="04-L0.4-信用.html" data-search="第 4 章 信用：用违约概率换票息"><span class="toc-num">04</span><span class="toc-text">信用：用违约概率换票息</span></a><a class="toc-link" href="05-L0.5-券种地图.html" data-search="第 5 章 券种地图：中国债市的货架"><span class="toc-num">05</span><span class="toc-text">券种地图：中国债市的货架</span></a></div><div class="toc-part"><div class="toc-part-label">L1 · 基金容器：包装层</div><a class="toc-link" href="06-L1.1-分类谱系.html" data-search="第 6 章 分类谱系：按波动排好的七个台阶"><span class="toc-num">06</span><span class="toc-text">分类谱系：按波动排好的七个台阶</span></a><a class="toc-link" href="07-L1.2-收益拆解公式.html" data-search="第 7 章 收益拆解公式：本书的主轴"><span class="toc-num">07</span><span class="toc-text">收益拆解公式：本书的主轴</span></a><a class="toc-link" href="08-L1.3-估值方法.html" data-search="第 8 章 估值方法：市值法、摊余成本法与混合估值"><span class="toc-num">08</span><span class="toc-text">估值方法：市值法、摊余成本法与混合估值</span></a><a class="toc-link" href="09-L1.4-杠杆.html" data-search="第 9 章 杠杆：质押式回购与正负 carry"><span class="toc-num">09</span><span class="toc-text">杠杆：质押式回购与正负 carry</span></a><a class="toc-link" href="10-L1.5-流动性与条款.html" data-search="第 10 章 流动性与条款：定开、持有期、巨额赎回、摆动定价"><span class="toc-num">10</span><span class="toc-text">流动性与条款：定开、持有期、巨额赎回、摆动定价</span></a><a class="toc-link" href="11-L1.6-费率.html" data-search="第 11 章 费率：A/C 份额的临界持有天数"><span class="toc-num">11</span><span class="toc-text">费率：A/C 份额的临界持有天数</span></a><a class="toc-link" href="12-L1.7-信息披露节奏.html" data-search="第 12 章 信息披露节奏：你能看到什么，看不到什么"><span class="toc-num">12</span><span class="toc-text">信息披露节奏：你能看到什么，看不到什么</span></a></div><div class="toc-part"><div class="toc-part-label">L2 · 驱动层：债市为什么涨跌</div><a class="toc-link" href="13-L2.1-资金面.html" data-search="第 13 章 资金面：定短端"><span class="toc-num">13</span><span class="toc-text">资金面：定短端</span></a><a class="toc-link" href="14-L2.2-政策面.html" data-search="第 14 章 政策面：定中枢"><span class="toc-num">14</span><span class="toc-text">政策面：定中枢</span></a><a class="toc-link" href="15-L2.3-基本面.html" data-search="第 15 章 基本面：定长端"><span class="toc-num">15</span><span class="toc-text">基本面：定长端</span></a><a class="toc-link" href="16-L2.4-供需.html" data-search="第 16 章 供需：定边际"><span class="toc-num">16</span><span class="toc-text">供需：定边际</span></a><a class="toc-link" href="17-L2.5-交易面.html" data-search="第 17 章 交易面：定情绪"><span class="toc-num">17</span><span class="toc-text">交易面：定情绪</span></a><a class="toc-link" href="18-L2.6-股债关系.html" data-search="第 18 章 股债关系：跷跷板何时失效"><span class="toc-num">18</span><span class="toc-text">股债关系：跷跷板何时失效</span></a></div><div class="toc-part"><div class="toc-part-label">L3 · 评价与选基</div><a class="toc-link" href="19-L3.1-风险收益指标.html" data-search="第 19 章 风险收益指标：年化、回撤、修复天数、Calmar"><span class="toc-num">19</span><span class="toc-text">风险收益指标：年化、回撤、修复天数、Calmar</span></a><a class="toc-link" href="20-L3.2-持有体验.html" data-search="第 20 章 持有体验：比年化更重要的那个数"><span class="toc-num">20</span><span class="toc-text">持有体验：比年化更重要的那个数</span></a><a class="toc-link" href="21-L3.3-业绩归因.html" data-search="第 21 章 业绩归因：它赚的到底是什么钱"><span class="toc-num">21</span><span class="toc-text">业绩归因：它赚的到底是什么钱</span></a><a class="toc-link" href="22-L3.4-经理画像.html" data-search="第 22 章 经理画像：久期中枢、下沉程度、杠杆习惯"><span class="toc-num">22</span><span class="toc-text">经理画像：久期中枢、下沉程度、杠杆习惯</span></a><a class="toc-link" href="23-L3.5-规模与持有人结构.html" data-search="第 23 章 规模与持有人结构：赎回冲击敞口"><span class="toc-num">23</span><span class="toc-text">规模与持有人结构：赎回冲击敞口</span></a><a class="toc-link" href="24-L3.6-危险信号清单.html" data-search="第 24 章 危险信号清单：十二条红灯"><span class="toc-num">24</span><span class="toc-text">危险信号清单：十二条红灯</span></a></div><div class="toc-part"><div class="toc-part-label">L4 · 实战层</div><a class="toc-link" href="25-L4.1-必修历史断面.html" data-search="第 25 章 必修历史断面：五次教科书级行情"><span class="toc-num">25</span><span class="toc-text">必修历史断面：五次教科书级行情</span></a><a class="toc-link" href="26-L4.2-负反馈机制.html" data-search="第 26 章 负反馈机制：债市最猛的下跌从哪来"><span class="toc-num">26</span><span class="toc-text">负反馈机制：债市最猛的下跌从哪来</span></a><a class="toc-link" href="27-L4.3-每日数据看板.html" data-search="第 27 章 每日数据看板：十个指标，连看六十天"><span class="toc-num">27</span><span class="toc-text">每日数据看板：十个指标，连看六十天</span></a><a class="toc-link active" href="28-L4.4-复盘制度.html" data-search="第 28 章 复盘制度：整套体系的闭环"><span class="toc-num">28</span><span class="toc-text">复盘制度：整套体系的闭环</span></a><div class="toc-sub"><a class="toc-sublink" href="#28-28.0-学习体系的原话">28.0 学习体系的原话</a><a class="toc-sublink" href="#28-28.1-四层复盘制度-★">28.1 四层复盘制度 ★</a><a class="toc-sublink" href="#28-28.2--日度验证2-分钟">28.2 ① 日度验证（2 分钟）</a><a class="toc-sublink" href="#28-28.3--周度归因300-字-★★">28.3 ② 周度归因：300 字 ★★</a><a class="toc-sublink" href="#28-28.4--月度自评解释是否被验证-★">28.4 ③ 月度自评：解释是否被验证 ★</a><a class="toc-sublink" href="#28-28.5--季度体检持仓的结构复查">28.5 ④ 季度体检：持仓的结构复查</a><a class="toc-sublink" href="#28-28.6-基金档案所有复盘的沉淀地-★">28.6 基金档案：所有复盘的沉淀地 ★</a><a class="toc-sublink" href="#28-28.7-12-周学习计划的收口">28.7 12 周学习计划的收口</a><a class="toc-sublink" href="#28-28.8-方法库把个人经验制度化-★">28.8 方法库：把个人经验制度化 ★</a><a class="toc-sublink" href="#28-28.9-本章与主轴公式的挂钩完整的闭环">28.9 本章与主轴公式的挂钩：完整的闭环</a><a class="toc-sublink" href="#28-自检题">自检题</a><a class="toc-sublink" href="#28-产出物">产出物</a><a class="toc-sublink" href="#28-全书终章三句话">全书终章：三句话</a><a class="toc-sublink" href="#28-判断自己学到哪一层的唯一标准">判断自己学到哪一层的唯一标准</a></div></div><div class="toc-part"><div class="toc-part-label">附录</div><a class="toc-link" href="附录A-12周落地表.html" data-search="附录 A：12 周落地表与产出物清单"><span class="toc-num">A</span><span class="toc-text">12 周落地表与产出物清单</span></a><a class="toc-link" href="附录B-公式与口径手册.html" data-search="附录 B：公式与口径手册（可打印）"><span class="toc-num">B</span><span class="toc-text">公式与口径手册（可打印）</span></a><a class="toc-link" href="附录C-术语表.html" data-search="附录 C：术语表（中英对照）"><span class="toc-num">C</span><span class="toc-text">术语表（中英对照）</span></a><a class="toc-link" href="附录D-延伸资料.html" data-search="附录 D：延伸资料（按层归位）"><span class="toc-num">D</span><span class="toc-text">延伸资料（按层归位）</span></a><a class="toc-link" href="附录E-网络结构图详解.html" data-search="附录 E：债市传导因果网络图详解"><span class="toc-num">E</span><span class="toc-text">债市传导因果网络图详解</span></a></div></nav>
+    <div class="sidebar-foot">
+      <a href="print.html">合并打印版 ⎙</a>
+      <button id="themeToggle" type="button">切换主题</button>
+    </div>
+  </aside>
+  <main>
+    <header class="chapter-head">
+      <div class="chapter-kicker">L4 · 实战层</div>
+      <h1>第 28 章 复盘制度：整套体系的闭环</h1>
+    </header>
+    <article class="prose">
+<blockquote class="callout"><p>对应原目录 4.4</p>
+<p>【挂钩】复盘是把看板（输入）、持仓（参数）、净值（输出）三者对照的制度。<strong>没有复盘，主轴公式永远是别人的公式，不会变成你的能力。</strong></p>
+</blockquote>
+<hr>
+<h2 id="28-28.0-学习体系的原话"><a class="anchor" href="#28-28.0-学习体系的原话" aria-hidden="true">#</a>28.0 学习体系的原话</h2>
+<blockquote class="callout"><p><strong>L4.4 的周复盘是整套体系的闭环。只学不复盘，三个月后会退回原点。</strong></p>
+</blockquote>
+<p><strong>为什么会&quot;退回原点&quot;</strong>：</p>
+<pre><code>看了研报、建了看板、读了季报
+        ↓
+但没有把&quot;我的判断&quot;和&quot;实际结果&quot;对照
+        ↓
+所以不知道哪些判断是对的、哪些是错的
+        ↓
+所以无法修正方法
+        ↓
+★ 三个月后，知识还在，但判断力没有任何提升</code></pre>
+<p><strong>复盘的本质是建立反馈回路</strong>：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>判断</mtext><mo>→</mo><mtext>结果</mtext><mo>→</mo><mtext>对照</mtext><mo>→</mo><mtext>修正</mtext><mo>→</mo><mtext>更好的判断</mtext></mrow><annotation encoding="application/x-tex">\text{判断} \to \text{结果} \to \text{对照} \to \text{修正} \to \text{更好的判断}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">判断</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">结果</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">对照</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">修正</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">更好的判断</span></span></span></span></span></span>
+<p><strong>这和第 26 章的负反馈回路形成对称</strong>：</p>
+<ul>
+<li>市场的回路会放大错误</li>
+<li><strong>你的复盘回路会减少错误</strong></li>
+</ul>
+<hr>
+<h2 id="28-28.1-四层复盘制度-★"><a class="anchor" href="#28-28.1-四层复盘制度-★" aria-hidden="true">#</a>28.1 四层复盘制度 ★</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>层级</th><th>频率</th><th>时长</th><th>核心问题</th><th>产出</th></tr></thead>
+<tbody>
+<tr><td><strong>① 日度验证</strong></td><td>每日</td><td>2 分钟</td><td>昨天的叙事对不对？</td><td>看板的&quot;次日验证&quot;列</td></tr>
+<tr><td><strong>② 周度归因</strong></td><td>每周</td><td>30 分钟</td><td><strong>这周我的组合为什么这样动？</strong></td><td><strong>★ 300 字归因</strong></td></tr>
+<tr><td><strong>③ 月度自评</strong></td><td>每月</td><td>1 小时</td><td>我的解释是否被验证？</td><td>月度自评表</td></tr>
+<tr><td><strong>④ 季度体检</strong></td><td>每季</td><td>3 小时</td><td>持仓的结构是否还符合我的理由？</td><td>季度体检报告</td></tr>
+</tbody>
+</table></div>
+<p><strong>学习体系要求的是&quot;每周 300 字归因 + 每月自评解释是否被验证&quot;。</strong> 本章在此基础上补上日度和季度两层。</p>
+<hr>
+<h2 id="28-28.2--日度验证2-分钟"><a class="anchor" href="#28-28.2--日度验证2-分钟" aria-hidden="true">#</a>28.2 ① 日度验证（2 分钟）</h2>
+<p><strong>就是第 27 章看板的最后一列。</strong></p>
+<pre><code>昨天我写：  &quot;资金面宽松主导短端，长端对基本面仍有疑虑，预计短端继续下行&quot;
+今天实际：  1Y −4bp，10Y −1bp
+验证：     ✅ 对</code></pre>
+<p><strong>三种结果的记法</strong>：</p>
+<div class="table-wrap"><table>
+<thead><tr><th>结果</th><th>含义</th><th>要不要追查</th></tr></thead>
+<tbody>
+<tr><td>✅ 对</td><td>方向和形态都对</td><td>不用</td></tr>
+<tr><td>⚠️ 部分对</td><td>方向对但形态错（或反之）</td><td>简单记一句原因</td></tr>
+<tr><td>❌ 错</td><td>方向错</td><td><strong>必须追查，并记入&quot;错误库&quot;</strong> ★</td></tr>
+</tbody>
+</table></div>
+<h3 id="28-错误库这是本章最有价值的工具之一★"><a class="anchor" href="#28-错误库这是本章最有价值的工具之一★" aria-hidden="true">#</a>错误库（这是本章最有价值的工具之一）★</h3>
+<p><strong>建一张表，只记❌的情形</strong>：</p>
+<div class="table-wrap"><table>
+<thead><tr><th>日期</th><th>我的判断</th><th>实际</th><th>我漏掉了什么</th><th>归类</th></tr></thead>
+<tbody>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>&quot;归类&quot;这一列，用全书的因子分类</strong>：</p>
+<pre><code>漏掉了资金面（第 13 章）
+漏掉了季节性（第 13 章）
+漏掉了供给（第 16 章）
+漏掉了机构行为（第 16 章）
+漏掉了交易面/拥挤（第 17 章）
+漏掉了政策信号（第 14 章）
+漏掉了基本面（第 15 章）
+漏掉了股债联动（第 18 章）
+★ 纯噪音（无法解释，不是我的错）</code></pre>
+<p><strong>三个月后统计这一列的分布</strong>，你会发现自己有一两个系统性盲区。</p>
+<p><strong>典型的盲区</strong>：</p>
+<div class="table-wrap"><table>
+<thead><tr><th>盲区</th><th>表现</th><th>修正</th></tr></thead>
+<tbody>
+<tr><td><strong>忽略季节性</strong></td><td>把技术性紧张当趋势性收紧</td><td>把日历贴在看板旁边</td></tr>
+<tr><td><strong>只看资金面</strong></td><td>漏掉供给和机构行为</td><td>周度表加强</td></tr>
+<tr><td><strong>忽略交易面</strong></td><td>解释不了&quot;无原因的急跌&quot;</td><td>加入拥挤度打分</td></tr>
+<tr><td><strong>过度解释</strong></td><td>给纯噪音找理由</td><td><strong>增加&quot;纯噪音&quot;这个选项</strong> ★</td></tr>
+</tbody>
+</table></div>
+<p><strong>最后一条最重要</strong>：</p>
+<blockquote class="callout"><p><strong>很多人的问题不是&quot;解释不了&quot;，而是&quot;过度解释&quot;。</strong></p>
+<p>债市有相当一部分日度波动是纯噪音（成交稀疏、个别大单、技术性调整）。</p>
+<p><strong>给噪音找理由，会让你建立错误的因果，比承认&quot;不知道&quot;更有害。</strong></p>
+<p><strong>所以&quot;纯噪音&quot;必须是一个合法的归类选项，而且它的占比应该有 20–30%。</strong>
+如果你的&quot;纯噪音&quot;占比接近 0，说明你在过度解释。</p>
+</blockquote>
+<hr>
+<h2 id="28-28.3--周度归因300-字-★★"><a class="anchor" href="#28-28.3--周度归因300-字-★★" aria-hidden="true">#</a>28.3 ② 周度归因：300 字 ★★</h2>
+<p><strong>这是学习体系明确要求的核心产出物。本章给出标准格式。</strong></p>
+<h3 id="28-标准模板300-字"><a class="anchor" href="#28-标准模板300-字" aria-hidden="true">#</a>标准模板（300 字）</h3>
+<pre><code class="language-markdown"># 周度归因 [YYYY-MM-DD ~ YYYY-MM-DD]
+
+## 市场（80 字）
+曲线：1Y ___bp，3Y ___bp，10Y ___bp，30Y ___bp
+形态：[牛平/牛陡/熊平/熊陡]，10Y−1Y 变动 ___bp
+利差：AAA 3Y ___bp，二永 ___bp
+资金：DR007 均值 ___%，R007−DR007 ___bp，carry 空间 ___bp
+主导因子：[资金面/政策面/基本面/供需/交易面/股债]
+
+## 我的组合（100 字）
+本周净值变动：___%
+归因（第 7 章）：
+  票息   +___%
+  利率   ___%  （D_net ___ × Δy ___bp）
+  利差   ___%  （D_s ___ × Δs ___bp）
+  权益   ___%
+  费用   -___%
+  合计   ___%
+实际 vs 归因：残差 ___%（占比 ___%）
+
+## 对错判断（80 字）
+上周我预判：________________
+实际发生：  ________________
+结论：[对 / 部分对 / 错]
+我漏掉的是：________________
+
+## 下周（40 字）
+关键变量：________（季节性标记：________）
+我的预判：________
+验证点：  ________</code></pre>
+<h3 id="28-为什么quot归因quot是周度复盘的核心"><a class="anchor" href="#28-为什么quot归因quot是周度复盘的核心" aria-hidden="true">#</a>为什么&quot;归因&quot;是周度复盘的核心</h3>
+<p><strong>因为归因是唯一能把&quot;市场变动&quot;和&quot;我的损益&quot;定量连接的工具。</strong></p>
+<pre><code>只看净值：     &quot;这周跌了 0.3%&quot;       → 无信息
+看了归因：     &quot;利率贡献 -0.42%，票息 +0.15%，
+                残差 -0.03%&quot;        → ★ 知道是久期在起作用
+                                    → 知道我的 D_net 估计是对的
+                                    → 知道下周如果利率反转会赚多少</code></pre>
+<p><strong>而且归因的残差会告诉你&quot;你的参数估计准不准&quot;</strong>：</p>
+<div class="table-wrap"><table>
+<thead><tr><th>残差占比</th><th>含义</th><th>行动</th></tr></thead>
+<tbody>
+<tr><td>&lt; 15%</td><td>参数估计良好</td><td>继续</td></tr>
+<tr><td>15–30%</td><td>有偏差</td><td>用第 21 章方法校准 D_net、D_s</td></tr>
+<tr><td><strong>&gt; 30%</strong></td><td><strong>参数错了，或有未识别暴露</strong></td><td><strong>★ 必须追查（第 24 章红灯 5、11）</strong></td></tr>
+</tbody>
+</table></div>
+<h3 id="28-一个完整的周度归因实例"><a class="anchor" href="#28-一个完整的周度归因实例" aria-hidden="true">#</a>一个完整的周度归因实例</h3>
+<pre><code class="language-markdown"># 周度归因 2026-11-09 ~ 2026-11-13
+
+## 市场
+曲线：1Y −6bp，3Y −4bp，10Y −2bp，30Y −1bp
+形态：牛陡，10Y−1Y 扩大 4bp
+利差：AAA 3Y +2bp（微走阔），二永 +3bp
+资金：DR007 均值 1.44%（低于 OMO 6bp），R007−DR007 18bp，carry 空间 15bp
+主导因子：资金面（央行本周净投放 3200 亿，跨税期呵护充分）
+
+## 我的组合（70% 中长债 + 30% 短债）
+本周净值变动：+0.11%
+归因：
+  票息   +0.052%  （加权 c·L = 2.72%，5 天）
+  利率   +0.074%  （加权 D_net 2.47 × Δy −3bp）
+  利差   -0.014%  （加权 D_s 0.95 × Δs +1.5bp）
+  权益   0
+  费用   -0.006%
+  合计   +0.106%
+实际 +0.11%，残差 +0.004%（占比 3.6%）✅ 参数估计良好
+
+## 对错判断
+上周我预判：税期走款 + 政府债缴款，资金面偏紧，预期熊平
+实际发生：  央行大额对冲，资金面反而宽松，牛陡
+结论：❌ 错
+★ 我漏掉的是：央行的对冲力度。我只看了&quot;资金需求&quot;（税期+缴款），
+  没有预判&quot;央行会不会充分对冲&quot;。这是第 13 章判断表的第二层，我跳过了。
+  归类：漏掉了政策反应（第 13、14 章）
+
+## 下周
+关键变量：11 月社融（预计 14 日前后公布）
+季节性标记：月中，无特殊
+我的预判：若企业中长贷继续疲弱 → 利多；但 carry 空间仅 15bp，
+         杠杆策略无空间，所以涨幅会受限（配置盘买不动）
+验证点：社融结构中的企业中长贷同比；以及 10Y 下行幅度是否
+       小于&quot;纯基本面逻辑&quot;该有的幅度</code></pre>
+<p><strong>注意这份归因的三个优点</strong>：</p>
+<ol>
+<li><strong>它承认了错误</strong>，并精确定位到&quot;第 13 章判断表的第二层被跳过了&quot;</li>
+<li><strong>残差只有 3.6%</strong>，说明参数估计是对的——这是一个独立的好消息</li>
+<li><strong>下周预判带了一个&quot;约束条件&quot;</strong>（carry 空间限制涨幅），这是把多个因子结合起来的思考</li>
+</ol>
+<hr>
+<h2 id="28-28.4--月度自评解释是否被验证-★"><a class="anchor" href="#28-28.4--月度自评解释是否被验证-★" aria-hidden="true">#</a>28.4 ③ 月度自评：解释是否被验证 ★</h2>
+<p><strong>学习体系的要求是&quot;每月自评解释是否被验证&quot;。这一层的重点不是看市场，是看自己。</strong></p>
+<h3 id="28-月度自评表"><a class="anchor" href="#28-月度自评表" aria-hidden="true">#</a>月度自评表</h3>
+<pre><code class="language-markdown"># 月度自评 [YYYY-MM]
+
+## A. 判断质量
+| 项 | 本月 | 上月 | 趋势 |
+|---|---|---|---|
+| 日度叙事命中率 | ___% | ___% | |
+| 周度预判命中率（4 周） | ___/4 | ___/4 | |
+| **归因残差均值** | ___% | ___% | |
+| 错误库新增条数 | ___ | ___ | |
+
+## B. ★ 错误归类统计（累计）
+| 归类 | 本月次数 | 累计次数 | 占比 |
+|---|---|---|---|
+| 漏掉资金面 | | | |
+| 漏掉季节性 | | | |
+| 漏掉供给 | | | |
+| 漏掉机构行为 | | | |
+| 漏掉交易面 | | | |
+| 漏掉政策反应 | | | |
+| 漏掉基本面 | | | |
+| 漏掉股债联动 | | | |
+| 纯噪音 | | | |
+→ **我的最大盲区是：____________**
+→ **本月针对它做了什么改进：____________**
+
+## C. 组合表现
+| 项 | 值 |
+|---|---|
+| 本月组合收益 | ___% |
+| 同类基准 | ___% |
+| 超额 | ___% |
+| 本月最大回撤 | ___% |
+| 当前组合 D_net | ___ |
+| 当前组合 c·L | ___% |
+| **当前盈亏平衡 Δy（1 个月）** | ___bp |
+
+## D. ★★ 纪律检查（最重要的一节）
+| 检查项 | 是/否 | 说明 |
+|---|---|---|
+| 本月有无临时起意的交易？ | | |
+| 有无因为净值下跌而卖出？ | | **★ 违反第 19、22、26 章** |
+| 有无因为排名/收益追高买入？ | | **★ 违反第 20、21 章** |
+| 有无在红色警报期恐慌赎回？ | | **★ 违反第 26 章预案** |
+| 卖出条件清单（第 22 章）是否执行？ | | |
+| 持有期承诺是否仍然成立？ | | |
+| 本月交易次数 | ___ 次 | 理想是 0–1 次 |
+
+## E. 制度执行
+| 项 | 完成度 |
+|---|---|
+| 看板填写天数 / 交易日 | ___/___ |
+| 周度归因完成数 | ___/4 |
+| 季报阅读（如有新季报） | |
+| 红灯清单复查（如到期） | |
+
+## F. 本月最重要的一个发现
+________________________________
+（可以是关于市场的，也可以是关于自己的）</code></pre>
+<h3 id="28-D-节纪律检查为什么最重要-★★"><a class="anchor" href="#28-D-节纪律检查为什么最重要-★★" aria-hidden="true">#</a>D 节（纪律检查）为什么最重要 ★★</h3>
+<p><strong>因为所有的分析能力，都可以被一次违反纪律的操作抹掉。</strong></p>
+<pre><code>你花了 60 天建看板、读了 28 章书、算了所有指标
+        ↓
+然后在 2022.11 那样的行情里恐慌赎回
+        ↓
+★ 全部白费，而且比不学的人亏得更多
+  （因为不学的人可能根本没买）</code></pre>
+<p><strong>纪律检查的四条红线（全书的汇总）</strong>：</p>
+<div class="table-wrap"><table>
+<thead><tr><th>红线</th><th>为什么</th><th>章节</th></tr></thead>
+<tbody>
+<tr><td><strong>① 不因净值下跌而卖出</strong></td><td>债基回撤会自然修复，按净值止损 = 系统性卖在底部</td><td>19, 22, 26</td></tr>
+<tr><td><strong>② 不因排名/收益追高买入</strong></td><td>高收益常来自方向押注，不是能力</td><td>20, 21</td></tr>
+<tr><td><strong>③ 红色警报期不赎回</strong></td><td>回路型下跌会修复，此时卖出成本最高</td><td>26</td></tr>
+<tr><td><strong>④ 只按预设的卖出条件卖</strong></td><td>风格漂移/能力失效/结构变化，而非价格</td><td>22</td></tr>
+</tbody>
+</table></div>
+<p><strong>每月自问这四条。</strong> 如果某个月违反了，<strong>在 F 节详细写下当时的心理过程</strong>——这是最有价值的记录。</p>
+<hr>
+<h2 id="28-28.5--季度体检持仓的结构复查"><a class="anchor" href="#28-28.5--季度体检持仓的结构复查" aria-hidden="true">#</a>28.5 ④ 季度体检：持仓的结构复查</h2>
+<p><strong>季报出来后（季末后 15 个工作日内），对每只持仓做一次结构复查。</strong></p>
+<h3 id="28-季度体检清单"><a class="anchor" href="#28-季度体检清单" aria-hidden="true">#</a>季度体检清单</h3>
+<pre><code class="language-markdown"># 季度体检 [YYYYQn]
+
+## 对每只持仓基金
+
+### 1. 季报阅读（第 12 章 30 分钟流程）
+□ 杠杆率 ____ （变动 ____，主动/被动？）
+□ 流动性覆盖比 ____%
+□ 品种分布变化：________________
+□ 前五大占债券资产 ____%（久期推算可信？）
+□ 份额变动 ____%
+□ 本期利润 vs 已实现收益：差额 ____（浮盈/浮亏）
+□ 5.10 附注有无风险事件
+□ ★ 言行一致性：经理自述&quot;____&quot;vs 数据&quot;____&quot; → [一致/不一致]
+
+### 2. 红灯清单复查（第 24 章的 7 条季度项）
+□ 1 久期漂移    □ 2 低评级    □ 6 杠杆水平
+□ 8 流动性      □ 9 持有人    □ 10 规模超载   □ 12 言行一致
+→ 🔴 ____ 条，🟡 ____ 条
+
+### 3. 画像更新（第 22 章）
+□ 久期中枢和波动是否变化
+□ 下沉打分是否变化
+□ 杠杆习惯是否变化
+□ 残差 α 是否变化
+
+### 4. ★★ 买入理由复查（最重要）
+我当初买它的理由是：________________
+这个理由现在还成立吗？[是 / 否 / 部分]
+如果否 → 执行卖出
+
+### 5. 卖出条件检查（第 22 章）
+我设定的三类触发条件：
+① 风格漂移：____  → 触发？[Y/N]
+② 能力失效：____  → 触发？[Y/N]
+③ 结构变化：____  → 触发？[Y/N]
+
+## 对整个组合
+
+### 6. 分散度检查（第 20 章）
+□ 持仓两两相关系数矩阵（有无 &gt; 0.9 的对？）
+□ 归因结构是否雷同（第 7、21 章）
+□ 风格四象限分布（第 22 章）
+
+### 7. 持有期匹配复查（第 6、19、20 章）
+| 资金 | 最晚使用时点 | 距今 | 对应产品 | 理论修复天数 | 匹配？ |
+|---|---|---|---|---|---|
+★ 随着时间推移，&quot;距今&quot;会缩短，原本匹配的可能变成不匹配！
+
+### 8. 压力测试更新（第 7、25 章）
+| 情景 | 预估损益 | 我的承诺动作 |
+|---|---|---|
+| 2022.11 重演 | | |
+| 2016.12 重演 | | |
+
+### 9. 政策面措辞 diff（第 14 章）
+□ 本季政治局会议措辞变化
+□ 本季货政报告专栏（必读）
+□ 关键措辞：是否出现&quot;资金空转&quot;/&quot;长期收益率&quot;</code></pre>
+<h3 id="28-第-7-项持有期匹配复查的特殊重要性-★"><a class="anchor" href="#28-第-7-项持有期匹配复查的特殊重要性-★" aria-hidden="true">#</a>第 7 项（持有期匹配复查）的特殊重要性 ★</h3>
+<p><strong>这是一个随时间自动恶化的风险，而且几乎所有人都忽略它。</strong></p>
+<pre><code>2026 年 1 月：我有一笔钱 2028 年 1 月要用 → 可用期限 24 个月
+            → 买中长债纯债基金（理论修复 227 天）→ ✅ 匹配
+
+2027 年 7 月：同一笔钱，同一只基金
+            → 但可用期限只剩 6 个月了！
+            → 理论修复 227 天 ≈ 7.5 个月 &gt; 6 个月
+            → ★ 已经不匹配了，而我什么都没做</code></pre>
+<p><strong>所以每季度必须重算&quot;距今还有多久&quot;，并重新检查匹配性。</strong></p>
+<p><strong>规则</strong>：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><menclose notation="box"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mtext>当&quot;距使用时点的剩余时间&quot; &lt; 1.5 × 理论修复天数 时，开始降台阶</mtext></mstyle></mstyle></mstyle></menclose></mrow><annotation encoding="application/x-tex">\boxed{\text{当&quot;距使用时点的剩余时间&quot; &lt; 1.5 × \text{理论修复天数} 时，开始降台阶}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:1.4578em;vertical-align:-0.4233em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0344em;"><span style="top:-3.4578em;"><span class="pstrut" style="height:3.4578em;"></span><span class="boxpad"><span class="mord"><span class="mord"><span class="mord text"><span class="mord cjk_fallback">当</span><span class="mord">&quot;</span><span class="mord cjk_fallback">距使用时点的剩余时间</span><span class="mord">&quot; &lt; 1.5 × </span><span class="mord text"><span class="mord cjk_fallback">理论修复天数</span></span><span class="mord"> </span><span class="mord cjk_fallback">时，开始降台阶</span></span></span></span></span></span><span style="top:-3.0344em;"><span class="pstrut" style="height:3.4578em;"></span><span class="katex-stretchy fbox" style="height:1.4578em;border-style:solid;border-width:0.04em;"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4233em;"><span></span></span></span></span></span></span></span></span></span>
+<p><strong>降台阶的路径</strong>：</p>
+<pre><code>中长债纯债 → 短债 → 存单指数 → 货基
+（分批转移，不要一次性切换，避免时点风险）</code></pre>
+<hr>
+<h2 id="28-28.6-基金档案所有复盘的沉淀地-★"><a class="anchor" href="#28-28.6-基金档案所有复盘的沉淀地-★" aria-hidden="true">#</a>28.6 基金档案：所有复盘的沉淀地 ★</h2>
+<p><strong>第 12 章给了档案模板，这里给出完整版和维护节奏。</strong></p>
+<pre class="wide"><code class="language-markdown"># 基金档案：[基金名称 / 代码]
+
+## 一、静态信息（很少变）
+- 类型 / 成立日 / 估值方法
+- 费率（A/C）+ 临界持有天数（第 11 章）
+- 条款：形态、最短持有期、赎回费阶梯、是否有摆动定价（第 10 章）
+
+## 二、病史（事件驱动，只增不减）★
+| 日期 | 事件 | 当时净值影响 | 修复时间 | 备注 |
+|---|---|---|---|---|
+（巨额赎回、暂停赎回、侧袋、经理变更、费率调整、
+  投资范围变更、净值异动确认持有问题券……）
+
+## 三、经理画像（每季更新，第 22 章）
+（完整画像卡）
+
+## 四、季度跟踪表（每季追加一行）
+| 季度 | 杠杆率 | 反推L | 份额 | 主/被动 | 前五大占比 | 推算D | 回归D | R² | 利率债% | 信用债% | 二永% | 利润-已实现 | 言行一致 |
+
+## 五、半年度深度体检（每半年追加，第 12、24 章）
+| 期间 | 隐含评级背离度 | 单一发行人最大 | C+D层占比 | 精算久期 | 换手率 | 机构占比 | 单一持有人 | κ（如有压力期） |
+
+## 六、红灯记录（每季更新）
+| 季度 | 🔴 | 🟡 | 具体哪几条 | 追查结论 | 处理 |
+
+## 七、★★ 我的决策记录（最有价值的部分）
+| 日期 | 动作 | 理由 | 当时的 P(持有期) / 5%分位 / 压力测试结果 | **事后验证** |
+|---|---|---|---|---|
+| 买入 | | | | |
+| 加仓/减仓 | | | | |
+| 卖出 | | | | |
+
+## 八、买入理由与卖出条件（第 22 章）
+买入理由：______________（每季复查是否成立）
+卖出条件：
+  ① 风格漂移：______
+  ② 能力失效：______
+  ③ 结构变化：______</code></pre>
+<h3 id="28-第七节决策记录为什么最有价值-★★"><a class="anchor" href="#28-第七节决策记录为什么最有价值-★★" aria-hidden="true">#</a>第七节（决策记录）为什么最有价值 ★★</h3>
+<p><strong>因为它是你唯一能用来评估&quot;自己的决策能力&quot;的数据。</strong></p>
+<pre><code>一般人：   只知道&quot;我赚了/亏了多少&quot;
+有档案的人：知道&quot;我做的 20 个决策里，有几个的理由在事后被验证&quot;
+          ↓
+    ★ 后者才能改进决策</code></pre>
+<p><strong>事后验证的记法</strong>：</p>
+<div class="table-wrap"><table>
+<thead><tr><th>验证结果</th><th>含义</th></tr></thead>
+<tbody>
+<tr><td>✅ 理由成立且结果好</td><td>正确决策</td></tr>
+<tr><td>⚠️ <strong>理由成立但结果差</strong></td><td><strong>正确决策，运气不好。不要改方法</strong> ★</td></tr>
+<tr><td>⚠️ <strong>理由不成立但结果好</strong></td><td><strong>错误决策，运气好。必须改方法</strong> ★★</td></tr>
+<tr><td>❌ 理由不成立且结果差</td><td>错误决策</td></tr>
+</tbody>
+</table></div>
+<p><strong>第三行是最危险的</strong>：</p>
+<blockquote class="callout"><p><strong>&quot;理由错了但赚钱了&quot;是最有害的经历，因为它会强化错误的方法。</strong></p>
+<p>比如：你因为&quot;它排名第一&quot;买入了一只久期 5.2 的基金（第 20 章的基金 A），然后恰好利率继续下行，你赚了 5%。</p>
+<p><strong>你会得出结论&quot;按排名选基是有效的&quot;，然后在下一轮亏掉更多。</strong></p>
+</blockquote>
+<p><strong>所以决策记录必须记&quot;理由&quot;，而不只是记&quot;动作和结果&quot;。</strong> 评估决策质量要看理由是否成立，不看结果。</p>
+<hr>
+<h2 id="28-28.7-12-周学习计划的收口"><a class="anchor" href="#28-28.7-12-周学习计划的收口" aria-hidden="true">#</a>28.7 12 周学习计划的收口</h2>
+<p><strong>学习体系给出了 12 周落地表。本书 28 章的产出物，正好对应这 12 周：</strong></p>
+<div class="table-wrap"><table>
+<thead><tr><th>周次</th><th>主题</th><th>产出物</th><th>本书章节</th></tr></thead>
+<tbody>
+<tr><td><strong>1–2</strong></td><td>L0.1–0.2</td><td>手算一只真实国债的久期，算 Δy=+10bp 时价格跌多少</td><td><strong>第 1、2 章产出物</strong></td></tr>
+<tr><td><strong>3–4</strong></td><td>L0.3–0.5</td><td>画出当前国债收益率曲线，标出三个期限利差</td><td><strong>第 3、4、5 章产出物</strong></td></tr>
+<tr><td><strong>5–6</strong></td><td>L1 全层</td><td>拆解一只纯债基金的季报：久期、杠杆、评级分布</td><td><strong>第 6–12 章产出物</strong></td></tr>
+<tr><td><strong>7–9</strong></td><td>L2 全层</td><td>建好 10 指标看板，每天记录，每周写 300 字归因</td><td><strong>第 13–18、27 章 + 本章 ②</strong></td></tr>
+<tr><td><strong>10</strong></td><td>L3</td><td>对 4 只代表性基金做归因对比</td><td><strong>第 19–24 章产出物</strong></td></tr>
+<tr><td><strong>11</strong></td><td>L4.1</td><td>复述 2022.11 赎回潮的完整传导链</td><td><strong>第 25 章产出物任务一</strong></td></tr>
+<tr><td><strong>12</strong></td><td>压力测试</td><td>预先写下&quot;若 Δy +50bp，我的组合跌多少&quot;，之后验证</td><td><strong>第 7、25、26 章产出物</strong></td></tr>
+</tbody>
+</table></div>
+<h3 id="28-12-周之后转入常态运行"><a class="anchor" href="#28-12-周之后转入常态运行" aria-hidden="true">#</a>12 周之后：转入常态运行</h3>
+<pre><code>日度（15 分钟）： 看板 + 日度验证
+周度（30 分钟）： 300 字归因
+月度（1 小时）： 月度自评（特别是 D 节纪律检查）
+季度（3 小时）： 季度体检 + 档案更新 + 政策措辞 diff
+半年（4 小时）： 半年报深度体检 + 全部 12 条红灯 + κ 更新
+年度（1 天）：  完整复盘 + 方法库更新（见 28.8 节）</code></pre>
+<p><strong>总计约 <strong>每周 2 小时 + 每季 3 小时</strong></strong>。这是一个可持续的工作量。</p>
+<hr>
+<h2 id="28-28.8-方法库把个人经验制度化-★"><a class="anchor" href="#28-28.8-方法库把个人经验制度化-★" aria-hidden="true">#</a>28.8 方法库：把个人经验制度化 ★</h2>
+<p><strong>除了基金档案，还要维护一份&quot;方法库&quot;——记录你自己验证过的规律。</strong></p>
+<pre><code class="language-markdown"># 我的方法库
+
+## 一、已验证的规律（附我的样本和日期）
+| 规律 | 我的验证 | 样本期 | 置信度 |
+|---|---|---|---|
+| 季末资金面紧张是技术性的，除非央行未对冲 | 60 天看板，4 次季末 | 2026Q4–2027Q1 | 高 |
+| 二永利差领先 AAA 利差约 3–5 天 | 自算相关性 | ___ | 中 |
+| 规模增长超 3 倍后，残差 α 衰减 50%+ | 3 个案例 | ___ | 中 |
+| ... | | | |
+
+## 二、已证伪的说法
+| 说法 | 为什么错 | 我的证据 |
+|---|---|---|
+| &quot;降息后债市会涨&quot; | 预期已定价，常&quot;利多出尽&quot; | 3 次历史回溯（第 14 章产出物） |
+| &quot;短债基金很安全&quot; | 2022.11 短债也跌，跌的是利差 | 第 25 章 |
+| &quot;按排名选基&quot; | 高收益常来自方向押注 | 第 20、21 章案例 |
+| ... | | |
+
+## 三、我的系统性盲区（来自错误库统计）
+| 盲区 | 累计出错次数 | 我的应对措施 |
+|---|---|---|
+| | | |
+
+## 四、待验证的假设
+| 假设 | 怎么验证 | 验证期限 |
+|---|---|---|
+| | | |</code></pre>
+<p><strong>第三节（系统性盲区）是方法库的核心价值。</strong> 它是你从几百条错误记录里提炼出的、关于自己的知识——这是任何书、任何研报都不可能提供的。</p>
+<hr>
+<h2 id="28-28.9-本章与主轴公式的挂钩完整的闭环"><a class="anchor" href="#28-28.9-本章与主轴公式的挂钩完整的闭环" aria-hidden="true">#</a>28.9 本章与主轴公式的挂钩：完整的闭环</h2>
+<pre><code>            ┌─────────────────────────────────────────────┐
+            │                                             │
+            ▼                                             │
+   【L2 看板，第 27 章】                                   │
+   市场变量：Δy, Δs, r_repo, R_e                           │
+            │                                             │
+            ▼                                             │
+   【主轴公式，第 7 章】                                    │
+   R = c·L - D_net·Δy - D_s·Δs - (L-1)r_repo + w_e·R_e - f │
+            │                   ↑                          │
+            │          【持仓参数，第 12、22 章】            │
+            │          c, L, D_net, D_s, w_e, f            │
+            │          （来自季报 + 画像）                   │
+            ▼                                             │
+   【预测的净值变动】                                        │
+            │                                             │
+            ▼                                             │
+   ★【对照实际净值】                                        │
+            │                                             │
+            ├── 残差 &lt; 15% → 参数正确，继续                 │
+            │                                             │
+            └── 残差 &gt; 30% → 参数错误 或 未识别暴露          │
+                              │                            │
+                              ▼                            │
+                    【第 21、24 章：追查】                   │
+                              │                            │
+                              ▼                            │
+                    【修正参数 / 发现红灯】──────────────────┘
+
+★ 这就是复盘的闭环。它让主轴公式从&quot;一个教学工具&quot;
+  变成&quot;一个持续自我校准的预测模型&quot;。</code></pre>
+<p><strong>对比第 26 章的市场负反馈回路</strong>：</p>
+<div class="table-wrap"><table>
+<thead><tr><th></th><th>市场的回路（第 26 章）</th><th>你的回路（本章）</th></tr></thead>
+<tbody>
+<tr><td>输入</td><td>价格冲击</td><td>你的判断</td></tr>
+<tr><td>放大/衰减</td><td><strong>放大错误</strong>（G &gt; 1 时发散）</td><td><strong>减少错误</strong>（持续校准）</td></tr>
+<tr><td>结果</td><td>系统失稳</td><td><strong>判断力提升</strong></td></tr>
+</tbody>
+</table></div>
+<p><strong>全书的最后一个对称</strong>：</p>
+<blockquote class="callout"><p><strong>市场用回路放大你的恐慌，你用回路减少自己的错误。</strong></p>
+<p>谁的回路跑得更好，谁就是最后的赢家。</p>
+</blockquote>
+<hr>
+<h2 id="28-自检题"><a class="anchor" href="#28-自检题" aria-hidden="true">#</a>自检题</h2>
+<ol>
+<li>为什么说&quot;只学不复盘，三个月后会退回原点&quot;？</li>
+<li>错误库的&quot;归类&quot;列里，为什么必须包含&quot;纯噪音&quot;这个选项？它的合理占比是多少？</li>
+<li>周度归因的残差占总收益 38%。列出三种可能原因和核查方法。</li>
+<li>月度自评的 D 节（纪律检查）有四条红线。为什么它比 A 节（判断质量）更重要？</li>
+<li>为什么&quot;季度体检第 7 项（持有期匹配复查）&quot;是一个&quot;随时间自动恶化的风险&quot;？</li>
+<li>决策记录的四种事后验证结果里，哪一种最危险？为什么？</li>
+<li>2026 年 1 月你买入一只中长债纯债基金（理论修复 227 天），资金 2028 年 1 月要用。什么时候该开始降台阶？</li>
+<li>方法库的&quot;系统性盲区&quot;一节，为什么是它的核心价值？</li>
+</ol>
+<details>
+<summary>参考答案</summary><ol>
+<li>因为<strong>学习本身不产生反馈</strong>。<pre><code>读书、看研报、建看板 → 知识增加
+     但如果不把&quot;我的判断&quot;和&quot;实际结果&quot;对照
+     → 不知道哪些判断对、哪些错
+     → 无法定位自己的系统性盲区
+     → 无法修正方法
+     → ★ 知识还在，判断力零提升</code></pre>
+<strong>更糟的是会退步</strong>：没有验证的情况下，<strong>你会记住那些偶然正确的判断（确认偏误），遗忘错误的判断</strong>。于是你对自己能力的信心在上升，而真实能力没变甚至下降——<strong>这比一开始就不学更危险，因为你会给自己更大的仓位。</strong>
+<strong>复盘的本质是建立反馈回路</strong>：判断 → 结果 → 对照 → 修正 → 更好的判断。没有这个回路，剩下的只是收集信息。</li>
+<li><strong>因为债市有相当一部分日度波动是纯噪音</strong>（成交稀疏、个别大单、技术性调整、算法交易、报价口径差异）。
+<strong>如果没有&quot;纯噪音&quot;这个选项，你会被迫给每一次波动找一个理由</strong> → <strong>过度解释</strong> → 建立错误的因果关系。
+<strong>过度解释的具体危害</strong>：
+（a）你会&quot;学到&quot;一些不存在的规律（比如&quot;周三债市容易跌&quot;）；
+（b）这些伪规律会污染你的判断体系，让你在真实信号出现时反应错误；
+（c）它让你对自己的解释力产生错误的信心。
+<strong>合理占比：20–30%。</strong><ul>
+<li>如果&quot;纯噪音&quot;占比接近 0 → <strong>你在过度解释</strong>，需要提高归因的标准</li>
+<li>如果占比超过 50% → 你的指标体系覆盖不足，或者你没有认真追查
+<strong>一句话</strong>：承认&quot;不知道&quot;是一种能力，而且是一种罕见的能力。</li>
+</ul>
+</li>
+<li><strong>残差 38% &gt; 30%，参数错误或有未识别暴露（第 24 章红灯 5、11）。</strong>
+<strong>三种可能原因及核查</strong>：
+（a）<strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mrow><mi>n</mi><mi>e</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{net}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0278em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 或 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">D_s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0278em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 估计错误</strong>（最常见）<ul>
+<li>核查：用第 2 章方法 B 重新做 60 日多因子回归；对照季报重仓券推算（若前五大占债券资产 &gt; 50%）；若有最新半年报，用全持仓做精算久期校准</li>
+<li>特别检查：<strong>杠杆率是否用了季报期末值而实际有窗口粉饰</strong>（第 21、24 章）→ 用年报利息支出反推期间平均 L
+（b）<strong>曲线非平行移动</strong>（第 2.6 节）</li>
+<li>核查：改用关键期限久期（KRD）多因子归因，把 1Y/3Y/10Y 的 Δy 分开算。如果本周曲线形变剧烈（比如短端大幅下行而长端上行），单一久期必然算不准
+（c）<strong>有未识别的风险暴露</strong>（最严重）</li>
+<li>核查：（i）回归中加入转债指数和沪深300 因子，看 β₄、β₅ 是否显著非零（纯债基金应为 0）；（ii）查季报 5.2/5.3/5.6/5.9 节有无股票、ABS、国债期货；（iii）检查本周是否有 3σ 以上的净值异动日（第 21 章净值异动法），如有则对照当天的债市新闻，看是否有发行人事件
+<strong>优先级</strong>：先排除 (a)（最可能且最容易修正），再 (b)，最后 (c)。如果连续多周残差都 &gt; 30% 且 (a)(b) 都排除了，那就是 (c)，这是一个 🔴 红灯。</li>
+</ul>
+</li>
+<li><strong>因为所有的分析能力都可以被一次违反纪律的操作抹掉。</strong><pre><code>A 节好、D 节差：  判断力强但在关键时刻恐慌卖出 → 全部白费，
+                 而且比不学的人亏得更多（因为不学的人可能没买）
+A 节差、D 节好：  判断力弱但持有期匹配、不恐慌 → ★ 仍然能拿到
+                 基金的完整回报（第 20 章：投资者回报缺口为 0）</code></pre>
+<strong>根本原因（第 20、26 章）</strong>：
+（a）债基的收益绝大部分来自<strong>票息累积</strong>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>⋅</mo><mi>L</mi><mo>⋅</mo><mi>T</mi><mi mathvariant="normal">/</mi><mn>365</mn></mrow><annotation encoding="application/x-tex">c \cdot L \cdot T/365</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4445em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.1389em;">T</span><span class="mord">/365</span></span></span></span>），它随时间线性增长，不需要任何判断能力；
+（b）<strong>信噪比随持有期的平方根增长</strong>，所以时间本身就是最强的工具；
+（c）而违反纪律（在底部卖出）会<strong>系统性地破坏这个机制</strong>——你放弃了几乎确定的修复收益，并支付了最高的交易成本。
+<strong>一句话（第 26 章的结论）</strong>：<blockquote class="callout"><p><strong>债券基金的超额收益，绝大部分不来自选基能力，来自持有期纪律。</strong>
+<strong>所以月度自评的顺序应该是：先看 D 节，再看 A 节。</strong></p>
+</blockquote>
+</li>
+<li>因为**&quot;距使用时点的剩余时间&quot;每天都在减少，而产品的&quot;理论修复天数&quot;不变。**<pre><code>2026-01：剩余 24 个月，产品修复期 7.5 个月 → 匹配 ✅
+2027-07：剩余 6 个月，  产品修复期 7.5 个月 → 不匹配 ❌
+                                             （而你什么都没做）</code></pre>
+<strong>这是一个&quot;什么都不做就会恶化&quot;的风险</strong>，和其他风险（需要外部事件触发）完全不同。
+<strong>而几乎所有人忽略它</strong>，因为：
+（a）买入时做过一次匹配检查，就以为永久有效；
+（b）没有任何系统会提醒你（App 不会说&quot;你的持有期快不够了&quot;）；
+（c）它的恶化是渐进的、无感的。
+<strong>后果</strong>：当你在剩余 3 个月时遇到一次 1.5% 的回撤，你<strong>被迫在亏损状态下卖出</strong>——这正是第 26 章的 κ 极大的情形，也是零售投资者亏钱的最主要模式。
+<strong>所以必须制度化地每季度重算。</strong></li>
+<li><strong>最危险的是&quot;理由不成立但结果好&quot;（⚠️ 错误决策，运气好）。</strong>
+<strong>为什么</strong>：因为它会<strong>强化错误的方法</strong>。
+<strong>具体机制</strong>：<pre><code>你因为&quot;它排名第一&quot;买入了一只久期 5.2 的基金（第 20 章的基金 A）
+         ↓
+恰好利率继续下行，你赚了 5%
+         ↓
+★ 你得出结论：&quot;按排名选基是有效的&quot;
+         ↓
+你在下一轮用更大的仓位重复这个方法
+         ↓
+利率反转，亏掉更多</code></pre>
+<strong>对比&quot;理由成立但结果差&quot;</strong>（⚠️ 正确决策，运气不好）：<ul>
+<li>这种情况下你可能会怀疑自己的方法并放弃它 —— 这也是错的，但<strong>它至少不会让你加大仓位</strong></li>
+<li>正确的处理是：<strong>确认理由仍然成立 → 不改方法 → 接受这次的运气成分</strong>
+<strong>核心原则</strong>：
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><menclose notation="box"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mtext>评估决策质量，看&quot;理由是否成立&quot;，不看&quot;结果好坏&quot;</mtext></mstyle></mstyle></mstyle></menclose></mrow><annotation encoding="application/x-tex">\boxed{\text{评估决策质量，看&quot;理由是否成立&quot;，不看&quot;结果好坏&quot;}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:1.3744em;vertical-align:-0.34em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0344em;"><span style="top:-3.3744em;"><span class="pstrut" style="height:3.3744em;"></span><span class="boxpad"><span class="mord"><span class="mord"><span class="mord text"><span class="mord cjk_fallback">评估决策质量，看</span><span class="mord">&quot;</span><span class="mord cjk_fallback">理由是否成立</span><span class="mord">&quot;</span><span class="mord cjk_fallback">，不看</span><span class="mord">&quot;</span><span class="mord cjk_fallback">结果好坏</span><span class="mord">&quot;</span></span></span></span></span></span><span style="top:-3.0344em;"><span class="pstrut" style="height:3.3744em;"></span><span class="katex-stretchy fbox" style="height:1.3744em;border-style:solid;border-width:0.04em;"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.34em;"><span></span></span></span></span></span></span></span></span></span>
+<strong>所以决策记录必须记&quot;理由&quot;，而不只是记&quot;动作和结果&quot;。</strong> 这是第 28.6 节第七部分的全部意义。</li>
+</ul>
+</li>
+<li><strong>理论修复天数 227 天 ≈ 7.5 个月。</strong>
+<strong>降台阶规则</strong>：当剩余时间 &lt; 1.5 × 理论修复天数时开始降台阶
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>1.5</mn><mo>×</mo><mn>7.5</mn><mo>=</mo><mrow><mn mathvariant="bold">11.25</mn><mtext> 个月</mtext></mrow></mrow><annotation encoding="application/x-tex">1.5 \times 7.5 = \mathbf{11.25 \text{ 个月}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1.5</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">7.5</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord"><span class="mord mathbf">11.25</span><span class="mord text"><span class="mord"> </span><span class="mord cjk_fallback">个月</span></span></span></span></span></span></span>
+资金 2028 年 1 月要用，所以：
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>2028</mn><mtext>年</mtext><mn>1</mn><mtext>月</mtext><mo>−</mo><mn>11.25</mn><mtext>个月</mtext><mo>≈</mo><mrow><mn mathvariant="bold">2027</mn><mtext>年 </mtext><mn mathvariant="bold">2</mn><mtext> 月</mtext></mrow></mrow><annotation encoding="application/x-tex">2028\text{年}1\text{月} - 11.25 \text{个月} \approx \mathbf{2027 \text{年 } 2 \text{ 月}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">2028</span><span class="mord text"><span class="mord cjk_fallback">年</span></span><span class="mord">1</span><span class="mord text"><span class="mord cjk_fallback">月</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord">11.25</span><span class="mord text"><span class="mord cjk_fallback">个月</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord"><span class="mord mathbf">2027</span><span class="mord text"><span class="mord cjk_fallback">年</span><span class="mord"> </span></span><span class="mord mathbf">2</span><span class="mord text"><span class="mord"> </span><span class="mord cjk_fallback">月</span></span></span></span></span></span></span>
+<strong>所以应该在 2027 年 2 月左右开始降台阶。</strong>
+<strong>降台阶的路径和方式</strong>：<pre><code>2027年2月起：中长债纯债 → 短债（分 3 批，每月一批）
+2027年8月起：短债 → 存单指数（剩余时间 &lt; 5 个月时）
+2027年11月起：存单指数 → 货基（剩余时间 &lt; 2 个月时）</code></pre>
+<strong>为什么要分批</strong>：避免时点风险。如果你在 2027 年 2 月某一天一次性全部切换，而那天恰好是债市的低点，你就锁定了损失。分批转移把时点风险平均化。
+<strong>额外提醒</strong>：如果在 2027 年 2 月时这只基金恰好处于水下（净值低于你的成本），<strong>不要因为&quot;等它回本&quot;而推迟降台阶</strong>——那是沉没成本谬误，而且会让你在剩余时间更短时面临更大的被迫卖出风险。<strong>按计划执行，接受当时的净值。</strong></li>
+<li>因为<strong>它是你从几百条错误记录里提炼出的、关于自己的知识，而这是任何书、任何研报、任何老师都不可能提供的。</strong>
+<strong>具体价值</strong>：
+（a）<strong>它是个性化的</strong>：每个人的盲区不同。有人总是忽略季节性，有人总是忽略交易面，有人总是过度解释噪音。<strong>书只能告诉你&quot;有这些因子&quot;，不能告诉你&quot;你总是漏掉哪一个&quot;</strong>；
+（b）<strong>它是可行动的</strong>：知道&quot;我总是漏掉央行的对冲反应&quot;之后，你可以（i）把第 13 章的判断表贴在看板旁边，（ii）在每次季末/税期前强制检查央行投放，（iii）在周度归因里增加一行&quot;央行对冲力度&quot;；
+（c）<strong>它是复利的</strong>：修正一个系统性盲区，会改善未来所有相关的判断。而修正一个个别错误，只改善那一次；
+（d）<strong>它需要时间累积</strong>：必须有几百条错误记录才能统计出可靠的分布。<strong>所以它是一种只有坚持复盘的人才能获得的资产，无法速成、无法购买、无法抄袭。</strong>
+<strong>这也是本章（和本书）的最终目的</strong>：不是给你一套方法，而是给你一套<strong>能让你自己发现和修正自己方法的制度</strong>。</li>
+</ol>
+</details><hr>
+<h2 id="28-产出物"><a class="anchor" href="#28-产出物" aria-hidden="true">#</a>产出物</h2>
+<h3 id="28-任务一建立四层复盘制度本章核心作业"><a class="anchor" href="#28-任务一建立四层复盘制度本章核心作业" aria-hidden="true">#</a>任务一：建立四层复盘制度（本章核心作业）</h3>
+<p>建四个文件/表格：</p>
+<pre><code>1. 看板的&quot;叙事 + 次日验证&quot;两列      （已在第 27 章）
+2. 错误库.xlsx                      （只记❌，带归类列）
+3. 周度归因.md                      （每周追加一节 300 字）
+4. 月度自评.md                      （每月一张表，特别是 D 节）
+5. 季度体检.md                      （每季一份）
+6. 基金档案/[基金名].md              （每只一个文件）
+7. 方法库.md                         （持续更新）</code></pre>
+<p><strong>把这七个文件放在一个文件夹里，命名为&quot;债基研究&quot;。</strong> 这个文件夹三年后会是你最有价值的资产。</p>
+<h3 id="28-任务二写第一份周度归因"><a class="anchor" href="#28-任务二写第一份周度归因" aria-hidden="true">#</a>任务二：写第一份周度归因</h3>
+<p>按 28.3 节的模板，<strong>本周就写一份</strong>。</p>
+<p>要求：</p>
+<ul>
+<li>严格 300 字左右（不要写成长篇，简洁是可持续的前提）</li>
+<li>必须包含归因的七项和残差</li>
+<li>必须包含&quot;对错判断&quot;和&quot;我漏掉的是&quot;</li>
+</ul>
+<h3 id="28-任务三补写决策记录回溯★"><a class="anchor" href="#28-任务三补写决策记录回溯★" aria-hidden="true">#</a>任务三：补写决策记录（回溯）★</h3>
+<p>对你<strong>已经持有</strong>的每只基金，<strong>回溯补写</strong>决策记录：</p>
+<div class="table-wrap"><table>
+<thead><tr><th>日期</th><th>动作</th><th><strong>我当时的理由</strong></th><th>当时我算过的指标</th><th><strong>事后验证</strong></th></tr></thead>
+<tbody>
+
+</tbody>
+</table></div>
+<p><strong>诚实地回答两个问题</strong>：</p>
+<ol>
+<li>我当初买它的理由，是基于分析还是基于排名/推荐？</li>
+<li>这个理由，现在还成立吗？</li>
+</ol>
+<p><strong>这一项练习可能让人不舒服，但它是整本书最有价值的一次自我校准。</strong></p>
+<h3 id="28-任务四设定制度化的日程"><a class="anchor" href="#28-任务四设定制度化的日程" aria-hidden="true">#</a>任务四：设定制度化的日程</h3>
+<p>把以下内容写进日历并设提醒：</p>
+<div class="table-wrap"><table>
+<thead><tr><th>频率</th><th>时间</th><th>内容</th><th>时长</th></tr></thead>
+<tbody>
+<tr><td>每交易日</td><td>收盘后</td><td>看板 + 日度验证</td><td>15 分钟</td></tr>
+<tr><td>每周五</td><td>收盘后</td><td>300 字归因</td><td>30 分钟</td></tr>
+<tr><td>每月最后一个周末</td><td>—</td><td>月度自评</td><td>1 小时</td></tr>
+<tr><td>季末后 20 天</td><td>—</td><td>季度体检 + 档案更新</td><td>3 小时</td></tr>
+<tr><td>3 月底 / 8 月底</td><td>—</td><td>半年报深度体检</td><td>4 小时</td></tr>
+<tr><td>每年 1 月</td><td>—</td><td>年度复盘 + 方法库更新</td><td>1 天</td></tr>
+</tbody>
+</table></div>
+<p><strong>没有制度化的日程，复盘会在第三周停止。</strong> 这是经验之谈。</p>
+<hr>
+<p><strong>上一章</strong>：<a href="27-L4.3-每日数据看板.html">27 每日数据看板</a> ｜ <strong>附录</strong>：<a href="附录A-12周落地表.html">A 12 周落地表</a></p>
+<hr>
+<h2 id="28-全书终章三句话"><a class="anchor" href="#28-全书终章三句话" aria-hidden="true">#</a>全书终章：三句话</h2>
+<p><strong>第一句，关于知识结构</strong>：</p>
+<blockquote class="callout"><p>债券基金只有一条主轴公式。所有知识点都要能回答&quot;它影响公式里的哪一项&quot;，答不上来的，就是还没学进去。</p>
+</blockquote>
+<p><strong>第二句，关于风险的本质</strong>：</p>
+<blockquote class="callout"><p>债市最猛的下跌来自回路，不来自基本面。你能做的不是预测触发事件，而是测量系统的脆弱性，并降低自己在回路中的参与度。</p>
+</blockquote>
+<p><strong>第三句，关于收益的来源</strong>：</p>
+<blockquote class="callout"><p>债券基金的超额收益，绝大部分不来自选基能力，来自持有期纪律。而持有期纪律不需要任何预测能力，只需要在买入前把资金期限和产品的修复周期对上一次。</p>
+</blockquote>
+<hr>
+<h2 id="28-判断自己学到哪一层的唯一标准"><a class="anchor" href="#28-判断自己学到哪一层的唯一标准" aria-hidden="true">#</a>判断自己学到哪一层的唯一标准</h2>
+<p><strong>学习体系原文</strong>：</p>
+<blockquote class="callout"><p><strong>能不能在不看研报的情况下，解释今天债市为什么这样走，并在第二天被数据验证。</strong></p>
+</blockquote>
+<p><strong>本书给这个标准加一个补充</strong>：</p>
+<blockquote class="callout"><p>以及：<strong>能不能在下一次 2022.11 重演时，做到你在第 26 章产出物里写下的那件事。</strong></p>
+</blockquote>
+<p>前者是认知，后者是纪律。<strong>两者都有，才算学完。</strong></p>
+<hr>
+<p><em>本书为学习框架与公开资料整理，不构成任何投资建议，不推荐任何具体基金。</em>
+<em>所有&quot;市场参考值&quot;标注了检索日期（多为 2026-11 口径），使用前请以中债、中国货币网、Wind 口径复核。</em>
+<em>历史行情的关键点位为公开信息整理，用于复述传导链条，具体数字请以 Wind / 中债历史数据复核后再引用。</em></p>
+
+    </article>
+    
+<nav class="chapter-nav">
+  <a class="cn-prev" href="27-L4.3-每日数据看板.html"><span class="cn-dir">← 上一章</span><span class="cn-title">每日数据看板：十个指标，连看六十天</span></a>
+  <a class="cn-next" href="附录A-12周落地表.html"><span class="cn-dir">下一章 →</span><span class="cn-title">12 周落地表与产出物清单</span></a>
+</nav>
+    <footer class="page-foot">
+      <div>债券基金：从定价引擎到实战盘感 · 版本 1.0</div>
+      <div>本书为学习框架与公开资料整理，不构成任何投资建议，不推荐任何具体基金。</div>
+    </footer>
+  </main>
+</div>
+<a class="back-top" href="#" id="backTop" aria-label="回到顶部">↑</a>
+<script>window.__SEARCH_INDEX__ = [{"t":"前言：一条公式贯穿全书","u":"00-前言-一条公式贯穿全书.html","c":"前言：一条公式贯穿全书","k":"ch"},{"t":"0.1 一个被误解了二十年的产品","u":"00-前言-一条公式贯穿全书.html#00-0.1-一个被误解了二十年的产品","c":"前言：一条公式贯穿全书","k":"h"},{"t":"0.2 主轴公式","u":"00-前言-一条公式贯穿全书.html#00-0.2-主轴公式","c":"前言：一条公式贯穿全书","k":"h"},{"t":"为什么这条公式值得被当成全书骨架","u":"00-前言-一条公式贯穿全书.html#00-为什么这条公式值得被当成全书骨架","c":"前言：一条公式贯穿全书","k":"h"},{"t":"学习的自检标准","u":"00-前言-一条公式贯穿全书.html#00-学习的自检标准","c":"前言：一条公式贯穿全书","k":"h"},{"t":"0.3 知识的依赖顺序不能颠倒","u":"00-前言-一条公式贯穿全书.html#00-0.3-知识的依赖顺序不能颠倒","c":"前言：一条公式贯穿全书","k":"h"},{"t":"0.4 三个你现在就该知道的反直觉结论","u":"00-前言-一条公式贯穿全书.html#00-0.4-三个你现在就该知道的反直觉结论","c":"前言：一条公式贯穿全书","k":"h"},{"t":"结论一：久期是放大倍数，不是方向","u":"00-前言-一条公式贯穿全书.html#00-结论一久期是放大倍数不是方向","c":"前言：一条公式贯穿全书","k":"h"},{"t":"结论二：你看到的波动不等于真实风险","u":"00-前言-一条公式贯穿全书.html#00-结论二你看到的波动不等于真实风险","c":"前言：一条公式贯穿全书","k":"h"},{"t":"结论三：债市最猛的下跌来自回路，不来自基本面","u":"00-前言-一条公式贯穿全书.html#00-结论三债市最猛的下跌来自回路不来自基本面","c":"前言：一条公式贯穿全书","k":"h"},{"t":"0.5 本书的使用方式","u":"00-前言-一条公式贯穿全书.html#00-0.5-本书的使用方式","c":"前言：一条公式贯穿全书","k":"h"},{"t":"自检题","u":"00-前言-一条公式贯穿全书.html#00-自检题","c":"前言：一条公式贯穿全书","k":"h"},{"t":"第 1 章 现金流与定价：价格与收益率为什么反向","u":"01-L0.1-现金流与定价.html","c":"现金流与定价：价格与收益率为什么反向","k":"ch"},{"t":"1.1 一张债券只是一张现金流时间表","u":"01-L0.1-现金流与定价.html#01-1.1-一张债券只是一张现金流时间表","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"1.2 四个必须分清的\"利率\"","u":"01-L0.1-现金流与定价.html#01-1.2-四个必须分清的quot利率quot","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"票面利率（Coupon Rate）","u":"01-L0.1-现金流与定价.html#01-票面利率Coupon-Rate","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"当期收益率（Current Yield）","u":"01-L0.1-现金流与定价.html#01-当期收益率Current-Yield","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"到期收益率（YTM）","u":"01-L0.1-现金流与定价.html#01-到期收益率YTM","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"到期收益率 ≠ 你能拿到的回报","u":"01-L0.1-现金流与定价.html#01-到期收益率--你能拿到的回报","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"1.3 全价、净价、应计利息：报价陷阱","u":"01-L0.1-现金流与定价.html#01-1.3-全价净价应计利息报价陷阱","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"三个量的关系","u":"01-L0.1-现金流与定价.html#01-三个量的关系","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"为什么要搞这么麻烦","u":"01-L0.1-现金流与定价.html#01-为什么要搞这么麻烦","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"实操陷阱 1：国债指数是全价指数","u":"01-L0.1-现金流与定价.html#01-实操陷阱-1国债指数是全价指数","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"实操陷阱 2：基金净值也含票息","u":"01-L0.1-现金流与定价.html#01-实操陷阱-2基金净值也含票息","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"实操陷阱 3：国债期货的涨跌基准是昨结算价","u":"01-L0.1-现金流与定价.html#01-实操陷阱-3国债期货的涨跌基准是昨结算价","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"1.4 价格与收益率反向：从公式看，从直觉看","u":"01-L0.1-现金流与定价.html#01-1.4-价格与收益率反向从公式看从直觉看","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"从公式看","u":"01-L0.1-现金流与定价.html#01-从公式看","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"从直觉看（这个更重要）","u":"01-L0.1-现金流与定价.html#01-从直觉看这个更重要","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"三条由此派生的必然结论","u":"01-L0.1-现金流与定价.html#01-三条由此派生的必然结论","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"1.5 完整的可复算示例","u":"01-L0.1-现金流与定价.html#01-1.5-完整的可复算示例","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"设定","u":"01-L0.1-现金流与定价.html#01-设定","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"第一步：算价格","u":"01-L0.1-现金流与定价.html#01-第一步算价格","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"第二步：收益率上行 10bp，价格跌多少","u":"01-L0.1-现金流与定价.html#01-第二步收益率上行-10bp价格跌多少","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"第三步：大幅波动的不对称性（凸性的第一次出场）","u":"01-L0.1-现金流与定价.html#01-第三步大幅波动的不对称性凸性的第一次出场","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"1.6 中国债市的计息惯例（容易被忽略的细节）","u":"01-L0.1-现金流与定价.html#01-1.6-中国债市的计息惯例容易被忽略的细节","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"1.7 本章与主轴公式的挂钩","u":"01-L0.1-现金流与定价.html#01-1.7-本章与主轴公式的挂钩","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"自检题","u":"01-L0.1-现金流与定价.html#01-自检题","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"产出物（做完才算学完本章）","u":"01-L0.1-现金流与定价.html#01-产出物做完才算学完本章","c":"现金流与定价：价格与收益率为什么反向","k":"h"},{"t":"第 2 章 久期与凸性：波动的度量衡","u":"02-L0.2-久期与凸性.html","c":"久期与凸性：波动的度量衡","k":"ch"},{"t":"2.0 为什么这一章是整个体系的枢纽","u":"02-L0.2-久期与凸性.html#02-2.0-为什么这一章是整个体系的枢纽","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"2.1 久期的三副面孔","u":"02-L0.2-久期与凸性.html#02-2.1-久期的三副面孔","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"面孔一：麦考利久期（Macaulay Duration）—— 时间加权","u":"02-L0.2-久期与凸性.html#02-面孔一麦考利久期Macaulay-Duration-时间加权","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"面孔二：修正久期（Modified Duration）—— 价格敏感度","u":"02-L0.2-久期与凸性.html#02-面孔二修正久期Modified-Duration-价格敏感度","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"面孔三：基点价值（DV01 / PVBP）—— 绝对金额","u":"02-L0.2-久期与凸性.html#02-面孔三基点价值DV01--PVBP-绝对金额","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"三者关系速记表","u":"02-L0.2-久期与凸性.html#02-三者关系速记表","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"2.2 手算示范：把第 1 章的例子算到底","u":"02-L0.2-久期与凸性.html#02-2.2-手算示范把第-1-章的例子算到底","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"第一步：麦考利久期","u":"02-L0.2-久期与凸性.html#02-第一步麦考利久期","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"第二步：修正久期","u":"02-L0.2-久期与凸性.html#02-第二步修正久期","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"第三步：验证","u":"02-L0.2-久期与凸性.html#02-第三步验证","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"第四步：凸性","u":"02-L0.2-久期与凸性.html#02-第四步凸性","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"第五步：二阶近似，验证大幅波动","u":"02-L0.2-久期与凸性.html#02-第五步二阶近似验证大幅波动","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"2.3 四个必须内化的久期规律","u":"02-L0.2-久期与凸性.html#02-2.3-四个必须内化的久期规律","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"规律一：期限越长，久期越长（但不是线性的）","u":"02-L0.2-久期与凸性.html#02-规律一期限越长久期越长但不是线性的","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"规律二：票面利率越低，久期越长","u":"02-L0.2-久期与凸性.html#02-规律二票面利率越低久期越长","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"规律三：收益率越低，久期越长 ★","u":"02-L0.2-久期与凸性.html#02-规律三收益率越低久期越长-★","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"规律四：含权债券的久期是\"有效久期\"","u":"02-L0.2-久期与凸性.html#02-规律四含权债券的久期是quot有效久期quot","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"2.4 组合久期：债基分析的核心数字","u":"02-L0.2-久期与凸性.html#02-2.4-组合久期债基分析的核心数字","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"定义","u":"02-L0.2-久期与凸性.html#02-定义","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"两个口径，差别巨大","u":"02-L0.2-久期与凸性.html#02-两个口径差别巨大","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"一个完整的组合久期计算","u":"02-L0.2-久期与凸性.html#02-一个完整的组合久期计算","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"2.5 凸性：被低估的第三个维度","u":"02-L0.2-久期与凸性.html#02-2.5-凸性被低估的第三个维度","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"凸性是什么","u":"02-L0.2-久期与凸性.html#02-凸性是什么","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"凸性的实战价值：只在大波动时出现","u":"02-L0.2-久期与凸性.html#02-凸性的实战价值只在大波动时出现","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"凸性的来源与代价","u":"02-L0.2-久期与凸性.html#02-凸性的来源与代价","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"负凸性：警惕含权债和 MBS","u":"02-L0.2-久期与凸性.html#02-负凸性警惕含权债和-MBS","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"2.6 久期的三个失效场景","u":"02-L0.2-久期与凸性.html#02-2.6-久期的三个失效场景","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"失效一：曲线非平行移动","u":"02-L0.2-久期与凸性.html#02-失效一曲线非平行移动","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"失效二：信用利差单独变动","u":"02-L0.2-久期与凸性.html#02-失效二信用利差单独变动","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"失效三：流动性折价","u":"02-L0.2-久期与凸性.html#02-失效三流动性折价","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"2.7 实操：从公开信息估算一只债基的久期","u":"02-L0.2-久期与凸性.html#02-2.7-实操从公开信息估算一只债基的久期","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"方法 A：季报重仓券推算（粗，但免费）","u":"02-L0.2-久期与凸性.html#02-方法-A季报重仓券推算粗但免费","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"方法 B：净值回归法（最实用）★","u":"02-L0.2-久期与凸性.html#02-方法-B净值回归法最实用★","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"方法 C：类别锚定（最快，最糙）","u":"02-L0.2-久期与凸性.html#02-方法-C类别锚定最快最糙","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"2.8 本章与主轴公式的挂钩","u":"02-L0.2-久期与凸性.html#02-2.8-本章与主轴公式的挂钩","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"自检题","u":"02-L0.2-久期与凸性.html#02-自检题","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"产出物（本章是全书唯一\"必须交作业\"的一章）","u":"02-L0.2-久期与凸性.html#02-产出物本章是全书唯一quot必须交作业quot的一章","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"任务一：手算（30 分钟）","u":"02-L0.2-久期与凸性.html#02-任务一手算30-分钟","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"任务二：净值回归（1 小时）","u":"02-L0.2-久期与凸性.html#02-任务二净值回归1-小时","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"任务三：画久期漂移图","u":"02-L0.2-久期与凸性.html#02-任务三画久期漂移图","c":"久期与凸性：波动的度量衡","k":"h"},{"t":"第 3 章 收益率曲线：四象限与骑乘收益","u":"03-L0.3-收益率曲线.html","c":"收益率曲线：四象限与骑乘收益","k":"ch"},{"t":"3.0 为什么曲线是枢纽，不是一个数","u":"03-L0.3-收益率曲线.html#03-3.0-为什么曲线是枢纽不是一个数","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"3.1 期限结构的三种理论（为什么曲线通常向上倾斜）","u":"03-L0.3-收益率曲线.html#03-3.1-期限结构的三种理论为什么曲线通常向上倾斜","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"理论一：预期假说（Expectations Hypothesis）","u":"03-L0.3-收益率曲线.html#03-理论一预期假说Expectations-Hypothesis","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"理论二：流动性溢价 / 期限溢价（Term Premium）","u":"03-L0.3-收益率曲线.html#03-理论二流动性溢价--期限溢价Term-Premium","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"理论三：市场分割 / 优先投资域（Preferred Habitat）","u":"03-L0.3-收益率曲线.html#03-理论三市场分割--优先投资域Preferred-Habitat","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"3.2 期限利差：你每天必须看的三个数","u":"03-L0.3-收益率曲线.html#03-3.2-期限利差你每天必须看的三个数","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"定义","u":"03-L0.3-收益率曲线.html#03-定义","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"怎么读期限利差","u":"03-L0.3-收益率曲线.html#03-怎么读期限利差","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"三个必须记住的利差区间（历史直觉）","u":"03-L0.3-收益率曲线.html#03-三个必须记住的利差区间历史直觉","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"3.3 四象限：牛平、牛陡、熊平、熊陡 ★","u":"03-L0.3-收益率曲线.html#03-3.3-四象限牛平牛陡熊平熊陡-★","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"定义","u":"03-L0.3-收益率曲线.html#03-定义-2","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"四张图","u":"03-L0.3-收益率曲线.html#03-四张图","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"四象限的完整解读表","u":"03-L0.3-收益率曲线.html#03-四象限的完整解读表","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"怎么用这张表（实操流程）","u":"03-L0.3-收益率曲线.html#03-怎么用这张表实操流程","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"一个重要补充：曲线\"蝶式\"变动","u":"03-L0.3-收益率曲线.html#03-一个重要补充曲线quot蝶式quot变动","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"3.4 骑乘收益：Carry & Rolldown ★","u":"03-L0.3-收益率曲线.html#03-3.4-骑乘收益Carry-amp-Rolldown-★","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"核心洞察","u":"03-L0.3-收益率曲线.html#03-核心洞察","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"分解","u":"03-L0.3-收益率曲线.html#03-分解","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"完整的可复算示例","u":"03-L0.3-收益率曲线.html#03-完整的可复算示例","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"结果汇总","u":"03-L0.3-收益率曲线.html#03-结果汇总","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"把骑乘和杠杆合起来：中国债基的核心策略","u":"03-L0.3-收益率曲线.html#03-把骑乘和杠杆合起来中国债基的核心策略","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"3.5 中国收益率曲线的四条特殊性","u":"03-L0.3-收益率曲线.html#03-3.5-中国收益率曲线的四条特殊性","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"特殊性一：短端被 OMO 强锚定","u":"03-L0.3-收益率曲线.html#03-特殊性一短端被-OMO-强锚定","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"特殊性二：国开债是事实上的\"第二条基准曲线\"","u":"03-L0.3-收益率曲线.html#03-特殊性二国开债是事实上的quot第二条基准曲线quot","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"特殊性三：曲线在 30Y 之后仍有延伸，且保险是定价方","u":"03-L0.3-收益率曲线.html#03-特殊性三曲线在-30Y-之后仍有延伸且保险是定价方","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"特殊性四：曲线有\"监管干预\"这一项","u":"03-L0.3-收益率曲线.html#03-特殊性四曲线有quot监管干预quot这一项","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"3.6 本章与主轴公式的挂钩","u":"03-L0.3-收益率曲线.html#03-3.6-本章与主轴公式的挂钩","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"自检题","u":"03-L0.3-收益率曲线.html#03-自检题","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"产出物","u":"03-L0.3-收益率曲线.html#03-产出物","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"任务一：画出今天的曲线","u":"03-L0.3-收益率曲线.html#03-任务一画出今天的曲线","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"任务二：建四象限日志","u":"03-L0.3-收益率曲线.html#03-任务二建四象限日志","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"任务三：骑乘收益计算器","u":"03-L0.3-收益率曲线.html#03-任务三骑乘收益计算器","c":"收益率曲线：四象限与骑乘收益","k":"h"},{"t":"第 4 章 信用：用违约概率换票息","u":"04-L0.4-信用.html","c":"信用：用违约概率换票息","k":"ch"},{"t":"4.0 一句话概括这一章","u":"04-L0.4-信用.html#04-4.0-一句话概括这一章","c":"信用：用违约概率换票息","k":"h"},{"t":"4.1 从 YTM 到期望收益率：信用债的真实定价","u":"04-L0.4-信用.html#04-4.1-从-YTM-到期望收益率信用债的真实定价","c":"信用：用违约概率换票息","k":"h"},{"t":"承诺收益率 vs 期望收益率","u":"04-L0.4-信用.html#04-承诺收益率-vs-期望收益率","c":"信用：用违约概率换票息","k":"h"},{"t":"一个必须算一遍的例子","u":"04-L0.4-信用.html#04-一个必须算一遍的例子","c":"信用：用违约概率换票息","k":"h"},{"t":"为什么利差通常大于期望损失（风险溢价的三个来源）","u":"04-L0.4-信用.html#04-为什么利差通常大于期望损失风险溢价的三个来源","c":"信用：用违约概率换票息","k":"h"},{"t":"4.2 中国的评级体系：怎么读，以及怎么不读","u":"04-L0.4-信用.html#04-4.2-中国的评级体系怎么读以及怎么不读","c":"信用：用违约概率换票息","k":"h"},{"t":"外部评级的符号体系","u":"04-L0.4-信用.html#04-外部评级的符号体系","c":"信用：用违约概率换票息","k":"h"},{"t":"中债隐含评级：中国市场真正好用的工具 ★","u":"04-L0.4-信用.html#04-中债隐含评级中国市场真正好用的工具-★","c":"信用：用违约概率换票息","k":"h"},{"t":"4.3 信用利差：定义、分解、怎么看","u":"04-L0.4-信用.html#04-4.3-信用利差定义分解怎么看","c":"信用：用违约概率换票息","k":"h"},{"t":"定义","u":"04-L0.4-信用.html#04-定义","c":"信用：用违约概率换票息","k":"h"},{"t":"信用利差的分解（三层）","u":"04-L0.4-信用.html#04-信用利差的分解三层","c":"信用：用违约概率换票息","k":"h"},{"t":"一组示意数据（建立量级直觉）","u":"04-L0.4-信用.html#04-一组示意数据建立量级直觉","c":"信用：用违约概率换票息","k":"h"},{"t":"信用利差的两个历史分位数概念","u":"04-L0.4-信用.html#04-信用利差的两个历史分位数概念","c":"信用：用违约概率换票息","k":"h"},{"t":"4.4 违约与回收率：中国的真实数据","u":"04-L0.4-信用.html#04-4.4-违约与回收率中国的真实数据","c":"信用：用违约概率换票息","k":"h"},{"t":"违约的定义和历史脉络","u":"04-L0.4-信用.html#04-违约的定义和历史脉络","c":"信用：用违约概率换票息","k":"h"},{"t":"回收率的决定因素","u":"04-L0.4-信用.html#04-回收率的决定因素","c":"信用：用违约概率换票息","k":"h"},{"t":"违约数据从哪查","u":"04-L0.4-信用.html#04-违约数据从哪查","c":"信用：用违约概率换票息","k":"h"},{"t":"4.5 \"下沉\"：债基最常见的隐形加杠杆","u":"04-L0.4-信用.html#04-4.5-quot下沉quot债基最常见的隐形加杠杆","c":"信用：用违约概率换票息","k":"h"},{"t":"什么是下沉","u":"04-L0.4-信用.html#04-什么是下沉","c":"信用：用违约概率换票息","k":"h"},{"t":"怎么识别下沉（这是本章最实用的部分）","u":"04-L0.4-信用.html#04-怎么识别下沉这是本章最实用的部分","c":"信用：用违约概率换票息","k":"h"},{"t":"4.6 特殊条款：三个必须懂的坑","u":"04-L0.4-信用.html#04-4.6-特殊条款三个必须懂的坑","c":"信用：用违约概率换票息","k":"h"},{"t":"坑一：永续债不赎回","u":"04-L0.4-信用.html#04-坑一永续债不赎回","c":"信用：用违约概率换票息","k":"h"},{"t":"坑二：二级资本债减记 ★","u":"04-L0.4-信用.html#04-坑二二级资本债减记-★","c":"信用：用违约概率换票息","k":"h"},{"t":"坑三：含回售权的城投债","u":"04-L0.4-信用.html#04-坑三含回售权的城投债","c":"信用：用违约概率换票息","k":"h"},{"t":"4.7 信用风险在债基里的三种表现形式","u":"04-L0.4-信用.html#04-4.7-信用风险在债基里的三种表现形式","c":"信用：用违约概率换票息","k":"h"},{"t":"4.8 本章与主轴公式的挂钩","u":"04-L0.4-信用.html#04-4.8-本章与主轴公式的挂钩","c":"信用：用违约概率换票息","k":"h"},{"t":"自检题","u":"04-L0.4-信用.html#04-自检题","c":"信用：用违约概率换票息","k":"h"},{"t":"产出物","u":"04-L0.4-信用.html#04-产出物","c":"信用：用违约概率换票息","k":"h"},{"t":"任务一：自建信用利差跟踪（补上看板缺的那一项）","u":"04-L0.4-信用.html#04-任务一自建信用利差跟踪补上看板缺的那一项","c":"信用：用违约概率换票息","k":"h"},{"t":"任务二：隐含评级背离度体检","u":"04-L0.4-信用.html#04-任务二隐含评级背离度体检","c":"信用：用违约概率换票息","k":"h"},{"t":"任务三：下沉识别五信号打分卡","u":"04-L0.4-信用.html#04-任务三下沉识别五信号打分卡","c":"信用：用违约概率换票息","k":"h"},{"t":"第 5 章 券种地图：中国债市的货架","u":"05-L0.5-券种地图.html","c":"券种地图：中国债市的货架","k":"ch"},{"t":"5.0 为什么需要一张地图","u":"05-L0.5-券种地图.html#05-5.0-为什么需要一张地图","c":"券种地图：中国债市的货架","k":"h"},{"t":"5.1 先理清三个市场、两套登记","u":"05-L0.5-券种地图.html#05-5.1-先理清三个市场两套登记","c":"券种地图：中国债市的货架","k":"h"},{"t":"三个交易场所","u":"05-L0.5-券种地图.html#05-三个交易场所","c":"券种地图：中国债市的货架","k":"h"},{"t":"两套登记托管体系（看季报时会遇到）","u":"05-L0.5-券种地图.html#05-两套登记托管体系看季报时会遇到","c":"券种地图：中国债市的货架","k":"h"},{"t":"5.2 利率债：无信用风险的那一层","u":"05-L0.5-券种地图.html#05-5.2-利率债无信用风险的那一层","c":"券种地图：中国债市的货架","k":"h"},{"t":"定义","u":"05-L0.5-券种地图.html#05-定义","c":"券种地图：中国债市的货架","k":"h"},{"t":"三大品种","u":"05-L0.5-券种地图.html#05-三大品种","c":"券种地图：中国债市的货架","k":"h"},{"t":"国债：定价之锚","u":"05-L0.5-券种地图.html#05-国债定价之锚","c":"券种地图：中国债市的货架","k":"h"},{"t":"政策性金融债（国开债）：债基的核心配置品种 ★","u":"05-L0.5-券种地图.html#05-政策性金融债国开债债基的核心配置品种-★","c":"券种地图：中国债市的货架","k":"h"},{"t":"地方政府债：流动性陷阱","u":"05-L0.5-券种地图.html#05-地方政府债流动性陷阱","c":"券种地图：中国债市的货架","k":"h"},{"t":"5.3 信用债：中国债市最复杂的一层","u":"05-L0.5-券种地图.html#05-5.3-信用债中国债市最复杂的一层","c":"券种地图：中国债市的货架","k":"h"},{"t":"按发行人和监管划分（这是中国特色，必须理清）","u":"05-L0.5-券种地图.html#05-按发行人和监管划分这是中国特色必须理清","c":"券种地图：中国债市的货架","k":"h"},{"t":"按行业划分：城投 vs 产业","u":"05-L0.5-券种地图.html#05-按行业划分城投-vs-产业","c":"券种地图：中国债市的货架","k":"h"},{"t":"信用债的期限特征","u":"05-L0.5-券种地图.html#05-信用债的期限特征","c":"券种地图：中国债市的货架","k":"h"},{"t":"5.4 金融债：银行发的债，债基的重要仓位","u":"05-L0.5-券种地图.html#05-5.4-金融债银行发的债债基的重要仓位","c":"券种地图：中国债市的货架","k":"h"},{"t":"为什么单列一类","u":"05-L0.5-券种地图.html#05-为什么单列一类","c":"券种地图：中国债市的货架","k":"h"},{"t":"四个层级（清偿顺序从高到低）★","u":"05-L0.5-券种地图.html#05-四个层级清偿顺序从高到低★","c":"券种地图：中国债市的货架","k":"h"},{"t":"二永债的五个特征（必须全记住）","u":"05-L0.5-券种地图.html#05-二永债的五个特征必须全记住","c":"券种地图：中国债市的货架","k":"h"},{"t":"实操：怎么看一只债基的二永暴露","u":"05-L0.5-券种地图.html#05-实操怎么看一只债基的二永暴露","c":"券种地图：中国债市的货架","k":"h"},{"t":"5.5 含权与其他：可转债、同业存单、ABS","u":"05-L0.5-券种地图.html#05-5.5-含权与其他可转债同业存单ABS","c":"券种地图：中国债市的货架","k":"h"},{"t":"可转债：债基里唯一带股票味的东西 ★","u":"05-L0.5-券种地图.html#05-可转债债基里唯一带股票味的东西-★","c":"券种地图：中国债市的货架","k":"h"},{"t":"同业存单（NCD）：短债和货基的基石","u":"05-L0.5-券种地图.html#05-同业存单NCD短债和货基的基石","c":"券种地图：中国债市的货架","k":"h"},{"t":"ABS / ABN：被忽略的一类","u":"05-L0.5-券种地图.html#05-ABS--ABN被忽略的一类","c":"券种地图：中国债市的货架","k":"h"},{"t":"REITs（公募 REITs）","u":"05-L0.5-券种地图.html#05-REITs公募-REITs","c":"券种地图：中国债市的货架","k":"h"},{"t":"5.6 一张总图：中国债市货架","u":"05-L0.5-券种地图.html#05-5.6-一张总图中国债市货架","c":"券种地图：中国债市的货架","k":"h"},{"t":"5.7 不同类型债基的\"食谱\"","u":"05-L0.5-券种地图.html#05-5.7-不同类型债基的quot食谱quot","c":"券种地图：中国债市的货架","k":"h"},{"t":"5.8 本章与主轴公式的挂钩","u":"05-L0.5-券种地图.html#05-5.8-本章与主轴公式的挂钩","c":"券种地图：中国债市的货架","k":"h"},{"t":"自检题","u":"05-L0.5-券种地图.html#05-自检题","c":"券种地图：中国债市的货架","k":"h"},{"t":"产出物","u":"05-L0.5-券种地图.html#05-产出物","c":"券种地图：中国债市的货架","k":"h"},{"t":"任务一：读券名练习","u":"05-L0.5-券种地图.html#05-任务一读券名练习","c":"券种地图：中国债市的货架","k":"h"},{"t":"任务二：食谱对照","u":"05-L0.5-券种地图.html#05-任务二食谱对照","c":"券种地图：中国债市的货架","k":"h"},{"t":"任务三：二永暴露体检","u":"05-L0.5-券种地图.html#05-任务三二永暴露体检","c":"券种地图：中国债市的货架","k":"h"},{"t":"L0 层小结：你现在应该掌握的","u":"05-L0.5-券种地图.html#05-L0-层小结你现在应该掌握的","c":"券种地图：中国债市的货架","k":"h"},{"t":"第 6 章 分类谱系：按波动排好的七个台阶","u":"06-L1.1-分类谱系.html","c":"分类谱系：按波动排好的七个台阶","k":"ch"},{"t":"6.0 为什么销售平台的分类不能用","u":"06-L1.1-分类谱系.html#06-6.0-为什么销售平台的分类不能用","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"6.1 七个台阶","u":"06-L1.1-分类谱系.html#06-6.1-七个台阶","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"完整对照表","u":"06-L1.1-分类谱系.html#06-完整对照表","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"6.2 逐级拆解","u":"06-L1.1-分类谱系.html#06-6.2-逐级拆解","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"① 同业存单指数基金：不是债基，是货基替代品","u":"06-L1.1-分类谱系.html#06-同业存单指数基金不是债基是货基替代品","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"② 短债 / 中短债基金：被当成\"稳健\"的主力","u":"06-L1.1-分类谱系.html#06-短债--中短债基金被当成quot稳健quot的主力","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"③ 中长期纯债基金：债基的标准型","u":"06-L1.1-分类谱系.html#06-中长期纯债基金债基的标准型","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"③' 长久期利率债基金：纯粹的久期工具","u":"06-L1.1-分类谱系.html#06-39-长久期利率债基金纯粹的久期工具","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"④ 一级债基：历史产物","u":"06-L1.1-分类谱系.html#06-一级债基历史产物","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"⑤ 二级债基：\"固收+\"的主战场 ★","u":"06-L1.1-分类谱系.html#06-二级债基quot固收quot的主战场-★","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"⑥ 偏债混合型：边界模糊地带","u":"06-L1.1-分类谱系.html#06-偏债混合型边界模糊地带","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"⑦ 可转债基金：伪装成债基的股票基金","u":"06-L1.1-分类谱系.html#06-可转债基金伪装成债基的股票基金","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"6.3 一个必做的横向对比实验","u":"06-L1.1-分类谱系.html#06-6.3-一个必做的横向对比实验","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"6.4 怎么选台阶：从持有期倒推","u":"06-L1.1-分类谱系.html#06-6.4-怎么选台阶从持有期倒推","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"6.5 几个容易混的概念澄清","u":"06-L1.1-分类谱系.html#06-6.5-几个容易混的概念澄清","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"\"摊余成本法债基\"不是一个台阶","u":"06-L1.1-分类谱系.html#06-quot摊余成本法债基quot不是一个台阶","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"\"债券指数基金\"横跨多个台阶","u":"06-L1.1-分类谱系.html#06-quot债券指数基金quot横跨多个台阶","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"\"债券 ETF\" 的额外维度","u":"06-L1.1-分类谱系.html#06-quot债券-ETFquot-的额外维度","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"QDII 债基 / 美元债基金","u":"06-L1.1-分类谱系.html#06-QDII-债基--美元债基金","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"6.6 本章与主轴公式的挂钩","u":"06-L1.1-分类谱系.html#06-6.6-本章与主轴公式的挂钩","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"自检题","u":"06-L1.1-分类谱系.html#06-自检题","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"产出物","u":"06-L1.1-分类谱系.html#06-产出物","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"任务一：七台阶横向对比表（本章核心作业）","u":"06-L1.1-分类谱系.html#06-任务一七台阶横向对比表本章核心作业","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"任务二：错配自查","u":"06-L1.1-分类谱系.html#06-任务二错配自查","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"任务三：二级债基拆解","u":"06-L1.1-分类谱系.html#06-任务三二级债基拆解","c":"分类谱系：按波动排好的七个台阶","k":"h"},{"t":"第 7 章 收益拆解公式：本书的主轴","u":"07-L1.2-收益拆解公式.html","c":"收益拆解公式：本书的主轴","k":"ch"},{"t":"7.0 这一章做什么","u":"07-L1.2-收益拆解公式.html#07-7.0-这一章做什么","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"7.1 简版：心算公式","u":"07-L1.2-收益拆解公式.html#07-7.1-简版心算公式","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"三个记忆口诀","u":"07-L1.2-收益拆解公式.html#07-三个记忆口诀","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"7.2 标准版：七项分解","u":"07-L1.2-收益拆解公式.html#07-7.2-标准版七项分解","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"① 票息收入 C","u":"07-L1.2-收益拆解公式.html#07-票息收入-C","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"② 利率损益 G_rate","u":"07-L1.2-收益拆解公式.html#07-利率损益-G_rate","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"③ 利差损益 G_spread","u":"07-L1.2-收益拆解公式.html#07-利差损益-G_spread","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"④ 骑乘收益 G_roll","u":"07-L1.2-收益拆解公式.html#07-骑乘收益-G_roll","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"⑤ 杠杆净贡献 G_lev","u":"07-L1.2-收益拆解公式.html#07-杠杆净贡献-G_lev","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"⑥ 权益/转债损益 G_eq","u":"07-L1.2-收益拆解公式.html#07-权益转债损益-G_eq","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"⑦ 费用 F","u":"07-L1.2-收益拆解公式.html#07-费用-F","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"7.3 完整的归因案例（照着做一遍）","u":"07-L1.2-收益拆解公式.html#07-7.3-完整的归因案例照着做一遍","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"设定（教学用示例基金，非真实产品）","u":"07-L1.2-收益拆解公式.html#07-设定教学用示例基金非真实产品","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"归因计算","u":"07-L1.2-收益拆解公式.html#07-归因计算","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"汇总表","u":"07-L1.2-收益拆解公式.html#07-汇总表","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"残差怎么处理（这一步最能看出功力）","u":"07-L1.2-收益拆解公式.html#07-残差怎么处理这一步最能看出功力","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"这个归因告诉你什么（结论层）","u":"07-L1.2-收益拆解公式.html#07-这个归因告诉你什么结论层","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"7.4 公式的四个用法","u":"07-L1.2-收益拆解公式.html#07-7.4-公式的四个用法","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"用法一：预测（情景分析）","u":"07-L1.2-收益拆解公式.html#07-用法一预测情景分析","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"用法二：对比（同类基金拆解）","u":"07-L1.2-收益拆解公式.html#07-用法二对比同类基金拆解","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"用法三：诊断（归因异常 = 风险信号）","u":"07-L1.2-收益拆解公式.html#07-用法三诊断归因异常--风险信号","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"用法四：自己的组合层面","u":"07-L1.2-收益拆解公式.html#07-用法四自己的组合层面","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"7.5 为什么债基不持有到期（公式给出的答案）","u":"07-L1.2-收益拆解公式.html#07-7.5-为什么债基不持有到期公式给出的答案","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"7.6 本章与主轴公式的挂钩","u":"07-L1.2-收益拆解公式.html#07-7.6-本章与主轴公式的挂钩","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"自检题","u":"07-L1.2-收益拆解公式.html#07-自检题","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"产出物（全书最重要的产出物之一）","u":"07-L1.2-收益拆解公式.html#07-产出物全书最重要的产出物之一","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"任务一：盈亏平衡 Δy 表","u":"07-L1.2-收益拆解公式.html#07-任务一盈亏平衡-y-表","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"任务二：完整归因（照 7.3 节做一遍）","u":"07-L1.2-收益拆解公式.html#07-任务二完整归因照-7.3-节做一遍","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"任务三：情景表（压力测试的原型）","u":"07-L1.2-收益拆解公式.html#07-任务三情景表压力测试的原型","c":"收益拆解公式：本书的主轴","k":"h"},{"t":"第 8 章 估值方法：市值法、摊余成本法与混合估值","u":"08-L1.3-估值方法.html","c":"估值方法：市值法、摊余成本法与混合估值","k":"ch"},{"t":"8.0 一句话","u":"08-L1.3-估值方法.html#08-8.0-一句话","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"8.1 市值法（公允价值计量）","u":"08-L1.3-估值方法.html#08-8.1-市值法公允价值计量","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"原理","u":"08-L1.3-估值方法.html#08-原理","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"中债估值的两个特性","u":"08-L1.3-估值方法.html#08-中债估值的两个特性","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"市值法的优缺点","u":"08-L1.3-估值方法.html#08-市值法的优缺点","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"8.2 摊余成本法","u":"08-L1.3-估值方法.html#08-8.2-摊余成本法","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"原理","u":"08-L1.3-估值方法.html#08-原理-2","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"可复算示例（这个例子最能说明问题）","u":"08-L1.3-估值方法.html#08-可复算示例这个例子最能说明问题","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"摊余成本法的合法性边界","u":"08-L1.3-估值方法.html#08-摊余成本法的合法性边界","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"关键机制：影子定价（Shadow Pricing）★","u":"08-L1.3-估值方法.html#08-关键机制影子定价Shadow-Pricing★","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"摊余成本法定开债基：中国债基里的特殊物种","u":"08-L1.3-估值方法.html#08-摊余成本法定开债基中国债基里的特殊物种","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"8.3 混合估值法：2023 年后的新物种","u":"08-L1.3-估值方法.html#08-8.3-混合估值法2023-年后的新物种","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"为什么出现","u":"08-L1.3-估值方法.html#08-为什么出现","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"结构","u":"08-L1.3-估值方法.html#08-结构","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"对投资者的三条实操判断","u":"08-L1.3-估值方法.html#08-对投资者的三条实操判断","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"摊余 vs 市值的本质差异：会计分类","u":"08-L1.3-估值方法.html#08-摊余-vs-市值的本质差异会计分类","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"8.4 银行理财的估值切换：2022.11 的制度背景 ★","u":"08-L1.3-估值方法.html#08-8.4-银行理财的估值切换2022.11-的制度背景-★","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"时间线","u":"08-L1.3-估值方法.html#08-时间线","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"为什么这次冲击如此剧烈","u":"08-L1.3-估值方法.html#08-为什么这次冲击如此剧烈","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"8.5 怎么判断一只基金用什么估值方法","u":"08-L1.3-估值方法.html#08-8.5-怎么判断一只基金用什么估值方法","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"三步法","u":"08-L1.3-估值方法.html#08-三步法","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"一个诊断技巧：净值日涨幅的标准差","u":"08-L1.3-估值方法.html#08-一个诊断技巧净值日涨幅的标准差","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"8.6 本章与主轴公式的挂钩","u":"08-L1.3-估值方法.html#08-8.6-本章与主轴公式的挂钩","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"自检题","u":"08-L1.3-估值方法.html#08-自检题","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"产出物","u":"08-L1.3-估值方法.html#08-产出物","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"任务一：估值方法普查","u":"08-L1.3-估值方法.html#08-任务一估值方法普查","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"任务二：影子定价体检","u":"08-L1.3-估值方法.html#08-任务二影子定价体检","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"任务三：摊余成本法基金的\"影子净值\"重建（进阶）","u":"08-L1.3-估值方法.html#08-任务三摊余成本法基金的quot影子净值quot重建进阶","c":"估值方法：市值法、摊余成本法与混合估值","k":"h"},{"t":"第 9 章 杠杆：质押式回购与正负 carry","u":"09-L1.4-杠杆.html","c":"杠杆：质押式回购与正负 carry","k":"ch"},{"t":"9.0 核心判断","u":"09-L1.4-杠杆.html#09-9.0-核心判断","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"9.1 质押式回购：债基加杠杆的唯一主要方式","u":"09-L1.4-杠杆.html#09-9.1-质押式回购债基加杠杆的唯一主要方式","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"机制","u":"09-L1.4-杠杆.html#09-机制","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"期限错配：杠杆的本质风险 ★","u":"09-L1.4-杠杆.html#09-期限错配杠杆的本质风险-★","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"两套回购利率：R 和 DR（必须分清）","u":"09-L1.4-杠杆.html#09-两套回购利率R-和-DR必须分清","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"其他杠杆方式（占比小但要知道）","u":"09-L1.4-杠杆.html#09-其他杠杆方式占比小但要知道","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"9.2 杠杆率：定义、口径、上限","u":"09-L1.4-杠杆.html#09-9.2-杠杆率定义口径上限","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"定义（这是必须记住的公式）★","u":"09-L1.4-杠杆.html#09-定义这是必须记住的公式★","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"另一个口径：杠杆成本","u":"09-L1.4-杠杆.html#09-另一个口径杠杆成本","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"监管上限","u":"09-L1.4-杠杆.html#09-监管上限","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"杠杆率的被动上升：一个关键机制 ★","u":"09-L1.4-杠杆.html#09-杠杆率的被动上升一个关键机制-★","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"9.3 正 carry 与负 carry ★","u":"09-L1.4-杠杆.html#09-9.3-正-carry-与负-carry-★","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"判别式","u":"09-L1.4-杠杆.html#09-判别式","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"实战表：什么时候能加杠杆","u":"09-L1.4-杠杆.html#09-实战表什么时候能加杠杆","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"核心矛盾：carry 空间和久期暴露的反向关系","u":"09-L1.4-杠杆.html#09-核心矛盾carry-空间和久期暴露的反向关系","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"9.4 杠杆的三种死法","u":"09-L1.4-杠杆.html#09-9.4-杠杆的三种死法","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"死法一：负 carry 慢性失血","u":"09-L1.4-杠杆.html#09-死法一负-carry-慢性失血","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"死法二：续作失败，被迫卖券","u":"09-L1.4-杠杆.html#09-死法二续作失败被迫卖券","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"死法三：赎回 + 杠杆的双杀","u":"09-L1.4-杠杆.html#09-死法三赎回--杠杆的双杀","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"9.5 实操：怎么评估一只债基的杠杆风险","u":"09-L1.4-杠杆.html#09-9.5-实操怎么评估一只债基的杠杆风险","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"五项检查","u":"09-L1.4-杠杆.html#09-五项检查","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"杠杆率变化的解读","u":"09-L1.4-杠杆.html#09-杠杆率变化的解读","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"9.6 一个完整的杠杆分析案例","u":"09-L1.4-杠杆.html#09-9.6-一个完整的杠杆分析案例","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"分析","u":"09-L1.4-杠杆.html#09-分析","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"结论（如果你是投资者）","u":"09-L1.4-杠杆.html#09-结论如果你是投资者","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"9.7 本章与主轴公式的挂钩","u":"09-L1.4-杠杆.html#09-9.7-本章与主轴公式的挂钩","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"自检题","u":"09-L1.4-杠杆.html#09-自检题","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"产出物","u":"09-L1.4-杠杆.html#09-产出物","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"任务一：杠杆率时间序列","u":"09-L1.4-杠杆.html#09-任务一杠杆率时间序列","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"任务二：carry 空间跟踪","u":"09-L1.4-杠杆.html#09-任务二carry-空间跟踪","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"任务三：杠杆成本倒推","u":"09-L1.4-杠杆.html#09-任务三杠杆成本倒推","c":"杠杆：质押式回购与正负 carry","k":"h"},{"t":"第 10 章 流动性与条款：定开、持有期、巨额赎回、摆动定价","u":"10-L1.5-流动性与条款.html","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"ch"},{"t":"10.0 这一章的位置","u":"10-L1.5-流动性与条款.html#10-10.0-这一章的位置","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"10.1 资产端流动性：债券的流动性分层","u":"10-L1.5-流动性与条款.html#10-10.1-资产端流动性债券的流动性分层","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"流动性阶梯（必须记住的排序）","u":"10-L1.5-流动性与条款.html#10-流动性阶梯必须记住的排序","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"关键洞察：卖券的顺序是逆向的 ★","u":"10-L1.5-流动性与条款.html#10-关键洞察卖券的顺序是逆向的-★","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"债基的流动性缓冲工具","u":"10-L1.5-流动性与条款.html#10-债基的流动性缓冲工具","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"10.2 负债端：开放式基金的原罪","u":"10-L1.5-流动性与条款.html#10-10.2-负债端开放式基金的原罪","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"期限错配 #2","u":"10-L1.5-流动性与条款.html#10-期限错配-2","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"为什么会\"一起赎回\"","u":"10-L1.5-流动性与条款.html#10-为什么会quot一起赎回quot","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"10.3 四类产品设计：用条款换流动性","u":"10-L1.5-流动性与条款.html#10-10.3-四类产品设计用条款换流动性","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"① 开放式（每日开放）","u":"10-L1.5-流动性与条款.html#10-开放式每日开放","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"② 持有期型（最短持有期）","u":"10-L1.5-流动性与条款.html#10-持有期型最短持有期","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"③ 定期开放式（定开）","u":"10-L1.5-流动性与条款.html#10-定期开放式定开","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"④ 发起式 / 机构定制","u":"10-L1.5-流动性与条款.html#10-发起式--机构定制","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"10.4 巨额赎回条款：第一道刹车","u":"10-L1.5-流动性与条款.html#10-10.4-巨额赎回条款第一道刹车","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"定义","u":"10-L1.5-流动性与条款.html#10-定义","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"基金管理人的三个选项","u":"10-L1.5-流动性与条款.html#10-基金管理人的三个选项","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"怎么查、怎么用","u":"10-L1.5-流动性与条款.html#10-怎么查怎么用","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"一个相关条款：拒绝/暂停申购","u":"10-L1.5-流动性与条款.html#10-一个相关条款拒绝暂停申购","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"10.5 摆动定价：2022 年后的关键机制 ★","u":"10-L1.5-流动性与条款.html#10-10.5-摆动定价2022-年后的关键机制-★","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"它要解决什么","u":"10-L1.5-流动性与条款.html#10-它要解决什么","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"机制","u":"10-L1.5-流动性与条款.html#10-机制","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"效果","u":"10-L1.5-流动性与条款.html#10-效果","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"实操注意","u":"10-L1.5-流动性与条款.html#10-实操注意","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"10.6 其他流动性管理工具","u":"10-L1.5-流动性与条款.html#10-10.6-其他流动性管理工具","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"侧袋机制（Side Pocket）","u":"10-L1.5-流动性与条款.html#10-侧袋机制Side-Pocket","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"赎回费计入基金资产","u":"10-L1.5-流动性与条款.html#10-赎回费计入基金资产","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"国债期货对冲","u":"10-L1.5-流动性与条款.html#10-国债期货对冲","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"10.7 一张条款体检清单","u":"10-L1.5-流动性与条款.html#10-10.7-一张条款体检清单","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"10.8 本章与主轴公式的挂钩","u":"10-L1.5-流动性与条款.html#10-10.8-本章与主轴公式的挂钩","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"自检题","u":"10-L1.5-流动性与条款.html#10-自检题","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"产出物","u":"10-L1.5-流动性与条款.html#10-产出物","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"任务一：条款体检（10 项清单）","u":"10-L1.5-流动性与条款.html#10-任务一条款体检10-项清单","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"任务二：流动性覆盖比排名","u":"10-L1.5-流动性与条款.html#10-任务二流动性覆盖比排名","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"任务三：出清效应检测","u":"10-L1.5-流动性与条款.html#10-任务三出清效应检测","c":"流动性与条款：定开、持有期、巨额赎回、摆动定价","k":"h"},{"t":"第 11 章 费率：A/C 份额的临界持有天数","u":"11-L1.6-费率.html","c":"费率：A/C 份额的临界持有天数","k":"ch"},{"t":"11.0 为什么债基的费率比股基的费率重要得多","u":"11-L1.6-费率.html#11-11.0-为什么债基的费率比股基的费率重要得多","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"11.1 债基的全部费用科目","u":"11-L1.6-费率.html#11-11.1-债基的全部费用科目","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"六个科目","u":"11-L1.6-费率.html#11-六个科目","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"关键区分：持有期费用 vs 一次性费用","u":"11-L1.6-费率.html#11-关键区分持有期费用-vs-一次性费用","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"不同类型债基的费率水平（市场参考）","u":"11-L1.6-费率.html#11-不同类型债基的费率水平市场参考","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"11.2 A 类 vs C 类：临界持有天数 ★","u":"11-L1.6-费率.html#11-11.2-A-类-vs-C-类临界持有天数-★","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"两类份额的差异","u":"11-L1.6-费率.html#11-两类份额的差异","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"临界天数公式 ★","u":"11-L1.6-费率.html#11-临界天数公式-★","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"可复算示例","u":"11-L1.6-费率.html#11-可复算示例","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"完整的临界天数表","u":"11-L1.6-费率.html#11-完整的临界天数表","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"要注意的三个细节","u":"11-L1.6-费率.html#11-要注意的三个细节","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"决策流程图","u":"11-L1.6-费率.html#11-决策流程图","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"11.3 被忽略的隐性成本：交易成本","u":"11-L1.6-费率.html#11-11.3-被忽略的隐性成本交易成本","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"为什么它重要","u":"11-L1.6-费率.html#11-为什么它重要","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"怎么估算","u":"11-L1.6-费率.html#11-怎么估算","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"换手率的三层含义 ★","u":"11-L1.6-费率.html#11-换手率的三层含义-★","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"11.4 费率的完整计算：一个端到端的例子","u":"11-L1.6-费率.html#11-11.4-费率的完整计算一个端到端的例子","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"场景","u":"11-L1.6-费率.html#11-场景","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"计算 6 个月（182 天）的总成本","u":"11-L1.6-费率.html#11-计算-6-个月182-天的总成本","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"结果","u":"11-L1.6-费率.html#11-结果","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"11.5 一个容易忽略的点：费率和规模的关系","u":"11-L1.6-费率.html#11-11.5-一个容易忽略的点费率和规模的关系","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"管理费是按规模收的","u":"11-L1.6-费率.html#11-管理费是按规模收的","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"浮动费率产品","u":"11-L1.6-费率.html#11-浮动费率产品","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"11.6 本章与主轴公式的挂钩","u":"11-L1.6-费率.html#11-11.6-本章与主轴公式的挂钩","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"自检题","u":"11-L1.6-费率.html#11-自检题","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"产出物","u":"11-L1.6-费率.html#11-产出物","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"任务一：费率全表（最高性价比的一张表）","u":"11-L1.6-费率.html#11-任务一费率全表最高性价比的一张表","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"任务二：临界天数计算器","u":"11-L1.6-费率.html#11-任务二临界天数计算器","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"任务三：换手率体检","u":"11-L1.6-费率.html#11-任务三换手率体检","c":"费率：A/C 份额的临界持有天数","k":"h"},{"t":"第 12 章 信息披露节奏：你能看到什么，看不到什么","u":"12-L1.7-信息披露节奏.html","c":"信息披露节奏：你能看到什么，看不到什么","k":"ch"},{"t":"12.0 债基分析的根本困难","u":"12-L1.7-信息披露节奏.html#12-12.0-债基分析的根本困难","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"12.1 四类报告的完整清单","u":"12-L1.7-信息披露节奏.html#12-12.1-四类报告的完整清单","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"12.2 季报：你能从中挖出什么","u":"12-L1.7-信息披露节奏.html#12-12.2-季报你能从中挖出什么","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"季报的完整字段地图","u":"12-L1.7-信息披露节奏.html#12-季报的完整字段地图","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"从季报必须提取的九个数字","u":"12-L1.7-信息披露节奏.html#12-从季报必须提取的九个数字","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"重仓券推算久期：方法与红线 ★","u":"12-L1.7-信息披露节奏.html#12-重仓券推算久期方法与红线-★","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"从\"本期已实现收益\"vs\"本期利润\"拆浮盈浮亏 ★","u":"12-L1.7-信息披露节奏.html#12-从quot本期已实现收益quotvsquot本期利润quot拆浮盈浮亏-★","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"5.10 投资组合报告附注：最容易被跳过的金矿","u":"12-L1.7-信息披露节奏.html#12-5.10-投资组合报告附注最容易被跳过的金矿","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"12.3 半年报/年报：唯一的真相时刻 ★","u":"12-L1.7-信息披露节奏.html#12-12.3-半年报年报唯一的真相时刻-★","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"为什么它不可替代","u":"12-L1.7-信息披露节奏.html#12-为什么它不可替代","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"全持仓到手后，必做的六件事","u":"12-L1.7-信息披露节奏.html#12-全持仓到手后必做的六件事","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"时滞问题","u":"12-L1.7-信息披露节奏.html#12-时滞问题","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"12.4 临时公告：最被忽视的信息源","u":"12-L1.7-信息披露节奏.html#12-12.4-临时公告最被忽视的信息源","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"必须订阅的公告类型","u":"12-L1.7-信息披露节奏.html#12-必须订阅的公告类型","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"怎么高效订阅","u":"12-L1.7-信息披露节奏.html#12-怎么高效订阅","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"基金经理变更：一个被严重低估的事件 ★","u":"12-L1.7-信息披露节奏.html#12-基金经理变更一个被严重低估的事件-★","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"12.5 披露数据的加工流水线","u":"12-L1.7-信息披露节奏.html#12-12.5-披露数据的加工流水线","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"12.6 一个完整的\"读季报 30 分钟\"流程","u":"12-L1.7-信息披露节奏.html#12-12.6-一个完整的quot读季报-30-分钟quot流程","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"12.7 本章与主轴公式的挂钩","u":"12-L1.7-信息披露节奏.html#12-12.7-本章与主轴公式的挂钩","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"自检题","u":"12-L1.7-信息披露节奏.html#12-自检题","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"产出物","u":"12-L1.7-信息披露节奏.html#12-产出物","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"任务一：建立基金档案模板（第 28 章会一直用）","u":"12-L1.7-信息披露节奏.html#12-任务一建立基金档案模板第-28-章会一直用","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"任务二：读一份完整季报（30 分钟流程）","u":"12-L1.7-信息披露节奏.html#12-任务二读一份完整季报30-分钟流程","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"任务三：三方法久期校准","u":"12-L1.7-信息披露节奏.html#12-任务三三方法久期校准","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"L1 层小结","u":"12-L1.7-信息披露节奏.html#12-L1-层小结","c":"信息披露节奏：你能看到什么，看不到什么","k":"h"},{"t":"第 13 章 资金面：定短端","u":"13-L2.1-资金面.html","c":"资金面：定短端","k":"ch"},{"t":"13.0 L2 层的定位和工作方式","u":"13-L2.1-资金面.html#13-13.0-L2-层的定位和工作方式","c":"资金面：定短端","k":"h"},{"t":"13.1 资金面是什么：银行体系的超额准备金","u":"13-L2.1-资金面.html#13-13.1-资金面是什么银行体系的超额准备金","c":"资金面：定短端","k":"h"},{"t":"本质定义","u":"13-L2.1-资金面.html#13-本质定义","c":"资金面：定短端","k":"h"},{"t":"超额准备金的增减因素（这张表是资金面分析的全部基础）★","u":"13-L2.1-资金面.html#13-超额准备金的增减因素这张表是资金面分析的全部基础★","c":"资金面：定短端","k":"h"},{"t":"13.2 你每天必须看的六个资金面指标","u":"13-L2.1-资金面.html#13-13.2-你每天必须看的六个资金面指标","c":"资金面：定短端","k":"h"},{"t":"核心六指标","u":"13-L2.1-资金面.html#13-核心六指标","c":"资金面：定短端","k":"h"},{"t":"逐个解读","u":"13-L2.1-资金面.html#13-逐个解读","c":"资金面：定短端","k":"h"},{"t":"13.3 资金面的季节性：一张必须贴在显示器上的日历 ★","u":"13-L2.1-资金面.html#13-13.3-资金面的季节性一张必须贴在显示器上的日历-★","c":"资金面：定短端","k":"h"},{"t":"月内节奏","u":"13-L2.1-资金面.html#13-月内节奏","c":"资金面：定短端","k":"h"},{"t":"季内与年内节奏","u":"13-L2.1-资金面.html#13-季内与年内节奏","c":"资金面：定短端","k":"h"},{"t":"怎么用这张日历","u":"13-L2.1-资金面.html#13-怎么用这张日历","c":"资金面：定短端","k":"h"},{"t":"央行的对冲行为也是季节性的","u":"13-L2.1-资金面.html#13-央行的对冲行为也是季节性的","c":"资金面：定短端","k":"h"},{"t":"13.4 资金面到债市的传导链","u":"13-L2.1-资金面.html#13-13.4-资金面到债市的传导链","c":"资金面：定短端","k":"h"},{"t":"完整传导","u":"13-L2.1-资金面.html#13-完整传导","c":"资金面：定短端","k":"h"},{"t":"关键的非线性：②的反馈 ★","u":"13-L2.1-资金面.html#13-关键的非线性的反馈-★","c":"资金面：定短端","k":"h"},{"t":"13.5 资金面影响的量级：定量校准","u":"13-L2.1-资金面.html#13-13.5-资金面影响的量级定量校准","c":"资金面：定短端","k":"h"},{"t":"对短端的影响","u":"13-L2.1-资金面.html#13-对短端的影响","c":"资金面：定短端","k":"h"},{"t":"对长端的影响","u":"13-L2.1-资金面.html#13-对长端的影响","c":"资金面：定短端","k":"h"},{"t":"对不同债基的影响","u":"13-L2.1-资金面.html#13-对不同债基的影响","c":"资金面：定短端","k":"h"},{"t":"13.6 怎么判断资金面的\"趋势\"（而不是噪音）","u":"13-L2.1-资金面.html#13-13.6-怎么判断资金面的quot趋势quot而不是噪音","c":"资金面：定短端","k":"h"},{"t":"三层判断","u":"13-L2.1-资金面.html#13-三层判断","c":"资金面：定短端","k":"h"},{"t":"判断表","u":"13-L2.1-资金面.html#13-判断表","c":"资金面：定短端","k":"h"},{"t":"13.7 本章与主轴公式的挂钩","u":"13-L2.1-资金面.html#13-13.7-本章与主轴公式的挂钩","c":"资金面：定短端","k":"h"},{"t":"自检题","u":"13-L2.1-资金面.html#13-自检题","c":"资金面：定短端","k":"h"},{"t":"产出物","u":"13-L2.1-资金面.html#13-产出物","c":"资金面：定短端","k":"h"},{"t":"任务一：建资金面日度看板（第 27 章看板的核心模块）","u":"13-L2.1-资金面.html#13-任务一建资金面日度看板第-27-章看板的核心模块","c":"资金面：定短端","k":"h"},{"t":"任务二：季节性日历验证","u":"13-L2.1-资金面.html#13-任务二季节性日历验证","c":"资金面：定短端","k":"h"},{"t":"任务三：carry 空间警报","u":"13-L2.1-资金面.html#13-任务三carry-空间警报","c":"资金面：定短端","k":"h"},{"t":"第 14 章 政策面：定中枢","u":"14-L2.2-政策面.html","c":"政策面：定中枢","k":"ch"},{"t":"14.0 政策面和资金面的区别","u":"14-L2.2-政策面.html#14-14.0-政策面和资金面的区别","c":"政策面：定中枢","k":"h"},{"t":"14.1 中国货币政策工具箱（2026 年版）","u":"14-L2.2-政策面.html#14-14.1-中国货币政策工具箱2026-年版","c":"政策面：定中枢","k":"h"},{"t":"利率工具","u":"14-L2.2-政策面.html#14-利率工具","c":"政策面：定中枢","k":"h"},{"t":"数量工具","u":"14-L2.2-政策面.html#14-数量工具","c":"政策面：定中枢","k":"h"},{"t":"两个必须理解的新工具","u":"14-L2.2-政策面.html#14-两个必须理解的新工具","c":"政策面：定中枢","k":"h"},{"t":"14.2 怎么读央行的\"嘴\"：四类文本 ★","u":"14-L2.2-政策面.html#14-14.2-怎么读央行的quot嘴quot四类文本-★","c":"政策面：定中枢","k":"h"},{"t":"四类文本的权重排序","u":"14-L2.2-政策面.html#14-四类文本的权重排序","c":"政策面：定中枢","k":"h"},{"t":"关键措辞词典（这是本章最实用的部分）★","u":"14-L2.2-政策面.html#14-关键措辞词典这是本章最实用的部分★","c":"政策面：定中枢","k":"h"},{"t":"实操：措辞对比法","u":"14-L2.2-政策面.html#14-实操措辞对比法","c":"政策面：定中枢","k":"h"},{"t":"货政报告的专栏：最高信息密度的内容 ★","u":"14-L2.2-政策面.html#14-货政报告的专栏最高信息密度的内容-★","c":"政策面：定中枢","k":"h"},{"t":"14.3 政策面的三层：货币、财政、监管","u":"14-L2.2-政策面.html#14-14.3-政策面的三层货币财政监管","c":"政策面：定中枢","k":"h"},{"t":"第一条腿：货币政策（本章 14.1–14.2）","u":"14-L2.2-政策面.html#14-第一条腿货币政策本章-14.114.2","c":"政策面：定中枢","k":"h"},{"t":"第二条腿：财政政策 ★","u":"14-L2.2-政策面.html#14-第二条腿财政政策-★","c":"政策面：定中枢","k":"h"},{"t":"第三条腿：金融监管 ★★","u":"14-L2.2-政策面.html#14-第三条腿金融监管-★★","c":"政策面：定中枢","k":"h"},{"t":"14.4 政策传导的时滞与预期定价","u":"14-L2.2-政策面.html#14-14.4-政策传导的时滞与预期定价","c":"政策面：定中枢","k":"h"},{"t":"债市定价的是预期，不是事实","u":"14-L2.2-政策面.html#14-债市定价的是预期不是事实","c":"政策面：定中枢","k":"h"},{"t":"14.5 2024 年的特殊案例：当央行成为债市的对手盘 ★","u":"14-L2.2-政策面.html#14-14.5-2024-年的特殊案例当央行成为债市的对手盘-★","c":"政策面：定中枢","k":"h"},{"t":"背景","u":"14-L2.2-政策面.html#14-背景","c":"政策面：定中枢","k":"h"},{"t":"央行的反应链条","u":"14-L2.2-政策面.html#14-央行的反应链条","c":"政策面：定中枢","k":"h"},{"t":"央行为什么要管","u":"14-L2.2-政策面.html#14-央行为什么要管","c":"政策面：定中枢","k":"h"},{"t":"对投资者的三条实操结论 ★","u":"14-L2.2-政策面.html#14-对投资者的三条实操结论-★","c":"政策面：定中枢","k":"h"},{"t":"14.6 政策面分析的完整工作流","u":"14-L2.2-政策面.html#14-14.6-政策面分析的完整工作流","c":"政策面：定中枢","k":"h"},{"t":"月度工作流（约 2 小时/月）","u":"14-L2.2-政策面.html#14-月度工作流约-2-小时月","c":"政策面：定中枢","k":"h"},{"t":"把政策面转化为久期决策","u":"14-L2.2-政策面.html#14-把政策面转化为久期决策","c":"政策面：定中枢","k":"h"},{"t":"14.7 本章与主轴公式的挂钩","u":"14-L2.2-政策面.html#14-14.7-本章与主轴公式的挂钩","c":"政策面：定中枢","k":"h"},{"t":"自检题","u":"14-L2.2-政策面.html#14-自检题","c":"政策面：定中枢","k":"h"},{"t":"产出物","u":"14-L2.2-政策面.html#14-产出物","c":"政策面：定中枢","k":"h"},{"t":"任务一：建措辞档案（本章核心作业）","u":"14-L2.2-政策面.html#14-任务一建措辞档案本章核心作业","c":"政策面：定中枢","k":"h"},{"t":"任务二：读一期货政报告的专栏","u":"14-L2.2-政策面.html#14-任务二读一期货政报告的专栏","c":"政策面：定中枢","k":"h"},{"t":"任务三：预期定价校准","u":"14-L2.2-政策面.html#14-任务三预期定价校准","c":"政策面：定中枢","k":"h"},{"t":"第 15 章 基本面：定长端","u":"15-L2.3-基本面.html","c":"基本面：定长端","k":"ch"},{"t":"15.0 一个必须提前说清的事","u":"15-L2.3-基本面.html#15-15.0-一个必须提前说清的事","c":"基本面：定长端","k":"h"},{"t":"15.1 基本面到债市的理论链条","u":"15-L2.3-基本面.html#15-15.1-基本面到债市的理论链条","c":"基本面：定长端","k":"h"},{"t":"教科书版本（费雪方程）","u":"15-L2.3-基本面.html#15-教科书版本费雪方程","c":"基本面：定长端","k":"h"},{"t":"中国版本的修正","u":"15-L2.3-基本面.html#15-中国版本的修正","c":"基本面：定长端","k":"h"},{"t":"15.2 一号指标：社融与信贷 ★★","u":"15-L2.3-基本面.html#15-15.2-一号指标社融与信贷-★★","c":"基本面：定长端","k":"h"},{"t":"为什么它是中国债市的第一基本面指标","u":"15-L2.3-基本面.html#15-为什么它是中国债市的第一基本面指标","c":"基本面：定长端","k":"h"},{"t":"关键数据与发布时间","u":"15-L2.3-基本面.html#15-关键数据与发布时间","c":"基本面：定长端","k":"h"},{"t":"怎么读社融：结构比总量重要 ★","u":"15-L2.3-基本面.html#15-怎么读社融结构比总量重要-★","c":"基本面：定长端","k":"h"},{"t":"M1-M2 剪刀差 ★","u":"15-L2.3-基本面.html#15-M1-M2-剪刀差-★","c":"基本面：定长端","k":"h"},{"t":"15.3 二号指标：通胀（CPI / PPI）","u":"15-L2.3-基本面.html#15-15.3-二号指标通胀CPI--PPI","c":"基本面：定长端","k":"h"},{"t":"为什么排第二","u":"15-L2.3-基本面.html#15-为什么排第二","c":"基本面：定长端","k":"h"},{"t":"CPI","u":"15-L2.3-基本面.html#15-CPI","c":"基本面：定长端","k":"h"},{"t":"PPI","u":"15-L2.3-基本面.html#15-PPI","c":"基本面：定长端","k":"h"},{"t":"一个重要提醒：通胀预期 ≠ 通胀数据","u":"15-L2.3-基本面.html#15-一个重要提醒通胀预期--通胀数据","c":"基本面：定长端","k":"h"},{"t":"15.4 三号指标：景气指标（PMI 及高频）","u":"15-L2.3-基本面.html#15-15.4-三号指标景气指标PMI-及高频","c":"基本面：定长端","k":"h"},{"t":"PMI","u":"15-L2.3-基本面.html#15-PMI","c":"基本面：定长端","k":"h"},{"t":"高频指标（比月度数据有用得多）★","u":"15-L2.3-基本面.html#15-高频指标比月度数据有用得多★","c":"基本面：定长端","k":"h"},{"t":"GDP（放在最后，因为信息量最低）","u":"15-L2.3-基本面.html#15-GDP放在最后因为信息量最低","c":"基本面：定长端","k":"h"},{"t":"15.5 基本面数据的\"预期差\"框架 ★","u":"15-L2.3-基本面.html#15-15.5-基本面数据的quot预期差quot框架-★","c":"基本面：定长端","k":"h"},{"t":"核心原则","u":"15-L2.3-基本面.html#15-核心原则","c":"基本面：定长端","k":"h"},{"t":"反应矩阵","u":"15-L2.3-基本面.html#15-反应矩阵","c":"基本面：定长端","k":"h"},{"t":"失效情形：当配置压力压倒基本面 ★","u":"15-L2.3-基本面.html#15-失效情形当配置压力压倒基本面-★","c":"基本面：定长端","k":"h"},{"t":"15.6 基本面的传导时滞","u":"15-L2.3-基本面.html#15-15.6-基本面的传导时滞","c":"基本面：定长端","k":"h"},{"t":"15.7 一个可执行的基本面跟踪清单","u":"15-L2.3-基本面.html#15-15.7-一个可执行的基本面跟踪清单","c":"基本面：定长端","k":"h"},{"t":"月度（约 1.5 小时/月）","u":"15-L2.3-基本面.html#15-月度约-1.5-小时月","c":"基本面：定长端","k":"h"},{"t":"周度（约 20 分钟/周）","u":"15-L2.3-基本面.html#15-周度约-20-分钟周","c":"基本面：定长端","k":"h"},{"t":"季度/年度","u":"15-L2.3-基本面.html#15-季度年度","c":"基本面：定长端","k":"h"},{"t":"产出：一张\"基本面温度表\"","u":"15-L2.3-基本面.html#15-产出一张quot基本面温度表quot","c":"基本面：定长端","k":"h"},{"t":"15.8 本章与主轴公式的挂钩","u":"15-L2.3-基本面.html#15-15.8-本章与主轴公式的挂钩","c":"基本面：定长端","k":"h"},{"t":"自检题","u":"15-L2.3-基本面.html#15-自检题","c":"基本面：定长端","k":"h"},{"t":"产出物","u":"15-L2.3-基本面.html#15-产出物","c":"基本面：定长端","k":"h"},{"t":"任务一：基本面温度表（每月更新）","u":"15-L2.3-基本面.html#15-任务一基本面温度表每月更新","c":"基本面：定长端","k":"h"},{"t":"任务二：社融结构拆解练习","u":"15-L2.3-基本面.html#15-任务二社融结构拆解练习","c":"基本面：定长端","k":"h"},{"t":"任务三：高频指标看板","u":"15-L2.3-基本面.html#15-任务三高频指标看板","c":"基本面：定长端","k":"h"},{"t":"第 16 章 供需：定边际","u":"16-L2.4-供需.html","c":"供需：定边际","k":"ch"},{"t":"16.0 为什么这一章最值得投入时间","u":"16-L2.4-供需.html#16-16.0-为什么这一章最值得投入时间","c":"供需：定边际","k":"h"},{"t":"16.1 供给侧：政府债是唯一真正重要的变量","u":"16-L2.4-供需.html#16-16.1-供给侧政府债是唯一真正重要的变量","c":"供需：定边际","k":"h"},{"t":"中国债市的供给结构","u":"16-L2.4-供需.html#16-中国债市的供给结构","c":"供需：定边际","k":"h"},{"t":"供给冲击的两个机制","u":"16-L2.4-供需.html#16-供给冲击的两个机制","c":"供需：定边际","k":"h"},{"t":"怎么跟踪供给节奏 ★","u":"16-L2.4-供需.html#16-怎么跟踪供给节奏-★","c":"供需：定边际","k":"h"},{"t":"供给的季节性","u":"16-L2.4-供需.html#16-供给的季节性","c":"供需：定边际","k":"h"},{"t":"16.2 需求侧：四大配置盘的行为逻辑 ★★","u":"16-L2.4-供需.html#16-16.2-需求侧四大配置盘的行为逻辑-★★","c":"供需：定边际","k":"h"},{"t":"托管数据：唯一的公开窗口","u":"16-L2.4-供需.html#16-托管数据唯一的公开窗口","c":"供需：定边际","k":"h"},{"t":"四大配置盘详解","u":"16-L2.4-供需.html#16-四大配置盘详解","c":"供需：定边际","k":"h"},{"t":"四大配置盘对比总表 ★","u":"16-L2.4-供需.html#16-四大配置盘对比总表-★","c":"供需：定边际","k":"h"},{"t":"16.3 \"资产荒\"：过去几年中国债市的主线","u":"16-L2.4-供需.html#16-16.3-quot资产荒quot过去几年中国债市的主线","c":"供需：定边际","k":"h"},{"t":"定义","u":"16-L2.4-供需.html#16-定义","c":"供需：定边际","k":"h"},{"t":"成因链条","u":"16-L2.4-供需.html#16-成因链条","c":"供需：定边际","k":"h"},{"t":"资产荒的三个可观测标志","u":"16-L2.4-供需.html#16-资产荒的三个可观测标志","c":"供需：定边际","k":"h"},{"t":"资产荒什么时候结束","u":"16-L2.4-供需.html#16-资产荒什么时候结束","c":"供需：定边际","k":"h"},{"t":"16.4 申赎反馈回路：把需求侧和基金联系起来 ★★","u":"16-L2.4-供需.html#16-16.4-申赎反馈回路把需求侧和基金联系起来-★★","c":"供需：定边际","k":"h"},{"t":"为什么它是一个\"回路\"而不是\"因子\"","u":"16-L2.4-供需.html#16-为什么它是一个quot回路quot而不是quot因子quot","c":"供需：定边际","k":"h"},{"t":"回路的三个关键参数","u":"16-L2.4-供需.html#16-回路的三个关键参数","c":"供需：定边际","k":"h"},{"t":"怎么跟踪申赎（这是最难拿数据的一项）","u":"16-L2.4-供需.html#16-怎么跟踪申赎这是最难拿数据的一项","c":"供需：定边际","k":"h"},{"t":"16.5 完整的供需跟踪工作流","u":"16-L2.4-供需.html#16-16.5-完整的供需跟踪工作流","c":"供需：定边际","k":"h"},{"t":"周度（约 30 分钟）","u":"16-L2.4-供需.html#16-周度约-30-分钟","c":"供需：定边际","k":"h"},{"t":"月度（约 1 小时）","u":"16-L2.4-供需.html#16-月度约-1-小时","c":"供需：定边际","k":"h"},{"t":"季度/半年度","u":"16-L2.4-供需.html#16-季度半年度","c":"供需：定边际","k":"h"},{"t":"产出：一张供需平衡表","u":"16-L2.4-供需.html#16-产出一张供需平衡表","c":"供需：定边际","k":"h"},{"t":"16.6 本章与主轴公式的挂钩","u":"16-L2.4-供需.html#16-16.6-本章与主轴公式的挂钩","c":"供需：定边际","k":"h"},{"t":"自检题","u":"16-L2.4-供需.html#16-自检题","c":"供需：定边际","k":"h"},{"t":"产出物","u":"16-L2.4-供需.html#16-产出物","c":"供需：定边际","k":"h"},{"t":"任务一：补上\"需人工补\"的四项（本章核心作业）","u":"16-L2.4-供需.html#16-任务一补上quot需人工补quot的四项本章核心作业","c":"供需：定边际","k":"h"},{"t":"任务二：托管数据机构行为表","u":"16-L2.4-供需.html#16-任务二托管数据机构行为表","c":"供需：定边际","k":"h"},{"t":"任务三：供需平衡表（每周更新）","u":"16-L2.4-供需.html#16-任务三供需平衡表每周更新","c":"供需：定边际","k":"h"},{"t":"第 17 章 交易面：定情绪","u":"17-L2.5-交易面.html","c":"交易面：定情绪","k":"ch"},{"t":"17.0 交易面的定位","u":"17-L2.5-交易面.html#17-17.0-交易面的定位","c":"交易面：定情绪","k":"h"},{"t":"17.1 国债期货：最重要的交易面窗口 ★★","u":"17-L2.5-交易面.html#17-17.1-国债期货最重要的交易面窗口-★★","c":"交易面：定情绪","k":"h"},{"t":"为什么国债期货是最好的情绪指标","u":"17-L2.5-交易面.html#17-为什么国债期货是最好的情绪指标","c":"交易面：定情绪","k":"h"},{"t":"四个合约及其含义","u":"17-L2.5-交易面.html#17-四个合约及其含义","c":"交易面：定情绪","k":"h"},{"t":"要看的五个数据 ★","u":"17-L2.5-交易面.html#17-要看的五个数据-★","c":"交易面：定情绪","k":"h"},{"t":"17.2 市场杠杆率：系统脆弱性的度量 ★★","u":"17-L2.5-交易面.html#17-17.2-市场杠杆率系统脆弱性的度量-★★","c":"交易面：定情绪","k":"h"},{"t":"定义","u":"17-L2.5-交易面.html#17-定义","c":"交易面：定情绪","k":"h"},{"t":"为什么它重要","u":"17-L2.5-交易面.html#17-为什么它重要","c":"交易面：定情绪","k":"h"},{"t":"代理指标（免费、日度）★","u":"17-L2.5-交易面.html#17-代理指标免费日度★","c":"交易面：定情绪","k":"h"},{"t":"17.3 机构内部分歧度与拥挤交易","u":"17-L2.5-交易面.html#17-17.3-机构内部分歧度与拥挤交易","c":"交易面：定情绪","k":"h"},{"t":"为什么要看\"分歧度\"","u":"17-L2.5-交易面.html#17-为什么要看quot分歧度quot","c":"交易面：定情绪","k":"h"},{"t":"怎么度量分歧度","u":"17-L2.5-交易面.html#17-怎么度量分歧度","c":"交易面：定情绪","k":"h"},{"t":"一个实用的简易拥挤度打分卡","u":"17-L2.5-交易面.html#17-一个实用的简易拥挤度打分卡","c":"交易面：定情绪","k":"h"},{"t":"17.4 配置盘三大指标：区分交易盘和配置盘 ★","u":"17-L2.5-交易面.html#17-17.4-配置盘三大指标区分交易盘和配置盘-★","c":"交易面：定情绪","k":"h"},{"t":"为什么要区分交易盘和配置盘","u":"17-L2.5-交易面.html#17-为什么要区分交易盘和配置盘","c":"交易面：定情绪","k":"h"},{"t":"17.5 其他交易面指标","u":"17-L2.5-交易面.html#17-17.5-其他交易面指标","c":"交易面：定情绪","k":"h"},{"t":"现券成交活跃度","u":"17-L2.5-交易面.html#17-现券成交活跃度","c":"交易面：定情绪","k":"h"},{"t":"异常交易与监管介入","u":"17-L2.5-交易面.html#17-异常交易与监管介入","c":"交易面：定情绪","k":"h"},{"t":"境外机构持仓","u":"17-L2.5-交易面.html#17-境外机构持仓","c":"交易面：定情绪","k":"h"},{"t":"17.6 交易面的实战用法：三个场景","u":"17-L2.5-交易面.html#17-17.6-交易面的实战用法三个场景","c":"交易面：定情绪","k":"h"},{"t":"场景一：判断趋势是否健康","u":"17-L2.5-交易面.html#17-场景一判断趋势是否健康","c":"交易面：定情绪","k":"h"},{"t":"场景二：判断急跌是否到底","u":"17-L2.5-交易面.html#17-场景二判断急跌是否到底","c":"交易面：定情绪","k":"h"},{"t":"场景三：识别\"无基本面原因的急跌\"","u":"17-L2.5-交易面.html#17-场景三识别quot无基本面原因的急跌quot","c":"交易面：定情绪","k":"h"},{"t":"17.7 本章与主轴公式的挂钩","u":"17-L2.5-交易面.html#17-17.7-本章与主轴公式的挂钩","c":"交易面：定情绪","k":"h"},{"t":"自检题","u":"17-L2.5-交易面.html#17-自检题","c":"交易面：定情绪","k":"h"},{"t":"产出物","u":"17-L2.5-交易面.html#17-产出物","c":"交易面：定情绪","k":"h"},{"t":"任务一：国债期货日度看板","u":"17-L2.5-交易面.html#17-任务一国债期货日度看板","c":"交易面：定情绪","k":"h"},{"t":"任务二：脆弱性三指标","u":"17-L2.5-交易面.html#17-任务二脆弱性三指标","c":"交易面：定情绪","k":"h"},{"t":"任务三：拥挤度打分卡（每周更新）","u":"17-L2.5-交易面.html#17-任务三拥挤度打分卡每周更新","c":"交易面：定情绪","k":"h"},{"t":"第 18 章 股债关系：跷跷板何时失效","u":"18-L2.6-股债关系.html","c":"股债关系：跷跷板何时失效","k":"ch"},{"t":"18.0 跷跷板不是规律，是条件成立的结果","u":"18-L2.6-股债关系.html#18-18.0-跷跷板不是规律是条件成立的结果","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"18.1 跷跷板的三个机制","u":"18-L2.6-股债关系.html#18-18.1-跷跷板的三个机制","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"机制一：风险偏好切换（最经典）","u":"18-L2.6-股债关系.html#18-机制一风险偏好切换最经典","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"机制二：增长预期（基本面驱动）","u":"18-L2.6-股债关系.html#18-机制二增长预期基本面驱动","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"机制三：折现率（这个机制产生正相关！）★","u":"18-L2.6-股债关系.html#18-机制三折现率这个机制产生正相关★","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"18.2 四种状态：一张完整的状态表 ★★","u":"18-L2.6-股债关系.html#18-18.2-四种状态一张完整的状态表-★★","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"① 股债双牛：流动性驱动","u":"18-L2.6-股债关系.html#18-股债双牛流动性驱动","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"② 跷跷板：股涨债跌（增长驱动）","u":"18-L2.6-股债关系.html#18-跷跷板股涨债跌增长驱动","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"③ 跷跷板：股跌债涨（risk-off）","u":"18-L2.6-股债关系.html#18-跷跷板股跌债涨risk-off","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"④ 股债双杀：最危险的状态 ★★","u":"18-L2.6-股债关系.html#18-股债双杀最危险的状态-★★","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"18.3 怎么判断当前处于哪个状态","u":"18-L2.6-股债关系.html#18-18.3-怎么判断当前处于哪个状态","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"判断流程","u":"18-L2.6-股债关系.html#18-判断流程","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"核心工具：滚动相关系数 ★","u":"18-L2.6-股债关系.html#18-核心工具滚动相关系数-★","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"18.4 股债性价比：ERP 与其局限","u":"18-L2.6-股债关系.html#18-18.4-股债性价比ERP-与其局限","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"定义","u":"18-L2.6-股债关系.html#18-定义","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"怎么用","u":"18-L2.6-股债关系.html#18-怎么用","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"三个必须知道的局限 ★","u":"18-L2.6-股债关系.html#18-三个必须知道的局限-★","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"18.5 转债：股债关系在债基里的具体载体 ★","u":"18-L2.6-股债关系.html#18-18.5-转债股债关系在债基里的具体载体-★","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"转债是跷跷板的\"传导管道\"","u":"18-L2.6-股债关系.html#18-转债是跷跷板的quot传导管道quot","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"转债的三种状态下的股债敞口","u":"18-L2.6-股债关系.html#18-转债的三种状态下的股债敞口","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"转债的\"估值\"维度：第三个独立风险","u":"18-L2.6-股债关系.html#18-转债的quot估值quot维度第三个独立风险","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"实操：怎么评估一只债基的转债风险","u":"18-L2.6-股债关系.html#18-实操怎么评估一只债基的转债风险","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"18.6 \"固收+\"的真实风险结构","u":"18-L2.6-股债关系.html#18-18.6-quot固收quot的真实风险结构","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"把本章和第 6 章合起来","u":"18-L2.6-股债关系.html#18-把本章和第-6-章合起来","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"三条结论","u":"18-L2.6-股债关系.html#18-三条结论","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"18.7 本章与主轴公式的挂钩","u":"18-L2.6-股债关系.html#18-18.7-本章与主轴公式的挂钩","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"自检题","u":"18-L2.6-股债关系.html#18-自检题","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"产出物","u":"18-L2.6-股债关系.html#18-产出物","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"任务一：滚动相关系数（每周 30 秒，长期跟踪）","u":"18-L2.6-股债关系.html#18-任务一滚动相关系数每周-30-秒长期跟踪","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"任务二：四象限历史统计","u":"18-L2.6-股债关系.html#18-任务二四象限历史统计","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"任务三：转债穿透分析","u":"18-L2.6-股债关系.html#18-任务三转债穿透分析","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"L2 层小结","u":"18-L2.6-股债关系.html#18-L2-层小结","c":"股债关系：跷跷板何时失效","k":"h"},{"t":"第 19 章 风险收益指标：年化、回撤、修复天数、Calmar","u":"19-L3.1-风险收益指标.html","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"ch"},{"t":"19.0 股票基金的指标，直接搬到债基上会出错","u":"19-L3.1-风险收益指标.html#19-19.0-股票基金的指标直接搬到债基上会出错","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"19.1 收益类指标","u":"19-L3.1-风险收益指标.html#19-19.1-收益类指标","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"年化收益率","u":"19-L3.1-风险收益指标.html#19-年化收益率","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"超额收益（相对基准）","u":"19-L3.1-风险收益指标.html#19-超额收益相对基准","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"19.2 风险类指标","u":"19-L3.1-风险收益指标.html#19-19.2-风险类指标","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"波动率（年化标准差）","u":"19-L3.1-风险收益指标.html#19-波动率年化标准差","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"最大回撤","u":"19-L3.1-风险收益指标.html#19-最大回撤","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"下行风险指标","u":"19-L3.1-风险收益指标.html#19-下行风险指标","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"19.3 债基专用指标一：回撤修复天数 ★★","u":"19-L3.1-风险收益指标.html#19-19.3-债基专用指标一回撤修复天数-★★","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"为什么这是债基最重要的风险指标","u":"19-L3.1-风险收益指标.html#19-为什么这是债基最重要的风险指标","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"理论修复天数 vs 实际修复天数","u":"19-L3.1-风险收益指标.html#19-理论修复天数-vs-实际修复天数","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"各台阶的典型修复天数（第 6 章的定量版）","u":"19-L3.1-风险收益指标.html#19-各台阶的典型修复天数第-6-章的定量版","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"这个指标的实操用法 ★","u":"19-L3.1-风险收益指标.html#19-这个指标的实操用法-★","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"19.4 债基专用指标二：Calmar 比率 ★","u":"19-L3.1-风险收益指标.html#19-19.4-债基专用指标二Calmar-比率-★","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"定义","u":"19-L3.1-风险收益指标.html#19-定义","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"为什么它比夏普比率更适合债基","u":"19-L3.1-风险收益指标.html#19-为什么它比夏普比率更适合债基","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"各台阶的 Calmar 分布（这是第 6 章那个发现的定量版）","u":"19-L3.1-风险收益指标.html#19-各台阶的-Calmar-分布这是第-6-章那个发现的定量版","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"Calmar 的两个陷阱","u":"19-L3.1-风险收益指标.html#19-Calmar-的两个陷阱","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"19.5 其他指标的正确用法","u":"19-L3.1-风险收益指标.html#19-19.5-其他指标的正确用法","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"夏普比率：知道它为什么虚高，再谨慎使用","u":"19-L3.1-风险收益指标.html#19-夏普比率知道它为什么虚高再谨慎使用","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"索提诺比率","u":"19-L3.1-风险收益指标.html#19-索提诺比率","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"信息比率","u":"19-L3.1-风险收益指标.html#19-信息比率","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"胜率与盈亏比","u":"19-L3.1-风险收益指标.html#19-胜率与盈亏比","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"19.6 一张完整的评价表","u":"19-L3.1-风险收益指标.html#19-19.6-一张完整的评价表","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"19.7 本章与主轴公式的挂钩","u":"19-L3.1-风险收益指标.html#19-19.7-本章与主轴公式的挂钩","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"自检题","u":"19-L3.1-风险收益指标.html#19-自检题","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"产出物","u":"19-L3.1-风险收益指标.html#19-产出物","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"任务一：14 项指标全表（本章核心作业）","u":"19-L3.1-风险收益指标.html#19-任务一14-项指标全表本章核心作业","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"任务二：红灯筛查","u":"19-L3.1-风险收益指标.html#19-任务二红灯筛查","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"任务三：持有期匹配表","u":"19-L3.1-风险收益指标.html#19-任务三持有期匹配表","c":"风险收益指标：年化、回撤、修复天数、Calmar","k":"h"},{"t":"第 20 章 持有体验：比年化更重要的那个数","u":"20-L3.2-持有体验.html","c":"持有体验：比年化更重要的那个数","k":"ch"},{"t":"20.0 一个让人不舒服的事实","u":"20-L3.2-持有体验.html#20-20.0-一个让人不舒服的事实","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"20.1 核心指标：任意时点持有 N 期的正收益概率 ★★","u":"20-L3.2-持有体验.html#20-20.1-核心指标任意时点持有-N-期的正收益概率-★★","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"定义","u":"20-L3.2-持有体验.html#20-定义","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"怎么算（Excel 五分钟）","u":"20-L3.2-持有体验.html#20-怎么算Excel-五分钟","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"一张示意结果表","u":"20-L3.2-持有体验.html#20-一张示意结果表","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"这张表的四个关键信息 ★","u":"20-L3.2-持有体验.html#20-这张表的四个关键信息-★","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"20.2 进阶：条件概率和最差情形","u":"20-L3.2-持有体验.html#20-20.2-进阶条件概率和最差情形","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"指标一：滚动持有期收益的分布","u":"20-L3.2-持有体验.html#20-指标一滚动持有期收益的分布","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"指标二：最大连续亏损天数","u":"20-L3.2-持有体验.html#20-指标二最大连续亏损天数","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"指标三：盈亏不对称度","u":"20-L3.2-持有体验.html#20-指标三盈亏不对称度","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"20.3 为什么持有体验决定了实际收益 ★★","u":"20-L3.2-持有体验.html#20-20.3-为什么持有体验决定了实际收益-★★","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"量化\"投资者回报缺口\"","u":"20-L3.2-持有体验.html#20-量化quot投资者回报缺口quot","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"一个关键的因果链","u":"20-L3.2-持有体验.html#20-一个关键的因果链","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"20.4 怎么用持有体验选基：完整决策流程 ★","u":"20-L3.2-持有体验.html#20-20.4-怎么用持有体验选基完整决策流程-★","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"第一步：从资金期限出发（不是从收益出发）","u":"20-L3.2-持有体验.html#20-第一步从资金期限出发不是从收益出发","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"第二步：筛出 P(T) ≥ 你的容忍度的台阶","u":"20-L3.2-持有体验.html#20-第二步筛出-PT--你的容忍度的台阶","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"第三步：在该台阶内，看 5% 分位的滚动 T 期收益","u":"20-L3.2-持有体验.html#20-第三步在该台阶内看-5-分位的滚动-T-期收益","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"第四步：在剩下的基金里，按 Calmar（调整版）排序","u":"20-L3.2-持有体验.html#20-第四步在剩下的基金里按-Calmar调整版排序","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"第五步：用第 24 章的红灯清单做最后筛查","u":"20-L3.2-持有体验.html#20-第五步用第-24-章的红灯清单做最后筛查","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"完整示例","u":"20-L3.2-持有体验.html#20-完整示例","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"20.5 一个反面案例：为什么\"排名靠前\"会误导你","u":"20-L3.2-持有体验.html#20-20.5-一个反面案例为什么quot排名靠前quot会误导你","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"场景","u":"20-L3.2-持有体验.html#20-场景","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"拆解","u":"20-L3.2-持有体验.html#20-拆解","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"结论","u":"20-L3.2-持有体验.html#20-结论","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"20.6 持有体验的改善：不改变基金，改变自己","u":"20-L3.2-持有体验.html#20-20.6-持有体验的改善不改变基金改变自己","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"三个可操作的方法","u":"20-L3.2-持有体验.html#20-三个可操作的方法","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"20.7 本章与主轴公式的挂钩","u":"20-L3.2-持有体验.html#20-20.7-本章与主轴公式的挂钩","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"自检题","u":"20-L3.2-持有体验.html#20-自检题","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"产出物","u":"20-L3.2-持有体验.html#20-产出物","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"任务一：持有期概率表（本章核心作业）★","u":"20-L3.2-持有体验.html#20-任务一持有期概率表本章核心作业★","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"任务二：滚动收益分布","u":"20-L3.2-持有体验.html#20-任务二滚动收益分布","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"任务三：TWR vs MWR 缺口","u":"20-L3.2-持有体验.html#20-任务三TWR-vs-MWR-缺口","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"任务四：分散度检验","u":"20-L3.2-持有体验.html#20-任务四分散度检验","c":"持有体验：比年化更重要的那个数","k":"h"},{"t":"第 21 章 业绩归因：它赚的到底是什么钱","u":"21-L3.3-业绩归因.html","c":"业绩归因：它赚的到底是什么钱","k":"ch"},{"t":"21.0 归因的三个层次","u":"21-L3.3-业绩归因.html#21-21.0-归因的三个层次","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"21.1 L1：基于净值的回归归因","u":"21-L3.3-业绩归因.html#21-21.1-L1基于净值的回归归因","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"单因子模型（第 2 章方法 B 的扩展）","u":"21-L3.3-业绩归因.html#21-单因子模型第-2-章方法-B-的扩展","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"多因子模型（推荐）★","u":"21-L3.3-业绩归因.html#21-多因子模型推荐★","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"怎么从 α 里剥出真正的能力","u":"21-L3.3-业绩归因.html#21-怎么从--里剥出真正的能力","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"滚动归因：发现风格漂移 ★","u":"21-L3.3-业绩归因.html#21-滚动归因发现风格漂移-★","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"21.2 L2：基于持仓的七项归因（第 7 章的跨期版）","u":"21-L3.3-业绩归因.html#21-21.2-L2基于持仓的七项归因第-7-章的跨期版","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"跨期归因表","u":"21-L3.3-业绩归因.html#21-跨期归因表","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"从这张表读出的四件事 ★","u":"21-L3.3-业绩归因.html#21-从这张表读出的四件事-★","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"21.3 L3：基于财务报表的归因 ★★","u":"21-L3.3-业绩归因.html#21-21.3-L3基于财务报表的归因-★★","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"数据来源","u":"21-L3.3-业绩归因.html#21-数据来源","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"完整的财报归因模板 ★","u":"21-L3.3-业绩归因.html#21-完整的财报归因模板-★","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"示例：完整的财报归因","u":"21-L3.3-业绩归因.html#21-示例完整的财报归因","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"从这张表能读出什么（五个发现）★","u":"21-L3.3-业绩归因.html#21-从这张表能读出什么五个发现★","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"财报归因的汇总表（可直接套用）","u":"21-L3.3-业绩归因.html#21-财报归因的汇总表可直接套用","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"21.4 杠杆效应与非杠杆效应的分解 ★","u":"21-L3.3-业绩归因.html#21-21.4-杠杆效应与非杠杆效应的分解-★","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"方法","u":"21-L3.3-业绩归因.html#21-方法","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"示例（续用上面的数据）","u":"21-L3.3-业绩归因.html#21-示例续用上面的数据","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"这个分解的价值 ★","u":"21-L3.3-业绩归因.html#21-这个分解的价值-★","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"21.5 六维归因框架：完整的能力拆解","u":"21-L3.3-业绩归因.html#21-21.5-六维归因框架完整的能力拆解","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"重点展开：④ 风险个券识别的两个方法 ★","u":"21-L3.3-业绩归因.html#21-重点展开-风险个券识别的两个方法-★","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"21.6 跨基金对比：归因表的横向比较","u":"21-L3.3-业绩归因.html#21-21.6-跨基金对比归因表的横向比较","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"对比模板","u":"21-L3.3-业绩归因.html#21-对比模板","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"读出的结论","u":"21-L3.3-业绩归因.html#21-读出的结论","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"21.7 本章与主轴公式的挂钩","u":"21-L3.3-业绩归因.html#21-21.7-本章与主轴公式的挂钩","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"自检题","u":"21-L3.3-业绩归因.html#21-自检题","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"产出物","u":"21-L3.3-业绩归因.html#21-产出物","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"任务一：多因子滚动归因图（本章核心作业）★","u":"21-L3.3-业绩归因.html#21-任务一多因子滚动归因图本章核心作业★","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"任务二：残差 α 计算（真实能力指标）","u":"21-L3.3-业绩归因.html#21-任务二残差--计算真实能力指标","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"任务三：财报归因（L3）","u":"21-L3.3-业绩归因.html#21-任务三财报归因L3","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"任务四：建立净值异动监控","u":"21-L3.3-业绩归因.html#21-任务四建立净值异动监控","c":"业绩归因：它赚的到底是什么钱","k":"h"},{"t":"第 22 章 经理画像：久期中枢、下沉程度、杠杆习惯","u":"22-L3.4-经理画像.html","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"ch"},{"t":"22.0 为什么要画像，而不是看业绩","u":"22-L3.4-经理画像.html#22-22.0-为什么要画像而不是看业绩","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"22.1 画像的四个维度（基于申万宏源框架）★","u":"22-L3.4-经理画像.html#22-22.1-画像的四个维度基于申万宏源框架★","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"维度一：久期风格（最重要）","u":"22-L3.4-经理画像.html#22-维度一久期风格最重要","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"维度二：信用风格","u":"22-L3.4-经理画像.html#22-维度二信用风格","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"维度三：杠杆习惯","u":"22-L3.4-经理画像.html#22-维度三杠杆习惯","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"维度四：规模承载力与精力分配（第 23 章会深化）","u":"22-L3.4-经理画像.html#22-维度四规模承载力与精力分配第-23-章会深化","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"22.2 一张完整的经理画像卡 ★","u":"22-L3.4-经理画像.html#22-22.2-一张完整的经理画像卡-★","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"22.3 三个典型画像实例","u":"22-L3.4-经理画像.html#22-22.3-三个典型画像实例","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"实例一：票息型（持有型）","u":"22-L3.4-经理画像.html#22-实例一票息型持有型","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"实例二：久期型（交易型）","u":"22-L3.4-经理画像.html#22-实例二久期型交易型","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"实例三：规模受损型","u":"22-L3.4-经理画像.html#22-实例三规模受损型","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"22.4 画像的三个使用场景","u":"22-L3.4-经理画像.html#22-22.4-画像的三个使用场景","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"场景一：情景预测","u":"22-L3.4-经理画像.html#22-场景一情景预测","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"场景二：组合搭配","u":"22-L3.4-经理画像.html#22-场景二组合搭配","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"场景三：卖出决策（最被忽略的用途）★","u":"22-L3.4-经理画像.html#22-场景三卖出决策最被忽略的用途★","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"22.5 一个重要提醒：画像的局限","u":"22-L3.4-经理画像.html#22-22.5-一个重要提醒画像的局限","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"22.6 本章与主轴公式的挂钩","u":"22-L3.4-经理画像.html#22-22.6-本章与主轴公式的挂钩","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"自检题","u":"22-L3.4-经理画像.html#22-自检题","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"产出物","u":"22-L3.4-经理画像.html#22-产出物","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"任务一：完整画像卡（本章核心作业）★","u":"22-L3.4-经理画像.html#22-任务一完整画像卡本章核心作业★","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"任务二：风格四象限图","u":"22-L3.4-经理画像.html#22-任务二风格四象限图","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"任务三：卖出条件清单（最重要的一项）","u":"22-L3.4-经理画像.html#22-任务三卖出条件清单最重要的一项","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"任务四：熊市经历标注","u":"22-L3.4-经理画像.html#22-任务四熊市经历标注","c":"经理画像：久期中枢、下沉程度、杠杆习惯","k":"h"},{"t":"第 23 章 规模与持有人结构：赎回冲击敞口","u":"23-L3.5-规模与持有人结构.html","c":"规模与持有人结构：赎回冲击敞口","k":"ch"},{"t":"23.0 一句话","u":"23-L3.5-规模与持有人结构.html#23-23.0-一句话","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"23.1 规模的两面：承载力与稳定性","u":"23-L3.5-规模与持有人结构.html#23-23.1-规模的两面承载力与稳定性","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"规模太小的风险","u":"23-L3.5-规模与持有人结构.html#23-规模太小的风险","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"规模太大的风险：承载力 ★★","u":"23-L3.5-规模与持有人结构.html#23-规模太大的风险承载力-★★","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"规模的变化速度：比绝对水平更重要 ★","u":"23-L3.5-规模与持有人结构.html#23-规模的变化速度比绝对水平更重要-★","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"23.2 持有人结构：赎回冲击敞口 ★★","u":"23-L3.5-规模与持有人结构.html#23-23.2-持有人结构赎回冲击敞口-★★","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"四个必查的数字","u":"23-L3.5-规模与持有人结构.html#23-四个必查的数字","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"机构 vs 个人：赎回行为的根本差异 ★","u":"23-L3.5-规模与持有人结构.html#23-机构-vs-个人赎回行为的根本差异-★","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"机构持有人的三类赎回触发 ★","u":"23-L3.5-规模与持有人结构.html#23-机构持有人的三类赎回触发-★","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"一个关键的组合风险：高杠杆 + 高机构占比 ★★","u":"23-L3.5-规模与持有人结构.html#23-一个关键的组合风险高杠杆--高机构占比-★★","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"个人持有人也有问题：行为风险","u":"23-L3.5-规模与持有人结构.html#23-个人持有人也有问题行为风险","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"发起式基金的特殊性","u":"23-L3.5-规模与持有人结构.html#23-发起式基金的特殊性","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"23.3 完整的规模与结构体检表 ★","u":"23-L3.5-规模与持有人结构.html#23-23.3-完整的规模与结构体检表-★","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"23.4 三个案例","u":"23-L3.5-规模与持有人结构.html#23-23.4-三个案例","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"案例一：机构定制型（典型的隐藏风险）","u":"23-L3.5-规模与持有人结构.html#23-案例一机构定制型典型的隐藏风险","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"案例二：规模超载型","u":"23-L3.5-规模与持有人结构.html#23-案例二规模超载型","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"案例三：健康结构（对照组）","u":"23-L3.5-规模与持有人结构.html#23-案例三健康结构对照组","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"23.5 一个被忽略的问题：你自己的规模","u":"23-L3.5-规模与持有人结构.html#23-23.5-一个被忽略的问题你自己的规模","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"23.6 本章与主轴公式的挂钩","u":"23-L3.5-规模与持有人结构.html#23-23.6-本章与主轴公式的挂钩","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"自检题","u":"23-L3.5-规模与持有人结构.html#23-自检题","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"产出物","u":"23-L3.5-规模与持有人结构.html#23-产出物","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"任务一：规模与结构体检（本章核心作业）","u":"23-L3.5-规模与持有人结构.html#23-任务一规模与结构体检本章核心作业","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"任务二：承载力拐点图","u":"23-L3.5-规模与持有人结构.html#23-任务二承载力拐点图","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"任务三：风险矩阵定位","u":"23-L3.5-规模与持有人结构.html#23-任务三风险矩阵定位","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"任务四：自己的占比检查","u":"23-L3.5-规模与持有人结构.html#23-任务四自己的占比检查","c":"规模与持有人结构：赎回冲击敞口","k":"h"},{"t":"第 24 章 危险信号清单：十二条红灯","u":"24-L3.6-危险信号清单.html","c":"危险信号清单：十二条红灯","k":"ch"},{"t":"24.0 这一章怎么用","u":"24-L3.6-危险信号清单.html#24-24.0-这一章怎么用","c":"危险信号清单：十二条红灯","k":"h"},{"t":"24.1 十二条红灯总表","u":"24-L3.6-危险信号清单.html#24-24.1-十二条红灯总表","c":"危险信号清单：十二条红灯","k":"h"},{"t":"24.2 逐条详解","u":"24-L3.6-危险信号清单.html#24-24.2-逐条详解","c":"危险信号清单：十二条红灯","k":"h"},{"t":"红灯 1：久期漂移 🔴","u":"24-L3.6-危险信号清单.html#24-红灯-1久期漂移","c":"危险信号清单：十二条红灯","k":"h"},{"t":"红灯 2：低评级堆积 🔴","u":"24-L3.6-危险信号清单.html#24-红灯-2低评级堆积","c":"危险信号清单：十二条红灯","k":"h"},{"t":"红灯 3：隐含评级背离 🔴","u":"24-L3.6-危险信号清单.html#24-红灯-3隐含评级背离","c":"危险信号清单：十二条红灯","k":"h"},{"t":"红灯 4：净值异常平滑 🔴","u":"24-L3.6-危险信号清单.html#24-红灯-4净值异常平滑","c":"危险信号清单：十二条红灯","k":"h"},{"t":"红灯 5：风险被掩盖 🔴","u":"24-L3.6-危险信号清单.html#24-红灯-5风险被掩盖","c":"危险信号清单：十二条红灯","k":"h"},{"t":"红灯 6：杠杆贴近上限 🔴","u":"24-L3.6-危险信号清单.html#24-红灯-6杠杆贴近上限","c":"危险信号清单：十二条红灯","k":"h"},{"t":"红灯 7：杠杆窗口粉饰 🔴","u":"24-L3.6-危险信号清单.html#24-红灯-7杠杆窗口粉饰","c":"危险信号清单：十二条红灯","k":"h"},{"t":"红灯 8：流动性脆弱 🔴","u":"24-L3.6-危险信号清单.html#24-红灯-8流动性脆弱","c":"危险信号清单：十二条红灯","k":"h"},{"t":"红灯 9：持有人集中 🔴","u":"24-L3.6-危险信号清单.html#24-红灯-9持有人集中","c":"危险信号清单：十二条红灯","k":"h"},{"t":"红灯 10：规模超载 🔴","u":"24-L3.6-危险信号清单.html#24-红灯-10规模超载","c":"危险信号清单：十二条红灯","k":"h"},{"t":"红灯 11：净值异动（每日跑）🔴","u":"24-L3.6-危险信号清单.html#24-红灯-11净值异动每日跑","c":"危险信号清单：十二条红灯","k":"h"},{"t":"红灯 12：言行不一致 🔴","u":"24-L3.6-危险信号清单.html#24-红灯-12言行不一致","c":"危险信号清单：十二条红灯","k":"h"},{"t":"24.3 完整检查表（可直接打印使用）","u":"24-L3.6-危险信号清单.html#24-24.3-完整检查表可直接打印使用","c":"危险信号清单：十二条红灯","k":"h"},{"t":"24.4 三个诊断实例","u":"24-L3.6-危险信号清单.html#24-24.4-三个诊断实例","c":"危险信号清单：十二条红灯","k":"h"},{"t":"实例一：标榜\"稳健\"的下沉型基金","u":"24-L3.6-危险信号清单.html#24-实例一标榜quot稳健quot的下沉型基金","c":"危险信号清单：十二条红灯","k":"h"},{"t":"实例二：规模受损的优秀经理","u":"24-L3.6-危险信号清单.html#24-实例二规模受损的优秀经理","c":"危险信号清单：十二条红灯","k":"h"},{"t":"实例三：通过筛选的基金","u":"24-L3.6-危险信号清单.html#24-实例三通过筛选的基金","c":"危险信号清单：十二条红灯","k":"h"},{"t":"24.5 清单的局限与补充","u":"24-L3.6-危险信号清单.html#24-24.5-清单的局限与补充","c":"危险信号清单：十二条红灯","k":"h"},{"t":"五个局限","u":"24-L3.6-危险信号清单.html#24-五个局限","c":"危险信号清单：十二条红灯","k":"h"},{"t":"两条补充规则","u":"24-L3.6-危险信号清单.html#24-两条补充规则","c":"危险信号清单：十二条红灯","k":"h"},{"t":"24.6 本章与主轴公式的挂钩","u":"24-L3.6-危险信号清单.html#24-24.6-本章与主轴公式的挂钩","c":"危险信号清单：十二条红灯","k":"h"},{"t":"自检题","u":"24-L3.6-危险信号清单.html#24-自检题","c":"危险信号清单：十二条红灯","k":"h"},{"t":"产出物","u":"24-L3.6-危险信号清单.html#24-产出物","c":"危险信号清单：十二条红灯","k":"h"},{"t":"任务一：对所有持仓跑一遍清单（本章核心作业）","u":"24-L3.6-危险信号清单.html#24-任务一对所有持仓跑一遍清单本章核心作业","c":"危险信号清单：十二条红灯","k":"h"},{"t":"任务二：建立季度复查日程","u":"24-L3.6-危险信号清单.html#24-任务二建立季度复查日程","c":"危险信号清单：十二条红灯","k":"h"},{"t":"任务三：红灯触发日志","u":"24-L3.6-危险信号清单.html#24-任务三红灯触发日志","c":"危险信号清单：十二条红灯","k":"h"},{"t":"L3 层小结","u":"24-L3.6-危险信号清单.html#24-L3-层小结","c":"危险信号清单：十二条红灯","k":"h"},{"t":"第 25 章 必修历史断面：五次教科书级行情","u":"25-L4.1-必修历史断面.html","c":"必修历史断面：五次教科书级行情","k":"ch"},{"t":"25.0 为什么必须\"能复述传导链\"","u":"25-L4.1-必修历史断面.html#25-25.0-为什么必须quot能复述传导链quot","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"25.1 断面一：2013 年钱荒","u":"25-L4.1-必修历史断面.html#25-25.1-断面一2013-年钱荒","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"① 起点状态（事前的脆弱性）","u":"25-L4.1-必修历史断面.html#25-起点状态事前的脆弱性","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"② 触发事件","u":"25-L4.1-必修历史断面.html#25-触发事件","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"③ 传导链条 ★","u":"25-L4.1-必修历史断面.html#25-传导链条-★","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"④ 主轴公式的实测取值（量级）","u":"25-L4.1-必修历史断面.html#25-主轴公式的实测取值量级","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑤ 曲线形态","u":"25-L4.1-必修历史断面.html#25-曲线形态","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑥ 对债基的影响","u":"25-L4.1-必修历史断面.html#25-对债基的影响","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑦ 政策/制度反应","u":"25-L4.1-必修历史断面.html#25-政策制度反应","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑧ 可迁移的前兆信号 ★★","u":"25-L4.1-必修历史断面.html#25-可迁移的前兆信号-★★","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"25.2 断面二：2016 年 12 月去杠杆","u":"25-L4.1-必修历史断面.html#25-25.2-断面二2016-年-12-月去杠杆","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"① 起点状态","u":"25-L4.1-必修历史断面.html#25-起点状态","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"② 触发事件","u":"25-L4.1-必修历史断面.html#25-触发事件-2","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"③ 传导链条 ★★","u":"25-L4.1-必修历史断面.html#25-传导链条-★★","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"④ 主轴公式的实测取值","u":"25-L4.1-必修历史断面.html#25-主轴公式的实测取值","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑤ 曲线形态","u":"25-L4.1-必修历史断面.html#25-曲线形态-2","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑥ 对债基的影响","u":"25-L4.1-必修历史断面.html#25-对债基的影响-2","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑦ 政策/制度反应","u":"25-L4.1-必修历史断面.html#25-政策制度反应-2","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑧ 可迁移的前兆信号 ★★★","u":"25-L4.1-必修历史断面.html#25-可迁移的前兆信号-★★★","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"25.3 断面三：2020 年 5 月政策转向","u":"25-L4.1-必修历史断面.html#25-25.3-断面三2020-年-5-月政策转向","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"① 起点状态","u":"25-L4.1-必修历史断面.html#25-起点状态-2","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"② 触发事件","u":"25-L4.1-必修历史断面.html#25-触发事件-3","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"③ 传导链条 ★","u":"25-L4.1-必修历史断面.html#25-传导链条-★-2","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"④ 主轴公式的实测取值","u":"25-L4.1-必修历史断面.html#25-主轴公式的实测取值-2","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑤ 曲线形态","u":"25-L4.1-必修历史断面.html#25-曲线形态-3","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑥ 对债基的影响","u":"25-L4.1-必修历史断面.html#25-对债基的影响-3","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑦ 政策/制度反应","u":"25-L4.1-必修历史断面.html#25-政策制度反应-3","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑧ 可迁移的前兆信号 ★★","u":"25-L4.1-必修历史断面.html#25-可迁移的前兆信号-★★-2","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"25.4 断面四：2022 年 11 月理财赎回潮 ★★★","u":"25-L4.1-必修历史断面.html#25-25.4-断面四2022-年-11-月理财赎回潮-★★★","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"① 起点状态（这是本书反复引用的那个状态）","u":"25-L4.1-必修历史断面.html#25-起点状态这是本书反复引用的那个状态","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"② 触发事件","u":"25-L4.1-必修历史断面.html#25-触发事件-4","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"③ 传导链条 ★★★（本书最重要的一条链）","u":"25-L4.1-必修历史断面.html#25-传导链条-★★★本书最重要的一条链","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"④ 主轴公式的实测取值","u":"25-L4.1-必修历史断面.html#25-主轴公式的实测取值-3","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑤ 曲线形态","u":"25-L4.1-必修历史断面.html#25-曲线形态-4","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑥ 对债基的影响","u":"25-L4.1-必修历史断面.html#25-对债基的影响-4","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑦ 政策/制度反应（极其重要）★","u":"25-L4.1-必修历史断面.html#25-政策制度反应极其重要★","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑧ 可迁移的前兆信号 ★★★","u":"25-L4.1-必修历史断面.html#25-可迁移的前兆信号-★★★-2","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"25.5 断面五：2024 年长端大牛与监管干预 ★★","u":"25-L4.1-必修历史断面.html#25-25.5-断面五2024-年长端大牛与监管干预-★★","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"① 起点状态","u":"25-L4.1-必修历史断面.html#25-起点状态-3","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"② \"触发事件\"——这次不同，是一个持续的过程","u":"25-L4.1-必修历史断面.html#25-quot触发事件quot这次不同是一个持续的过程","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"③ 传导链条（牛市版）★","u":"25-L4.1-必修历史断面.html#25-传导链条牛市版★","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"④ 央行干预的完整链条 ★★★","u":"25-L4.1-必修历史断面.html#25-央行干预的完整链条-★★★","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑤ 曲线形态","u":"25-L4.1-必修历史断面.html#25-曲线形态-5","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑥ 对债基的影响","u":"25-L4.1-必修历史断面.html#25-对债基的影响-5","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑦ 政策/制度反应","u":"25-L4.1-必修历史断面.html#25-政策制度反应-4","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"⑧ 可迁移的前兆信号 ★★★","u":"25-L4.1-必修历史断面.html#25-可迁移的前兆信号-★★★-3","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"25.6 五次断面的横向对比 ★★","u":"25-L4.1-必修历史断面.html#25-25.6-五次断面的横向对比-★★","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"对比表","u":"25-L4.1-必修历史断面.html#25-对比表","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"四个贯穿性结论 ★★★","u":"25-L4.1-必修历史断面.html#25-四个贯穿性结论-★★★","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"25.7 本章与主轴公式的挂钩","u":"25-L4.1-必修历史断面.html#25-25.7-本章与主轴公式的挂钩","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"自检题","u":"25-L4.1-必修历史断面.html#25-自检题","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"产出物","u":"25-L4.1-必修历史断面.html#25-产出物","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"任务一：复述传导链（学习体系第 11 周的指定产出物）★","u":"25-L4.1-必修历史断面.html#25-任务一复述传导链学习体系第-11-周的指定产出物★","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"任务二：建立五次断面卡","u":"25-L4.1-必修历史断面.html#25-任务二建立五次断面卡","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"任务三：用你的持仓跑历史压力测试 ★","u":"25-L4.1-必修历史断面.html#25-任务三用你的持仓跑历史压力测试-★","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"任务四：前兆信号汇总","u":"25-L4.1-必修历史断面.html#25-任务四前兆信号汇总","c":"必修历史断面：五次教科书级行情","k":"h"},{"t":"第 26 章 负反馈机制：债市最猛的下跌从哪来","u":"26-L4.2-负反馈机制.html","c":"负反馈机制：债市最猛的下跌从哪来","k":"ch"},{"t":"26.0 本章的位置","u":"26-L4.2-负反馈机制.html#26-26.0-本章的位置","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"26.1 回路的数学：增益与稳定性 ★★","u":"26-L4.2-负反馈机制.html#26-26.1-回路的数学增益与稳定性-★★","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"建立模型","u":"26-L4.2-负反馈机制.html#26-建立模型","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"稳定性判别 ★","u":"26-L4.2-负反馈机制.html#26-稳定性判别-★","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"五个参数各由什么决定 ★★","u":"26-L4.2-负反馈机制.html#26-五个参数各由什么决定-★★","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"26.2 赎回弹性 κ：回路的核心开关 ★★★","u":"26-L4.2-负反馈机制.html#26-26.2-赎回弹性-回路的核心开关-★★★","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"κ 是什么","u":"26-L4.2-负反馈机制.html#26-是什么","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"κ 的决定因素（这是全书风险判断的汇总）","u":"26-L4.2-负反馈机制.html#26-的决定因素这是全书风险判断的汇总","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"2022 年 11 月为什么 κ 极大 ★","u":"26-L4.2-负反馈机制.html#26-2022-年-11-月为什么--极大-★","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"κ 的代理指标（可观测）","u":"26-L4.2-负反馈机制.html#26-的代理指标可观测","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"26.3 回路的两种形态","u":"26-L4.2-负反馈机制.html#26-26.3-回路的两种形态","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"形态一：杠杆回路（2013、2016.12）","u":"26-L4.2-负反馈机制.html#26-形态一杠杆回路20132016.12","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"形态二：赎回回路（2022.11）★★","u":"26-L4.2-负反馈机制.html#26-形态二赎回回路2022.11★★","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"两种回路的叠加（最危险）","u":"26-L4.2-负反馈机制.html#26-两种回路的叠加最危险","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"26.4 三道刹车及其有效性 ★","u":"26-L4.2-负反馈机制.html#26-26.4-三道刹车及其有效性-★","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"刹车一：流动性缓冲（作用于 ④）","u":"26-L4.2-负反馈机制.html#26-刹车一流动性缓冲作用于","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"刹车二：摆动定价（作用于 κ）★★","u":"26-L4.2-负反馈机制.html#26-刹车二摆动定价作用于-★★","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"刹车三：巨额赎回延期 / 暂停赎回 / 侧袋（强行中断 ④）","u":"26-L4.2-负反馈机制.html#26-刹车三巨额赎回延期--暂停赎回--侧袋强行中断","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"三道刹车的对比","u":"26-L4.2-负反馈机制.html#26-三道刹车的对比","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"26.5 作为投资者，你在回路里的位置 ★★","u":"26-L4.2-负反馈机制.html#26-26.5-作为投资者你在回路里的位置-★★","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"你有两个身份","u":"26-L4.2-负反馈机制.html#26-你有两个身份","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"怎么处理这个困境（三条实用建议）","u":"26-L4.2-负反馈机制.html#26-怎么处理这个困境三条实用建议","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"26.6 系统层面：怎么评估\"现在 G 有多大\" ★","u":"26-L4.2-负反馈机制.html#26-26.6-系统层面怎么评估quot现在-G-有多大quot-★","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"G 的五个参数的当前读数","u":"26-L4.2-负反馈机制.html#26-G-的五个参数的当前读数","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"一个简化的\"回路脆弱性打分卡\"★","u":"26-L4.2-负反馈机制.html#26-一个简化的quot回路脆弱性打分卡quot★","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"26.7 本章与主轴公式的挂钩","u":"26-L4.2-负反馈机制.html#26-26.7-本章与主轴公式的挂钩","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"自检题","u":"26-L4.2-负反馈机制.html#26-自检题","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"产出物","u":"26-L4.2-负反馈机制.html#26-产出物","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"任务一：算出你所有持仓的历史 κ ★★（本章核心作业）","u":"26-L4.2-负反馈机制.html#26-任务一算出你所有持仓的历史--★★本章核心作业","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"任务二：回路脆弱性打分卡（每周更新）","u":"26-L4.2-负反馈机制.html#26-任务二回路脆弱性打分卡每周更新","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"任务三：写下你的预案 ★★★","u":"26-L4.2-负反馈机制.html#26-任务三写下你的预案-★★★","c":"负反馈机制：债市最猛的下跌从哪来","k":"h"},{"t":"第 27 章 每日数据看板：十个指标，连看六十天","u":"27-L4.3-每日数据看板.html","c":"每日数据看板：十个指标，连看六十天","k":"ch"},{"t":"27.0 为什么必须是\"自己填的看板\"","u":"27-L4.3-每日数据看板.html#27-27.0-为什么必须是quot自己填的看板quot","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"27.1 十指标核心看板 ★★","u":"27-L4.3-每日数据看板.html#27-27.1-十指标核心看板-★★","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"核心十指标","u":"27-L4.3-每日数据看板.html#27-核心十指标","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"为什么是这十个（设计逻辑）","u":"27-L4.3-每日数据看板.html#27-为什么是这十个设计逻辑","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"27.2 每个指标的取数方法与判读标准","u":"27-L4.3-每日数据看板.html#27-27.2-每个指标的取数方法与判读标准","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"指标 1：国债期货","u":"27-L4.3-每日数据看板.html#27-指标-1国债期货","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"指标 2：中债国债收益率","u":"27-L4.3-每日数据看板.html#27-指标-2中债国债收益率","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"指标 3：期限利差 → 四象限分类 ★","u":"27-L4.3-每日数据看板.html#27-指标-3期限利差--四象限分类-★","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"指标 4、5：DR007 / R007 / 分层","u":"27-L4.3-每日数据看板.html#27-指标-45DR007--R007--分层","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"指标 6：OMO 净投放","u":"27-L4.3-每日数据看板.html#27-指标-6OMO-净投放","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"指标 7：carry 空间 ★★","u":"27-L4.3-每日数据看板.html#27-指标-7carry-空间-★★","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"指标 8：AAA 3Y 信用利差","u":"27-L4.3-每日数据看板.html#27-指标-8AAA-3Y-信用利差","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"指标 9：二永利差 ★★","u":"27-L4.3-每日数据看板.html#27-指标-9二永利差-★★","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"指标 10：股债","u":"27-L4.3-每日数据看板.html#27-指标-10股债","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"27.3 看板的物理形式 ★","u":"27-L4.3-每日数据看板.html#27-27.3-看板的物理形式-★","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"日度主表（Excel / Google Sheets）","u":"27-L4.3-每日数据看板.html#27-日度主表Excel--Google-Sheets","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"季节性标记列（第 13 章）","u":"27-L4.3-每日数据看板.html#27-季节性标记列第-13-章","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"周度扩展表","u":"27-L4.3-每日数据看板.html#27-周度扩展表","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"月度扩展表","u":"27-L4.3-每日数据看板.html#27-月度扩展表","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"季度扩展表","u":"27-L4.3-每日数据看板.html#27-季度扩展表","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"27.4 和 /bond-daily 脚本的衔接 ★","u":"27-L4.3-每日数据看板.html#27-27.4-和-bond-daily-脚本的衔接-★","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"脚本已自动覆盖","u":"27-L4.3-每日数据看板.html#27-脚本已自动覆盖","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"需人工补的四项 ★★","u":"27-L4.3-每日数据看板.html#27-需人工补的四项-★★","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"建议的分工","u":"27-L4.3-每日数据看板.html#27-建议的分工","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"27.5 60 天的使用方法：从记数到盘感 ★★","u":"27-L4.3-每日数据看板.html#27-27.5-60-天的使用方法从记数到盘感-★★","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"阶段一（第 1–20 天）：学会取数","u":"27-L4.3-每日数据看板.html#27-阶段一第-120-天学会取数","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"阶段二（第 21–40 天）：学会分类","u":"27-L4.3-每日数据看板.html#27-阶段二第-2140-天学会分类","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"阶段三（第 41–60 天）：学会预判","u":"27-L4.3-每日数据看板.html#27-阶段三第-4160-天学会预判","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"第 60 天：完整复盘 ★","u":"27-L4.3-每日数据看板.html#27-第-60-天完整复盘-★","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"27.6 看板的三层警报规则 ★★","u":"27-L4.3-每日数据看板.html#27-27.6-看板的三层警报规则-★★","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"🟡 黄色警报：脆弱性积累（预防阶段）","u":"27-L4.3-每日数据看板.html#27-黄色警报脆弱性积累预防阶段","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"🔴 红色警报：回路已启动（事中阶段）★","u":"27-L4.3-每日数据看板.html#27-红色警报回路已启动事中阶段★","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"⚫ 黑色警报：系统性事件","u":"27-L4.3-每日数据看板.html#27-黑色警报系统性事件","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"27.7 本章与主轴公式的挂钩","u":"27-L4.3-每日数据看板.html#27-27.7-本章与主轴公式的挂钩","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"自检题","u":"27-L4.3-每日数据看板.html#27-自检题","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"产出物","u":"27-L4.3-每日数据看板.html#27-产出物","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"任务一：建看板并连填 60 天 ★★（本章核心作业，也是全书最重要的产出物之一）","u":"27-L4.3-每日数据看板.html#27-任务一建看板并连填-60-天-★★本章核心作业也是全书最重要的产出物之一","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"任务二：补齐\"需人工补\"的四项","u":"27-L4.3-每日数据看板.html#27-任务二补齐quot需人工补quot的四项","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"任务三：三层警报规则落地","u":"27-L4.3-每日数据看板.html#27-任务三三层警报规则落地","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"任务四：第 60 天完整复盘","u":"27-L4.3-每日数据看板.html#27-任务四第-60-天完整复盘","c":"每日数据看板：十个指标，连看六十天","k":"h"},{"t":"第 28 章 复盘制度：整套体系的闭环","u":"28-L4.4-复盘制度.html","c":"复盘制度：整套体系的闭环","k":"ch"},{"t":"28.0 学习体系的原话","u":"28-L4.4-复盘制度.html#28-28.0-学习体系的原话","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"28.1 四层复盘制度 ★","u":"28-L4.4-复盘制度.html#28-28.1-四层复盘制度-★","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"28.2 ① 日度验证（2 分钟）","u":"28-L4.4-复盘制度.html#28-28.2--日度验证2-分钟","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"错误库（这是本章最有价值的工具之一）★","u":"28-L4.4-复盘制度.html#28-错误库这是本章最有价值的工具之一★","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"28.3 ② 周度归因：300 字 ★★","u":"28-L4.4-复盘制度.html#28-28.3--周度归因300-字-★★","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"标准模板（300 字）","u":"28-L4.4-复盘制度.html#28-标准模板300-字","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"为什么\"归因\"是周度复盘的核心","u":"28-L4.4-复盘制度.html#28-为什么quot归因quot是周度复盘的核心","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"一个完整的周度归因实例","u":"28-L4.4-复盘制度.html#28-一个完整的周度归因实例","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"28.4 ③ 月度自评：解释是否被验证 ★","u":"28-L4.4-复盘制度.html#28-28.4--月度自评解释是否被验证-★","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"月度自评表","u":"28-L4.4-复盘制度.html#28-月度自评表","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"D 节（纪律检查）为什么最重要 ★★","u":"28-L4.4-复盘制度.html#28-D-节纪律检查为什么最重要-★★","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"28.5 ④ 季度体检：持仓的结构复查","u":"28-L4.4-复盘制度.html#28-28.5--季度体检持仓的结构复查","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"季度体检清单","u":"28-L4.4-复盘制度.html#28-季度体检清单","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"第 7 项（持有期匹配复查）的特殊重要性 ★","u":"28-L4.4-复盘制度.html#28-第-7-项持有期匹配复查的特殊重要性-★","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"28.6 基金档案：所有复盘的沉淀地 ★","u":"28-L4.4-复盘制度.html#28-28.6-基金档案所有复盘的沉淀地-★","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"第七节（决策记录）为什么最有价值 ★★","u":"28-L4.4-复盘制度.html#28-第七节决策记录为什么最有价值-★★","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"28.7 12 周学习计划的收口","u":"28-L4.4-复盘制度.html#28-28.7-12-周学习计划的收口","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"12 周之后：转入常态运行","u":"28-L4.4-复盘制度.html#28-12-周之后转入常态运行","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"28.8 方法库：把个人经验制度化 ★","u":"28-L4.4-复盘制度.html#28-28.8-方法库把个人经验制度化-★","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"28.9 本章与主轴公式的挂钩：完整的闭环","u":"28-L4.4-复盘制度.html#28-28.9-本章与主轴公式的挂钩完整的闭环","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"自检题","u":"28-L4.4-复盘制度.html#28-自检题","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"产出物","u":"28-L4.4-复盘制度.html#28-产出物","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"任务一：建立四层复盘制度（本章核心作业）","u":"28-L4.4-复盘制度.html#28-任务一建立四层复盘制度本章核心作业","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"任务二：写第一份周度归因","u":"28-L4.4-复盘制度.html#28-任务二写第一份周度归因","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"任务三：补写决策记录（回溯）★","u":"28-L4.4-复盘制度.html#28-任务三补写决策记录回溯★","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"任务四：设定制度化的日程","u":"28-L4.4-复盘制度.html#28-任务四设定制度化的日程","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"全书终章：三句话","u":"28-L4.4-复盘制度.html#28-全书终章三句话","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"判断自己学到哪一层的唯一标准","u":"28-L4.4-复盘制度.html#28-判断自己学到哪一层的唯一标准","c":"复盘制度：整套体系的闭环","k":"h"},{"t":"附录 A：12 周落地表与产出物清单","u":"附录A-12周落地表.html","c":"12 周落地表与产出物清单","k":"ch"},{"t":"A.0 使用说明","u":"附录A-12周落地表.html#A-A.0-使用说明","c":"12 周落地表与产出物清单","k":"h"},{"t":"A.1 完整的 12 周表","u":"附录A-12周落地表.html#A-A.1-完整的-12-周表","c":"12 周落地表与产出物清单","k":"h"},{"t":"第 1–2 周：L0.1–0.2 定价与久期","u":"附录A-12周落地表.html#A-第-12-周L0.10.2-定价与久期","c":"12 周落地表与产出物清单","k":"h"},{"t":"第 3–4 周：L0.3–0.5 曲线、信用、券种","u":"附录A-12周落地表.html#A-第-34-周L0.30.5-曲线信用券种","c":"12 周落地表与产出物清单","k":"h"},{"t":"第 5–6 周：L1 全层 基金容器","u":"附录A-12周落地表.html#A-第-56-周L1-全层-基金容器","c":"12 周落地表与产出物清单","k":"h"},{"t":"第 7–9 周：L2 全层 + 看板（投入最大的三周）★★","u":"附录A-12周落地表.html#A-第-79-周L2-全层--看板投入最大的三周★★","c":"12 周落地表与产出物清单","k":"h"},{"t":"第 10 周：L3 评价与选基","u":"附录A-12周落地表.html#A-第-10-周L3-评价与选基","c":"12 周落地表与产出物清单","k":"h"},{"t":"第 11 周：L4.1 历史断面","u":"附录A-12周落地表.html#A-第-11-周L4.1-历史断面","c":"12 周落地表与产出物清单","k":"h"},{"t":"第 12 周：压力测试与闭环","u":"附录A-12周落地表.html#A-第-12-周压力测试与闭环","c":"12 周落地表与产出物清单","k":"h"},{"t":"A.2 产出物总清单（30 项）","u":"附录A-12周落地表.html#A-A.2-产出物总清单30-项","c":"12 周落地表与产出物清单","k":"h"},{"t":"A.3 如果你只有三周（极简路径）","u":"附录A-12周落地表.html#A-A.3-如果你只有三周极简路径","c":"12 周落地表与产出物清单","k":"h"},{"t":"第 1 周：搞清你买的是什么","u":"附录A-12周落地表.html#A-第-1-周搞清你买的是什么","c":"12 周落地表与产出物清单","k":"h"},{"t":"第 2 周：搞清你能不能拿得住","u":"附录A-12周落地表.html#A-第-2-周搞清你能不能拿得住","c":"12 周落地表与产出物清单","k":"h"},{"t":"第 3 周：搞清有没有坑，以及跌了怎么办","u":"附录A-12周落地表.html#A-第-3-周搞清有没有坑以及跌了怎么办","c":"12 周落地表与产出物清单","k":"h"},{"t":"A.4 进度自查表","u":"附录A-12周落地表.html#A-A.4-进度自查表","c":"12 周落地表与产出物清单","k":"h"},{"t":"附录 B：公式与口径手册（可打印）","u":"附录B-公式与口径手册.html","c":"公式与口径手册（可打印）","k":"ch"},{"t":"B.1 主轴公式","u":"附录B-公式与口径手册.html#B-B.1-主轴公式","c":"公式与口径手册（可打印）","k":"h"},{"t":"完整形态","u":"附录B-公式与口径手册.html#B-完整形态","c":"公式与口径手册（可打印）","k":"h"},{"t":"心算版","u":"附录B-公式与口径手册.html#B-心算版","c":"公式与口径手册（可打印）","k":"h"},{"t":"三个口诀","u":"附录B-公式与口径手册.html#B-三个口诀","c":"公式与口径手册（可打印）","k":"h"},{"t":"B.2 定价与久期（第 1、2 章）","u":"附录B-公式与口径手册.html#B-B.2-定价与久期第-12-章","c":"公式与口径手册（可打印）","k":"h"},{"t":"定价","u":"附录B-公式与口径手册.html#B-定价","c":"公式与口径手册（可打印）","k":"h"},{"t":"久期","u":"附录B-公式与口径手册.html#B-久期","c":"公式与口径手册（可打印）","k":"h"},{"t":"凸性","u":"附录B-公式与口径手册.html#B-凸性","c":"公式与口径手册（可打印）","k":"h"},{"t":"组合久期 ★","u":"附录B-公式与口径手册.html#B-组合久期-★","c":"公式与口径手册（可打印）","k":"h"},{"t":"含权债","u":"附录B-公式与口径手册.html#B-含权债","c":"公式与口径手册（可打印）","k":"h"},{"t":"久期的四条规律","u":"附录B-公式与口径手册.html#B-久期的四条规律","c":"公式与口径手册（可打印）","k":"h"},{"t":"B.3 曲线与骑乘（第 3 章）","u":"附录B-公式与口径手册.html#B-B.3-曲线与骑乘第-3-章","c":"公式与口径手册（可打印）","k":"h"},{"t":"骑乘收益","u":"附录B-公式与口径手册.html#B-骑乘收益","c":"公式与口径手册（可打印）","k":"h"},{"t":"四象限","u":"附录B-公式与口径手册.html#B-四象限","c":"公式与口径手册（可打印）","k":"h"},{"t":"B.4 信用（第 4 章）","u":"附录B-公式与口径手册.html#B-B.4-信用第-4-章","c":"公式与口径手册（可打印）","k":"h"},{"t":"B.5 杠杆（第 9 章）","u":"附录B-公式与口径手册.html#B-B.5-杠杆第-9-章","c":"公式与口径手册（可打印）","k":"h"},{"t":"carry 判别","u":"附录B-公式与口径手册.html#B-carry-判别","c":"公式与口径手册（可打印）","k":"h"},{"t":"赎回时的卖券量 ★","u":"附录B-公式与口径手册.html#B-赎回时的卖券量-★","c":"公式与口径手册（可打印）","k":"h"},{"t":"B.6 费率（第 11 章）","u":"附录B-公式与口径手册.html#B-B.6-费率第-11-章","c":"公式与口径手册（可打印）","k":"h"},{"t":"B.7 评价指标（第 19、20 章）","u":"附录B-公式与口径手册.html#B-B.7-评价指标第-1920-章","c":"公式与口径手册（可打印）","k":"h"},{"t":"自相关修正 ★","u":"附录B-公式与口径手册.html#B-自相关修正-★","c":"公式与口径手册（可打印）","k":"h"},{"t":"理论 MDD ★★","u":"附录B-公式与口径手册.html#B-理论-MDD-★★","c":"公式与口径手册（可打印）","k":"h"},{"t":"理论修复天数 ★★","u":"附录B-公式与口径手册.html#B-理论修复天数-★★","c":"公式与口径手册（可打印）","k":"h"},{"t":"Calmar","u":"附录B-公式与口径手册.html#B-Calmar","c":"公式与口径手册（可打印）","k":"h"},{"t":"持有期正收益概率 ★★","u":"附录B-公式与口径手册.html#B-持有期正收益概率-★★","c":"公式与口径手册（可打印）","k":"h"},{"t":"B.8 归因（第 21 章）","u":"附录B-公式与口径手册.html#B-B.8-归因第-21-章","c":"公式与口径手册（可打印）","k":"h"},{"t":"多因子回归","u":"附录B-公式与口径手册.html#B-多因子回归","c":"公式与口径手册（可打印）","k":"h"},{"t":"残差 α（真实能力）★★","u":"附录B-公式与口径手册.html#B-残差-真实能力★★","c":"公式与口径手册（可打印）","k":"h"},{"t":"杠杆效应分解 ★","u":"附录B-公式与口径手册.html#B-杠杆效应分解-★","c":"公式与口径手册（可打印）","k":"h"},{"t":"久期/杠杆择时能力 ★","u":"附录B-公式与口径手册.html#B-久期杠杆择时能力-★","c":"公式与口径手册（可打印）","k":"h"},{"t":"久期风格","u":"附录B-公式与口径手册.html#B-久期风格","c":"公式与口径手册（可打印）","k":"h"},{"t":"B.9 流动性与结构（第 10、23 章）","u":"附录B-公式与口径手册.html#B-B.9-流动性与结构第-1023-章","c":"公式与口径手册（可打印）","k":"h"},{"t":"B.10 负反馈回路（第 26 章）★★","u":"附录B-公式与口径手册.html#B-B.10-负反馈回路第-26-章★★","c":"公式与口径手册（可打印）","k":"h"},{"t":"B.11 股债（第 18 章）","u":"附录B-公式与口径手册.html#B-B.11-股债第-18-章","c":"公式与口径手册（可打印）","k":"h"},{"t":"转债","u":"附录B-公式与口径手册.html#B-转债","c":"公式与口径手册（可打印）","k":"h"},{"t":"B.12 全书红线汇总表 ★★★","u":"附录B-公式与口径手册.html#B-B.12-全书红线汇总表-★★★","c":"公式与口径手册（可打印）","k":"h"},{"t":"产品结构","u":"附录B-公式与口径手册.html#B-产品结构","c":"公式与口径手册（可打印）","k":"h"},{"t":"市场环境","u":"附录B-公式与口径手册.html#B-市场环境","c":"公式与口径手册（可打印）","k":"h"},{"t":"行动规则（最重要）★★★","u":"附录B-公式与口径手册.html#B-行动规则最重要★★★","c":"公式与口径手册（可打印）","k":"h"},{"t":"B.13 数据源速查","u":"附录B-公式与口径手册.html#B-B.13-数据源速查","c":"公式与口径手册（可打印）","k":"h"},{"t":"口径锚点（2026-11-09）","u":"附录B-公式与口径手册.html#B-口径锚点2026-11-09","c":"公式与口径手册（可打印）","k":"h"},{"t":"三个取数陷阱","u":"附录B-公式与口径手册.html#B-三个取数陷阱","c":"公式与口径手册（可打印）","k":"h"},{"t":"B.14 类别参考区间（2026-11 口径）","u":"附录B-公式与口径手册.html#B-B.14-类别参考区间2026-11-口径","c":"公式与口径手册（可打印）","k":"h"},{"t":"承载力上限（建议值）","u":"附录B-公式与口径手册.html#B-承载力上限建议值","c":"公式与口径手册（可打印）","k":"h"},{"t":"资金面季节性日历","u":"附录B-公式与口径手册.html#B-资金面季节性日历","c":"公式与口径手册（可打印）","k":"h"},{"t":"附录 C：术语表（中英对照）","u":"附录C-术语表.html","c":"术语表（中英对照）","k":"ch"},{"t":"C.1 定价与久期","u":"附录C-术语表.html#C-C.1-定价与久期","c":"术语表（中英对照）","k":"h"},{"t":"C.2 曲线","u":"附录C-术语表.html#C-C.2-曲线","c":"术语表（中英对照）","k":"h"},{"t":"C.3 信用","u":"附录C-术语表.html#C-C.3-信用","c":"术语表（中英对照）","k":"h"},{"t":"C.4 券种","u":"附录C-术语表.html#C-C.4-券种","c":"术语表（中英对照）","k":"h"},{"t":"C.5 基金容器","u":"附录C-术语表.html#C-C.5-基金容器","c":"术语表（中英对照）","k":"h"},{"t":"C.6 驱动因子","u":"附录C-术语表.html#C-C.6-驱动因子","c":"术语表（中英对照）","k":"h"},{"t":"C.7 评价与归因","u":"附录C-术语表.html#C-C.7-评价与归因","c":"术语表（中英对照）","k":"h"},{"t":"C.8 负反馈回路","u":"附录C-术语表.html#C-C.8-负反馈回路","c":"术语表（中英对照）","k":"h"},{"t":"C.9 制度与披露","u":"附录C-术语表.html#C-C.9-制度与披露","c":"术语表（中英对照）","k":"h"},{"t":"C.10 一句话定义：全书最重要的 15 个概念","u":"附录C-术语表.html#C-C.10-一句话定义全书最重要的-15-个概念","c":"术语表（中英对照）","k":"h"},{"t":"附录 D：延伸资料（按层归位）","u":"附录D-延伸资料.html","c":"延伸资料（按层归位）","k":"ch"},{"t":"D.0 最重要的一节：怎么用这份清单（不要通读）","u":"附录D-延伸资料.html#D-D.0-最重要的一节怎么用这份清单不要通读","c":"延伸资料（按层归位）","k":"h"},{"t":"D.1 L0 · 定价引擎：教材层","u":"附录D-延伸资料.html#D-D.1-L0-·-定价引擎教材层","c":"延伸资料（按层归位）","k":"h"},{"t":"D.2 L0–L1 · 中国市场落地","u":"附录D-延伸资料.html#D-D.2-L0L1-·-中国市场落地","c":"延伸资料（按层归位）","k":"h"},{"t":"D.3 L1 + L3 · 基金层（这一层中文书极少）","u":"附录D-延伸资料.html#D-D.3-L1--L3-·-基金层这一层中文书极少","c":"延伸资料（按层归位）","k":"h"},{"t":"D.4 L0.5 分支 · 可转债（固收+ 必修）","u":"附录D-延伸资料.html#D-D.4-L0.5-分支-·-可转债固收-必修","c":"延伸资料（按层归位）","k":"h"},{"t":"D.5 L2 · 驱动层：卖方研究框架（免费，性价比最高）","u":"附录D-延伸资料.html#D-D.5-L2-·-驱动层卖方研究框架免费性价比最高","c":"延伸资料（按层归位）","k":"h"},{"t":"D.6 L3 · 评价与选基：方法论文献（直接可抄的框架）★★","u":"附录D-延伸资料.html#D-D.6-L3-·-评价与选基方法论文献直接可抄的框架★★","c":"延伸资料（按层归位）","k":"h"},{"t":"D.7 L4.3 · 数据与官方源（看板搭建）","u":"附录D-延伸资料.html#D-D.7-L4.3-·-数据与官方源看板搭建","c":"延伸资料（按层归位）","k":"h"},{"t":"本书补充的数据源","u":"附录D-延伸资料.html#D-本书补充的数据源","c":"延伸资料（按层归位）","k":"h"},{"t":"D.8 视频与体系课","u":"附录D-延伸资料.html#D-D.8-视频与体系课","c":"延伸资料（按层归位）","k":"h"},{"t":"D.9 本书未覆盖、需要额外资料的四个领域","u":"附录D-延伸资料.html#D-D.9-本书未覆盖需要额外资料的四个领域","c":"延伸资料（按层归位）","k":"h"},{"t":"D.10 一句话评价：如果只买三本书","u":"附录D-延伸资料.html#D-D.10-一句话评价如果只买三本书","c":"延伸资料（按层归位）","k":"h"},{"t":"附录 E：债市传导因果网络图详解","u":"附录E-网络结构图详解.html","c":"债市传导因果网络图详解","k":"ch"},{"t":"E.0 为什么需要这张图","u":"附录E-网络结构图详解.html#E-E.0-为什么需要这张图","c":"债市传导因果网络图详解","k":"h"},{"t":"E.1 完整网络图（ASCII 版）","u":"附录E-网络结构图详解.html#E-E.1-完整网络图ASCII-版","c":"债市传导因果网络图详解","k":"h"},{"t":"E.2 Mermaid 版（手机 / 支持渲染的环境）","u":"附录E-网络结构图详解.html#E-E.2-Mermaid-版手机--支持渲染的环境","c":"债市传导因果网络图详解","k":"h"},{"t":"E.3 这张图的三个关键认知（学习体系原文）★★★","u":"附录E-网络结构图详解.html#E-E.3-这张图的三个关键认知学习体系原文★★★","c":"债市传导因果网络图详解","k":"h"},{"t":"认知一：收益率曲线是唯一枢纽","u":"附录E-网络结构图详解.html#E-认知一收益率曲线是唯一枢纽","c":"债市传导因果网络图详解","k":"h"},{"t":"认知二：久期是放大倍数，不是方向","u":"附录E-网络结构图详解.html#E-认知二久期是放大倍数不是方向","c":"债市传导因果网络图详解","k":"h"},{"t":"认知三：它不是单向链条，而是带回路的网络 ★★★","u":"附录E-网络结构图详解.html#E-认知三它不是单向链条而是带回路的网络-★★★","c":"债市传导因果网络图详解","k":"h"},{"t":"E.4 本书对原图的四个补充 ★","u":"附录E-网络结构图详解.html#E-E.4-本书对原图的四个补充-★","c":"债市传导因果网络图详解","k":"h"},{"t":"补充一：资金面 → 杠杆的那条线","u":"附录E-网络结构图详解.html#E-补充一资金面--杠杆的那条线","c":"债市传导因果网络图详解","k":"h"},{"t":"补充二：机构配置 → 信用利差 的虚线","u":"附录E-网络结构图详解.html#E-补充二机构配置--信用利差-的虚线","c":"债市传导因果网络图详解","k":"h"},{"t":"补充三：各条传导线的\"系数\"标注","u":"附录E-网络结构图详解.html#E-补充三各条传导线的quot系数quot标注","c":"债市传导因果网络图详解","k":"h"},{"t":"补充四：央行的\"国债买卖\"节点（2024+）★","u":"附录E-网络结构图详解.html#E-补充四央行的quot国债买卖quot节点2024★","c":"债市传导因果网络图详解","k":"h"},{"t":"E.5 怎么用这张图做日常分析（五步流程）★★","u":"附录E-网络结构图详解.html#E-E.5-怎么用这张图做日常分析五步流程★★","c":"债市传导因果网络图详解","k":"h"},{"t":"标准流程","u":"附录E-网络结构图详解.html#E-标准流程","c":"债市传导因果网络图详解","k":"h"},{"t":"完整示例","u":"附录E-网络结构图详解.html#E-完整示例","c":"债市传导因果网络图详解","k":"h"},{"t":"E.6 网络图与本书 28 章的完整映射","u":"附录E-网络结构图详解.html#E-E.6-网络图与本书-28-章的完整映射","c":"债市传导因果网络图详解","k":"h"},{"t":"E.7 一张简化版：只记七个节点","u":"附录E-网络结构图详解.html#E-E.7-一张简化版只记七个节点","c":"债市传导因果网络图详解","k":"h"},{"t":"E.8 最后：图的方向性提醒","u":"附录E-网络结构图详解.html#E-E.8-最后图的方向性提醒","c":"债市传导因果网络图详解","k":"h"},{"t":"全书结构一览（最后一张图）","u":"附录E-网络结构图详解.html#E-全书结构一览最后一张图","c":"债市传导因果网络图详解","k":"h"}];</script>
+<script src="assets/book.js"></script>
+</body>
+</html>
