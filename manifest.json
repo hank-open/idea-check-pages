@@ -1,0 +1,17 @@
+{
+  "name": "投资学习书架：债券基金与股票",
+  "short_name": "学习书架",
+  "description": "按依赖关系而非话题热度组织的债券基金与股票投资教科书",
+  "start_url": "/idea-check-pages/",
+  "scope": "/idea-check-pages/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7f5f0",
+  "theme_color": "#9a4b2f",
+  "lang": "zh-CN",
+  "icons": [
+    { "src": "/idea-check-pages/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/idea-check-pages/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/idea-check-pages/icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

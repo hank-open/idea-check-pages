@@ -293,6 +293,8 @@ main{flex:1 1 auto;min-width:0;max-width:calc(var(--maxw) + 120px);padding:52px 
   .sidebar.open{transform:none}
   .toc-toggle{display:block}
   main{padding-top:64px}
+  /* 锚点跳转时别躲到固定的汉堡按钮下面 */
+  .prose h2,.prose h3,.prose h4{scroll-margin-top:64px}
   .chapter-nav a{flex:0 1 48%}
 }
 @media (max-width:600px){
